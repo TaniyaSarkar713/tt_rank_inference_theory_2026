@@ -3,39 +3,47 @@
 This explanation focuses on the current September 9, 2026 revision.
 
 A **tensor** is a multidimensional array. A vector has one index, a matrix has two, and a four-way tensor has entries
-\[
+
+$$
 B_{i_1,i_2,i_3,i_4}.
-\]
-For example, a \(40\times40\times40\times40\) tensor contains \(40^4=2{,}560{,}000\) numbers. The project assumes these numbers have a simpler underlying structure.
+$$
+
+For example, a $40\times40\times40\times40$ tensor contains $40^4=2{,}560{,}000$ numbers. The project assumes these numbers have a simpler underlying structure.
 
 A **tensor train**, abbreviated TT, represents each entry through a chain of small matrix products:
-\[
-B_{i_1,i_2,i_3,i_4}
-=
-G_1(i_1)G_2(i_2)G_3(i_3)G_4(i_4).
-\]
+
+$$
+B_{i_1,i_2,i_3,i_4}=G_1(i_1)G_2(i_2)G_3(i_3)G_4(i_4).
+$$
+
 The matrix sizes fit together as
-\[
+
+$$
 (1\times r_1)(r_1\times r_2)(r_2\times r_3)(r_3\times1),
-\]
+$$
+
 so the final result is one number. Small intermediate dimensions allow a compact representation. This is the standard TT construction described in [Oseledets’s foundational paper](https://users.math.msu.edu/users/iwenmark/Teaching/CMSE890/TENSOR_oseledets2011.pdf).
 
 There is an equivalent description that matters especially here: reshape the tensor into a matrix at each cut,
-\[
+
+$$
 i_1\mid i_2i_3i_4,\qquad
 i_1i_2\mid i_3i_4,\qquad
 i_1i_2i_3\mid i_4,
-\]
+$$
+
 and require the corresponding matrix ranks to be small. Matrix rank counts the number of independent column directions. The project imposes **all these rank constraints together**.
 
 The statistical model is ordinary linear regression with tensor-shaped predictors:
-\[
+
+$$
 Y_i=\langle X_i,B\rangle+\varepsilon_i,
 \qquad
 \langle X_i,B\rangle
 =\sum_{i_1,\ldots,i_K}
 (X_i)_{i_1,\ldots,i_K}B_{i_1,\ldots,i_K}.
-\]
+$$
+
 Here \(X_i\) is observed, \(Y_i\) is the observed response, and \(B\) is the unknown coefficient tensor. In the current main results, predictor entries are independent standard Gaussian variables, and the errors are independent Gaussian variables with unknown standard deviation \(\sigma\).
 
 The goal is to estimate **one chosen number**
@@ -54,13 +62,12 @@ where \(\Theta_r\) denotes the allowed tensor class.
 In repeated experiments, the procedure must cover the true answer at least 95% of the time at every allowed parameter. The actual ranks can be lower than the caps. Consequently, uncertainty about rank must be respected.
 
 **The central mathematical idea is to measure how much the target can change when the tensor changes slightly.** The project calls this the *local modulus*:
-\[
-\omega_A(t;B_*)
-=
-\sup_{\substack{B\in\Theta_r\\
-\|B-B_*\|_F\le t}}
+
+$$
+\omega_A(t;B_* ) = \sup_{B\in\Theta_r, \|B-B_{\star}\|_F\le t}
 |\psi_A(B)-\psi_A(B_*)|.
-\]
+$$
+
 The Frobenius norm \(\|\cdot\|_F\) is the square root of the sum of squared entries.
 
 Read this formula as:
