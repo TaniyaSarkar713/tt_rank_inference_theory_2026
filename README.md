@@ -2,6 +2,16 @@
 
 **Current revision: 9 September 2026. Research decision: Promising — further theoretical work is needed for a strong top-journal submission.** The rank-two result survived a detailed internal audit. Its new generalization, calibrated interval, growing-dimension results and full proofs are now assembled in a separate dated manuscript. Internal checking is not independent peer review or a novelty certificate.
 
+## Project status — updated 10 September 2026
+
+The September 9 mathematical revision remains current. The project now has its own [private GitHub repository](https://github.com/TaniyaSarkar713/tt_rank_inference_theory_2026), a [beginner mathematical summary](summary.md) with Markdown-formatted equations, and a [local reference collection and reading guide](references/README.md). The reference collection contains eight papers and one supplementary PDF, with verified PDF parsing, source links, versions, and file hashes. This update preserves the summary's equation-formatting revision and adds research references and repository documentation; it does not introduce new theorems or simulation runs.
+
+The closest statistical comparison in the inspected collection is Ke, Song, Zhao and Wang, *Efficient Inference for Low-rank Regression via Covariance-Weighted Projection*. Its first-order variance condition separates it from this project's fully normal targets. Wouters et al. is the main higher-order MPS geometry comparison. The [reading guide](references/README.md) explains the overlap and differences and points to the relevant results in each downloaded version.
+
+The current research limitations remain unknown weak orientations, broader loading geometry, and conservative confidence-interval constants. The saved revision passes its existing artifact validator. PDF identities, reference hashes, and new local navigation links were also checked for this update.
+
+**Standing repository rule:** update this README's project status and file organization in every commit, and verify those updates before each push. The persistent instructions are in [AGENTS.md](AGENTS.md).
+
 ## Start here: the new revision
 
 - [Integrated manuscript PDF](paper/revision_2026_09_09/main.pdf), [LaTeX source](paper/revision_2026_09_09/main.tex), and [editable front matter](paper/revision_2026_09_09/frontmatter.md).
@@ -19,6 +29,29 @@ For a unit product loading annihilating the reference in every physical mode, th
 The geometric limit is uniform over dimensions and ranks for fixed order K. An explicit rank-two interval uses only 6K−3 selected features and attains the full weak-bond scale even when the ambient dimension exceeds n. Its short-length theorem concerns prespecified directions; a separate learned-subspace theorem requires n1 b²/σ² to exceed a dimension-dependent complexity. Optimal confidence constants and unknown weak-orientation adaptation remain open. Existing MPS geometry, Gaussian sketching and conservative test inversion are credited as prior art.
 
 The new experiment has 95,000 independent datasets, 5,000 per setting, and 380,000 paired interval records. It samples the exact selected-regression sufficient-statistic law in an ambient 40^4 embedding. The 198,000 historical datasets are a separate cohort; their files were preserved.
+
+## File organization — reviewed 10 September 2026
+
+| File or directory | Contents and current role |
+|---|---|
+| [README.md](README.md) | Current project status, navigation, reproduction commands, and repository-update rule. |
+| [summary.md](summary.md) | Beginner explanation of tensor trains, local moduli, honest intervals, and the weak-bond transition, with Markdown-formatted equations. |
+| [AGENTS.md](AGENTS.md) | Persistent instructions for README maintenance and artifact integrity. |
+| [references/](references/) | Eight closest and supporting papers, the Ke et al. supplement, a reading guide, BibTeX entries, and download provenance with hashes. |
+| [paper/revision_2026_09_09/](paper/revision_2026_09_09/) | Current integrated manuscript, complete proof supplement, bibliography, and build sources. |
+| [paper/](paper/) | Preserved earlier manuscript, appendices, bibliography, and vector figures. |
+| [theory/](theory/) | Theorem statements, proofs, geometric calculations, and inference development notes. |
+| [simulations/code/tt_revision/](simulations/code/tt_revision/) | Current selected-coordinate interval implementation, geometry checks, and simulation scripts. |
+| [simulations/results/tt_revision_2026_09_09/](simulations/results/tt_revision_2026_09_09/) | Saved results for the 95,000-dataset revision cohort and its validation reports. |
+| [simulations/](simulations/) | Prespecified designs, all current and historical code, raw results, and figures. |
+| [audit/](audit/) | Internal proof and assumption audits, publication assessments, validators, and frozen earlier snapshots. |
+| [literature/](literature/) | Existing literature reviews and dated novelty comparisons; downloaded PDFs are in `references/`. |
+| [notes/](notes/) | Research planning and assessments of the paper's direction. |
+| [real_data/README.md](real_data/README.md) | Application status and a proposed follow-up protocol; no completed real-data study. |
+| [build/](build/) | Preserved compilation and document-quality artifacts. |
+| [research_companion.xlsx](research_companion.xlsx) and [audit/audit_companion.xlsx](audit/audit_companion.xlsx) | Historical study summaries and audit additions. |
+| [MANIFEST.sha256](MANIFEST.sha256) | Integrity hashes for the research deliverables and subsequent documentation/reference additions. |
+| [requirements.lock.txt](requirements.lock.txt) and [revision requirements](simulations/code/tt_revision/requirements.txt) | Historical and current Python dependency records. |
 
 ## Reproduce the new revision
 
@@ -68,8 +101,6 @@ The two `run_*audit.py` commands regenerate the separately seeded audit experime
 
 The historical studies contain 198,000 unique datasets: 186,000 original, 6,000 paired loading/energy, and 6,000 finite-variance. The studies contain 1,632,000 interval records. Within-cohort loading/method comparisons share datasets and are explicitly paired. The original `research_companion.xlsx` preserves the primary results; `audit/audit_companion.xlsx` and the separate CSV files document the audit additions. No LLM or real-data experiment is claimed.
 
-## Historical scope and project organization
-
-`paper/` contains the manuscript, proofs, bibliography and vector figures; `theory/` contains current statements and proof maps; `audit/` contains the reconstruction, inventories, comparisons, verdict and preserved baseline; `literature/` contains source evidence; `simulations/` contains code and raw results; `notes/` contains research judgments; `build/` contains compilation/QA artifacts.
+## Historical scope
 
 The audited manuscript still fixes dimensions and evaluates original-mode rank-one coefficients. Separate development notes now establish focused higher-rank and growing-dimension special cases. General higher-rank geometry, optimal dimension thresholds and sharp confidence constants remain unresolved. The audited manuscript's internal singular example does not establish that internal singularity causes the cubic exponent. The finite-variance procedure uses established median amplification and has conservative constants; it is not an adversarial-contamination or unrestricted unknown-variance procedure.

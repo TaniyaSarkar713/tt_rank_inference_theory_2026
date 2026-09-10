@@ -1,0 +1,204 @@
+{
+  "checked_on": "2026-09-10",
+  "selection": "Eight close references for the current September 9 manuscript, with the closest statistical paper supplement.",
+  "files": [
+    {
+      "key": "ke2026",
+      "filename": "01_ke_2026_covariance_weighted_projection.pdf",
+      "title": "Efficient Inference for Low-rank Regression via Covariance-Weighted Projection",
+      "authors": [
+        "Baofang Ke",
+        "Zihao Song",
+        "Weihua Zhao",
+        "Lei Wang"
+      ],
+      "year": 2026,
+      "version": "Publisher preprint SS-2026-0222; FUTURE status checked 2026-09-10",
+      "landing_url": "https://www3.stat.sinica.edu.tw/statistica/fp/SS-2026-0222.html",
+      "doi": "10.5705/ss.202026.0222",
+      "download_url": "https://www3.stat.sinica.edu.tw/ss_newpaper/SS-2026-0222_na.pdf",
+      "resolved_url": "https://www3.stat.sinica.edu.tw/ss_newpaper/SS-2026-0222_na.pdf",
+      "accessed_date": "2026-09-10",
+      "pages": 44,
+      "bytes": 6840063,
+      "sha256": "cf29d112a7f998bbd3264291230f4e5c07d2643423a8ce1615853b8345d124e7",
+      "reading_locator": "Theorems 1–2, PDF page 18; Theorem 3, PDF page 21.",
+      "identity_checked": true
+    },
+    {
+      "key": "ke2026supp",
+      "filename": "01_ke_2026_supplement.pdf",
+      "title": "Supplementary material for Efficient Inference for Low-rank Regression via Covariance-Weighted Projection",
+      "authors": [
+        "Baofang Ke",
+        "Zihao Song",
+        "Weihua Zhao",
+        "Lei Wang"
+      ],
+      "year": 2026,
+      "version": "Publisher supplement for SS-2026-0222",
+      "landing_url": "https://www3.stat.sinica.edu.tw/statistica/fp/SS-2026-0222.html",
+      "doi": "10.5705/ss.202026.0222",
+      "download_url": "https://www3.stat.sinica.edu.tw/preprint/supp/2026-0222_supp.pdf",
+      "resolved_url": "https://www3.stat.sinica.edu.tw/preprint/supp/2026-0222_supp.pdf",
+      "accessed_date": "2026-09-10",
+      "pages": 30,
+      "bytes": 464105,
+      "sha256": "5ef90d123945a95ae8d486df56fe744cb53a0b5d29ad7731bdcac6be87e91716",
+      "reading_locator": "Proof supplement to SS-2026-0222.",
+      "identity_checked": true
+    },
+    {
+      "key": "xu2025",
+      "filename": "02_xu_2025_low_rank_tensor_inference.pdf",
+      "title": "Statistical Inference for Low-Rank Tensor Models",
+      "authors": [
+        "Ke Xu",
+        "Elynn Chen",
+        "Yuefeng Han"
+      ],
+      "year": 2025,
+      "version": "arXiv:2501.16223v1",
+      "landing_url": "https://arxiv.org/abs/2501.16223v1",
+      "download_url": "https://arxiv.org/pdf/2501.16223v1",
+      "resolved_url": "https://arxiv.org/pdf/2501.16223v1",
+      "accessed_date": "2026-09-10",
+      "pages": 118,
+      "bytes": 2259304,
+      "sha256": "4456c86b5eb674c34d8f6f3b640bc3bfb25395a46c5559e56e869428b7117e37",
+      "reading_locator": "Corollary 3.1 and equation (10), PDF page 10; Theorem 3.3, PDF page 15.",
+      "identity_checked": true
+    },
+    {
+      "key": "bei2026",
+      "filename": "03_bei_2026_first_order_degeneracy.pdf",
+      "title": "Inference under First-Order Degeneracy",
+      "authors": [
+        "Xinyue Bei",
+        "Manu Navjeevan"
+      ],
+      "year": 2026,
+      "version": "arXiv:2602.07377v1",
+      "landing_url": "https://arxiv.org/abs/2602.07377v1",
+      "download_url": "https://arxiv.org/pdf/2602.07377v1",
+      "resolved_url": "https://arxiv.org/pdf/2602.07377v1",
+      "accessed_date": "2026-09-10",
+      "pages": 67,
+      "bytes": 1148937,
+      "sha256": "2f4f5513c0a80db4b06d4888d27bf5ea41c14f3dd7d99b63d1209045ef387b58",
+      "reading_locator": "Sections 3–4 on the local experiment and minimum-distance inference.",
+      "identity_checked": true
+    },
+    {
+      "key": "wouters2013",
+      "filename": "04_wouters_2013_thouless_mps.pdf",
+      "title": "The Thouless theorem for matrix product states and subsequent post-density matrix renormalization group methods",
+      "authors": [
+        "Sebastian Wouters",
+        "Naoki Nakatani",
+        "Dimitri Van Neck",
+        "Garnet Kin-Lic Chan"
+      ],
+      "year": 2013,
+      "version": "arXiv:1305.1761v3",
+      "landing_url": "https://arxiv.org/abs/1305.1761v3",
+      "doi": "10.1103/PhysRevB.88.075122",
+      "download_url": "https://arxiv.org/pdf/1305.1761v3",
+      "resolved_url": "https://arxiv.org/pdf/1305.1761v3",
+      "accessed_date": "2026-09-10",
+      "pages": 16,
+      "bytes": 639678,
+      "sha256": "0b71275a7153b07076710eaa24768841bbd6bd4b89d36ff74aa27c31aef2a42c",
+      "reading_locator": "Sections V–VI, PDF pages 6–8; equation (51), PDF page 8.",
+      "identity_checked": true
+    },
+    {
+      "key": "kutschan2018",
+      "filename": "05_kutschan_2017_tt_tangent_cones.pdf",
+      "title": "Tangent Cones to TT Varieties",
+      "authors": [
+        "Benjamin Kutschan"
+      ],
+      "year": 2018,
+      "version": "arXiv:1705.10152v1 (2017 preprint; journal publication 2018)",
+      "landing_url": "https://arxiv.org/abs/1705.10152v1",
+      "doi": "10.1016/j.laa.2018.01.012",
+      "download_url": "https://arxiv.org/pdf/1705.10152v1",
+      "resolved_url": "https://arxiv.org/pdf/1705.10152v1",
+      "accessed_date": "2026-09-10",
+      "pages": 15,
+      "bytes": 197995,
+      "sha256": "a620dc65edf6eaf07e9fcd6001c8d65c016ff7f1f68e51805d114d1489a0f71d",
+      "reading_locator": "Theorem 14 and Remarks 15–16, PDF pages 8–9.",
+      "identity_checked": true
+    },
+    {
+      "key": "dolgov2019",
+      "filename": "06_dolgov_2019_parallel_tt_cross.pdf",
+      "title": "Parallel cross interpolation for high-precision calculation of high-dimensional integrals",
+      "authors": [
+        "Sergey Dolgov",
+        "Dmitry Savostyanov"
+      ],
+      "year": 2020,
+      "version": "arXiv:1903.11554v1 (2019 preprint; journal publication 2020)",
+      "landing_url": "https://arxiv.org/abs/1903.11554v1",
+      "doi": "10.1016/j.cpc.2019.106869",
+      "download_url": "https://arxiv.org/pdf/1903.11554v1",
+      "resolved_url": "https://arxiv.org/pdf/1903.11554v1",
+      "accessed_date": "2026-09-10",
+      "pages": 28,
+      "bytes": 1378180,
+      "sha256": "6070fa296943c32c9a697346ac4b6672a6ecabf41a026e758ddaf4af63d62913",
+      "reading_locator": "Formula (3) and Theorem 2, PDF page 7; formula numbering differs from the published version.",
+      "identity_checked": true
+    },
+    {
+      "key": "cailow2004",
+      "filename": "07_cai_low_2004_adaptive_confidence_intervals.pdf",
+      "title": "An adaptation theory for nonparametric confidence intervals",
+      "authors": [
+        "T. Tony Cai",
+        "Mark G. Low"
+      ],
+      "year": 2004,
+      "version": "arXiv:math/0503662v1 (2005 archive of 2004 article)",
+      "landing_url": "https://arxiv.org/abs/math/0503662v1",
+      "doi": "10.1214/009053604000000049",
+      "download_url": "https://arxiv.org/pdf/math/0503662v1",
+      "resolved_url": "https://arxiv.org/pdf/math/0503662v1",
+      "accessed_date": "2026-09-10",
+      "pages": 37,
+      "bytes": 363877,
+      "sha256": "67828a4ee834101df74fb0d676daa40edc765812cb9184c818a810314fafd90c",
+      "reading_locator": "Modulus definitions, PDF page 3; Section 2.1 and Theorem 1, PDF pages 4–6.",
+      "identity_checked": true
+    },
+    {
+      "key": "islet2020",
+      "filename": "08_zhang_2020_islet.pdf",
+      "title": "ISLET: Fast and Optimal Low-rank Tensor Regression via Importance Sketching",
+      "authors": [
+        "Anru R. Zhang",
+        "Yuetian Luo",
+        "Garvesh Raskutti",
+        "Ming Yuan"
+      ],
+      "year": 2020,
+      "version": "arXiv:1911.03804v2",
+      "landing_url": "https://arxiv.org/abs/1911.03804v2",
+      "doi": "10.1137/19M126476X",
+      "download_url": "https://arxiv.org/pdf/1911.03804v2",
+      "resolved_url": "https://arxiv.org/pdf/1911.03804v2",
+      "accessed_date": "2026-09-10",
+      "pages": 107,
+      "bytes": 2449257,
+      "sha256": "4b1a7dcdcb9402343bc87b1167b49153878f9339e83f343046e6eabd851ec307",
+      "reading_locator": "Theorem 4, PDF pages 23–24; Remark 5, PDF page 24.",
+      "identity_checked": true
+    }
+  ],
+  "paper_count": 8,
+  "supplement_count": 1,
+  "pdf_count": 9
+}
