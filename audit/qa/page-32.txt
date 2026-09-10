@@ -1,0 +1,48 @@
+Here 2h > J, so the integer moments through J are finite. Also n/g ≥2 and k = ⌊n/g⌋≥n/(2g),
+hence D ≤Cp,J ¯σ/√n. Since emed is deterministic, the sum ∥zmed −b∥+ emed has all required
+moments through J with uniform constants. Apply Theorem 8 with m = J, rn = ¯tn, and the
+median ball to obtain coverage and the length upper bound.
+For the lower bound take the admissible conditional noise law QG = N(0, ¯σ2) independent of
+the design. Every procedure honest for all Q is honest on this Gaussian submodel. The two-point
+calculation at noise scale ¯σ, the uniform loading modulus, and the tube alternative give the lower
+scale in the display. The supremum over Q in expected length is at least its value at QG. Taking
+the infimum over honest procedures preserves the bound. This proof uses the direct lower-bound
+argument, so it does not require importing the Gaussian procedure’s separate sufficient sample-size
+threshold. The median upper bound is uniform over Q, completing the comparison.
+C
+Counterexamples and boundaries of the conclusions
+These examples test proposed relaxations. They do not contradict the stated theorems.
+C1: zero signal changes the order.
+At B0 = 0 any elementary rank-one H gives a feasible path
+sH under every positive cap profile. For nonzero A, choose H with ⟨A, H⟩̸= 0. Then ωA,0(t; 0) ≍t,
+including classes with several cap-one cuts. Thus the order tq/λq−1 cannot be continued through
+λ = 0. More generally ω ≤∥A∥t, so a higher-order formula cannot hold without a local restriction
+on t/λ.
+C2: uncertain validity of cap-one restrictions.
+In four binary modes, B0 = λE0000 and
+A = E1111 have cubic contact under caps (1, 2, 1). If the honesty class instead permits caps (2, 2, 2),
+the path B0 +sE1111 is feasible and changes the target by s. The root-n two-point lower bound then
+applies. Choosing the smaller caps from the same data does not remove the larger-class alternatives.
+C3: an unobserved structured direction.
+For a two-mode coefficient with cap one, consider
+Bθ = θE11 and a design satisfying Xi,11 = 0 almost surely. Distinct θ produce exactly the same
+data distribution, although all coefficients in this submodel have rank at most one. The coordinate
+functional is not identifiable. Thus full ambient identifiability can be weakened to injectivity on
+structured differences, but no such injectivity assumption can simply be omitted. This example
+does not assert impossibility for every structured model with p ≥n.
+C4: independent-error scaling cannot cover arbitrary dependence.
+Take scalar regression
+with Xi = 1 and errors εi = Z for all i, where Z ∼N(0, σ2). Then z −b = Z does not shrink,
+whereas residual variance is zero. The residual-F interval is the singleton {z} and has zero coverage
+for b. This example embeds in K ≥2 by taking all mode dimensions one. Its error covariance has
+largest eigenvalue nσ2, violating the bounded conditional covariance assumption in Proposition 10.
+C5: finite variance does not give the Gaussian pivot.
+For p = 1, n = 2 and fixed X = (1, 0)⊤,
+let the first error be zero with probability 0.9 and equal to ±
+√
+10σ with probability 0.05 each;
+take the second error independently with the same distribution. These errors have mean zero and
+variance σ2. The known-Gaussian 95% radius is 1.96σ and its coverage is 0.9. The variance-bound
+radius in Proposition 10 avoids this failure. This is a finite-sample pivot counterexample, not a
+claim that asymptotic Gaussian approximation is impossible under finite variance.
+32

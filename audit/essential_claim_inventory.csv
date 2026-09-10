@@ -1,0 +1,17 @@
+ID,Claim,Status,Verification,Location
+D1,Risk identity and coefficient identification,VERIFIED,Direct conditional expectation; structured nullspace criterion,reconstructed_framework.md; C3
+D2,"Closed rank class, compact bounded tube, nearest-point existence",VERIFIED,Polynomial minors; bounded minimizing sequence in unbounded version,cor:unbounded proof
+D3,Orthogonal block decomposition and Walsh coefficient witness,VERIFIED,Tensor product of original orthonormal bases; finite sign cancellation,thm:contact proof
+D4,Positive product chart and energy expansion,VERIFIED,Base contraction c>=lambda-t>0 forces all factor contractions nonzero,thm:contact and lem:energy proofs
+D5,Tube sandwich including nonunit loading scale,VERIFIED,Closest structural coefficient; perturb in A/||A|| direction,Information bound and tube geometry
+D6,Deterministic simultaneous coverage certificate,VERIFIED,Ball event implies both intervals contain every target; same event for all A,First part of thm:procedure proof
+D7,Moment transfer and bad-event contribution,VERIFIED,"Degreewise powers, no O_P-to-expectation inference; min not treated as subadditive",thm:transfer proof
+D8,Internal singularity and single-prefix matrix comparison,VERIFIED,3x3 minor differentials; determinantal dimension; rank-slack direction,prop:slack proof
+D9,"Measurable HOSVD ties, signs and zero pilot",VERIFIED,Explicit first nonzero coordinate projection in top eigenspace; fallback,reconstructed_framework.md
+D10,Gaussian sufficient-statistic simulation law,VERIFIED,Bartlett factor S=LL^T; L^{-T}G has conditional covariance S^{-1},simulation validation; proof_audit.md
+D11,Triangular OLS limit and HOSVD eigengap expansion,VERIFIED,Fixed-parameter LLN; conditional characteristic functions; projected eigenvector equation,prop:wald proof
+D12,Wald coverage-event boundary has zero probability,VERIFIED,Nonzero polynomial under absolutely continuous Gaussian law,prop:wald proof
+D13,Simultaneous loading coverage versus random-loading length,VERIFIED,Common event gives random-target coverage; mixed expectations do not generally factor,thm:procedure; transfer proof
+D14,Dimension-one blocks and A=0,VERIFIED,Zero-dimensional graded spaces omitted; empty sums zero; trivial interval at A=0,thm:contact and code edge checks
+D15,Independent group median tail and moments through degree J,VERIFIED,Group coordinate variance; majority-count bound; tail integration,thm:robust proof
+D16,Unknown unrestricted conditional variance bound blocks shrinking honest intervals,VERIFIED,Conditional rare-mixture construction; total variation; Tonelli,Counterexample C12

@@ -1,0 +1,49 @@
+Proposition 2 (Slack at every cut; Proved). Let B ∈Θ0 have ∥B∥F < M and
+rank(B[k]) + 1 ≤¯rk
+for every k.
+For every A ̸= 0, ωA,0(t; B) ≍t for sufficiently small t. In particular, at an original-mode rank-one
+point, if every cap is at least two, no nonzero linear functional has a higher-order modulus.
+This is an exponent statement with geometry-dependent constants. It does not assert that every
+honest interval must have the ambient efficient variance, or that growing-dimensional constants are
+harmless.
+Let Iη,α be the measurable closed intervals satisfying coverage at least 1 −α for every B ∈Θη
+(and every σ > 0 for unknown-noise procedures). Set
+Lη,α(B0; σ) =
+inf
+I∈Iη,α EB0,σ|I|,
+tn = σ/√n.
+The infimum is a statistical benchmark, without a computational restriction.
+Theorem 3 (Honest length and structural approximation; Proved). Suppose 0 < α < 1/2, the
+dimensions and caps are fixed, and n ≥p + max(J, 2). There is a sufficiently small dimension-
+dependent c0 > 0 such that, for tn ≤c0λ, 0 < λ < M/2, and every known η ≥0,
+Lη,α(B0; σ) ≍RA(tn) + ∥A∥F (η ∧tn).
+(6)
+Constants depend only on α, dimensions and caps, uniformly over A, the unit factors, and n, σ, λ, η
+subject to these restrictions. Thus deterministic sequences A = An are allowed. The upper bound
+holds for the computable interval in Section 5, both with known and unknown noise variance. For fixed
+nonzero A of contact order q, the right side is comparable to tq
+n/λq−1 +η ∧tn, with loading-dependent
+constants.
+By (6), for fixed A with q ≥2 the exact-model rate survives a known approximation allowance
+only when η ≲tq
+n/λq−1. A coefficient perturbation much smaller than the ordinary noise scale can
+therefore destroy most of the gain. This is not resistance to contaminated observations: η bounds
+the distance of the regression coefficient from the specified structural class. The neighborhood
+argument is general; its tensor-specific input is (4).
+Corollary 4 (Undetectable departures; Proved). For a unit loading with q ≥2, let sn = tq
+n/λq−1
+and suppose sn = o(ηn) and ηn = o(tn). Then Bn = B0 + ηnA belongs to Θηn for all sufficiently
+large n, TV(P (n)
+Bn,σ, P (n)
+B0,σ) →0, and every interval honest over Θηn has expected length at B0 at least
+(1 −2α −o(1))ηn. No rank pretest can make an O(sn) expected-length interval uniformly honest
+over that tube.
+4.1
+Comparison with a single matrix constraint
+The six-mode example has cubic contact. In a single prefix unfolding with cap one, the same
+elementary loading is normal in both matrix factors and has quadratic contact. For a prefix cap
+two, the rank-one point has slack and has first-order contact. Thus none of the five individual prefix
+constraints alone yields the cubic exponent. This establishes a difference from any one such matrix
+envelope, not from all possible nonlinear matrix parameterizations or arbitrary collections of matrix
+constraints.
+7

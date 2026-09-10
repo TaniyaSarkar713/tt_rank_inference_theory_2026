@@ -1,0 +1,47 @@
+For 2 ≤ℓ< q, the same inequality bounds its ℓth summand by
+C∥A∥(h/λ)q−ℓρℓ/λℓ−1 ≤C∥A∥(T + η)q/λq−1.
+For ℓ≥q, use ρ/λ ≤1 to reach the same bound. For q = 1 use H ≤∥A∥ρ directly, including a
+nonzero radial component. Thus on G, H ≤C∥A∥(T + η)q/λq−1.
+On Gc the definition always gives H ≤∥A∥ρ ≤C∥A∥(T + η). Moreover
+(T + η)1Gc ≤(T + η)q
+(cJλ)q−1 ,
+also for q = 1. Lemma 15, η ≤tn, and (x + y)q ≤2q−1(xq + yq) now yield
+E|I| ≤2η∥A∥+ 2EH ≤C{η + tq
+n/λq−1}.
+If η > tn, intersection with Ia gives |I| ≤2e∥A∥(the empty case has zero length), so its expectation
+is at most Ctn. This establishes the fixed-degree assertion for every η. For the loading-uniform
+assertion use Theorem 8 with rn = tn and m = max(J, 2); its proof below decomposes all true
+loading degrees and controls the bad event degree by degree. Lemma 15 verifies every required
+moment. To finish the uniform lower bound in Theorem 3, apply the tube sandwich with its explicit
+∥A∥factors and the uniform part of Theorem 1. For h = 1 −2α, each term of RA(htn) is at least
+hJ times its term at tn, and min(η, htn) ≥h min(η, tn). The two-point bracket is at least h/2. The
+maximum of the structural and tube lower bounds is at least half their sum. All constants are
+independent of A and the unit factors.
+A.7
+Proof of Proposition 5
+Roadmap.
+Bound the cubic form by its injective norm and realize a maximizing product direction.
+In the local chart B = c(e0 + x) ⊗(e0 + y) ⊗(e0 + z), each vector is perpendicular to e0. The target
+equals c⟨T, x ⊗y ⊗z⟩. The energy bound gives c2(∥x∥2 + ∥y∥2 + ∥z∥2) ≤t2. Hence
+|⟨A, B⟩| ≤c∥T∥inj∥x∥∥y∥∥z∥≤
+∥T∥injt3
+3
+√
+3(λ −t)2 .
+Compactness of the unit spheres gives maximizing directions for ∥T∥inj. The product path with
+those directions and s2 = (1 + t2/λ2)1/3 −1 is feasible in the three-block product class and attains
+the matching limit. Setting λ = 1 identifies the squared spectral norm with 27 times the squared
+modulus coefficient. Thus an oracle evaluating this coefficient exactly also evaluates a known
+NP-hard tensor quantity as dimensions vary. The reduction adds no claim about approximation
+factors beyond those established for that source problem.
+A.8
+Proof of Proposition 7
+Roadmap.
+Derive the OLS Gaussian limit, solve the HOSVD eigenvector equation to first order,
+and apply the monomial distribution only at the exact boundary. Under the triangular sequence
+Bn,c, the OLS error distribution is independent of the coefficient. The law of large numbers gives
+S/n →I in probability, and conditional normality implies
+(z −bn,c)/tn
+d−→G,
+G ∼Np(0, I).
+27

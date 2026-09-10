@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-07",
+  "stage": "post-audit addendum; designed after original experiment",
+  "seed": 2026090717,
+  "replications_per_cohort": 2000,
+  "n": [
+    512,
+    8192,
+    131072
+  ],
+  "kappa": [
+    0.0,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "unique_datasets": 6000,
+  "paired_loadings_and_methods": true,
+  "lambda": 3.0,
+  "sigma": 0.2,
+  "blocks": [
+    2,
+    4,
+    2
+  ],
+  "code_hashes": {
+    "gaussian_base.py": "1d64e11f32e905830bd361c5bc16cf5529a8cbb9f5a51ee04dc0e89204b053e1",
+    "methods.py": "17e20df09c85ad46770c4876db8d73179d3eaa0379f766fa3e40299379c36b2b",
+    "audit_methods.py": "98075e08ac8001e84cc06116331effc1ac0539203688672a91c918229f9197ad",
+    "run_audit.py": "37acb7476fc3191ae4eac6d99e74c1f12dbfa6e18b1c597943932321a28f9531"
+  }
+}

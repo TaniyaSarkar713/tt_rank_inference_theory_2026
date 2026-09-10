@@ -1,0 +1,21 @@
+Result,Original,Possible/final stronger version,Status,Required argument,Tradeoff / limit
+R1/R3,Fixed A; only first nonzero degree,Uniform omega and honest length with all a_l weights,PROVED IMPROVEMENT,Walsh sign isolation; degreewise expectation bound,Same experiment; stronger uniformity
+R6/R16,"sqrt(C(J,l)) certificate coefficient","sqrt(C(J,l))/J^(l/2)",PROVED IMPROVEMENT,Keep total block energy; symmetric polynomial maximum,Same assumptions; length no greater for every dataset
+R10,n>=2p+2J+8,"n>=p+max(J,2)",PROVED IMPROVEMENT,Exact negative chi-square moments and fixed-dimension ratios,Same rates; larger allowed sample regime
+R6/D13,Deterministic A coverage,Simultaneous all-A coverage and data-selected random targets,PROVED IMPROVEMENT,Use the same ball event for every loading,No conditional selective inference or random-loading length formula
+R12,Gaussian localization tied to geometry,Any uniformly valid ball with moments through m,PROVED IMPROVEMENT,Separate deterministic certificate and degree-truncated moment argument,General upper theorem; no automatic lower bound
+R13,Gaussian iid design,General common design law with Gram moments,PROVED IMPROVEMENT,Conditional pivots; KL through E S,Same rates with design-dependent constants
+R14,Gaussian errors,"Conditional mean zero/covariance bound, known upper scale",PROVED IMPROVEMENT,Markov ball; two moment transfer,Coverage retained; degrees above two receive slower bound
+R15,Bounded TT class,Unbounded closed TT class and its tube,PROVED IMPROVEMENT,Nearest point via bounded minimizing sequence,Same rate and algorithm; larger honesty class
+R1/R3,Original-mode rank-one point,Block products with internal rank slack or general TT strata,OPEN QUESTION,Find uniform feasible arcs and lower coefficients,No universal rate claimed
+R3/R6,"Fixed dimensions, conservative ball",Intrinsic dimension sharp upper/lower bounds,OPEN QUESTION,Honest localization near rank boundaries plus packing/directional lower bounds,Highest potential publication impact
+R17,Gaussian observation errors for full contact rate,Iid pairs with known conditional variance upper bound; full contact rate and matched worst-noise length,PROVED IMPROVEMENT,Median of independent OLS groups; polynomial tail amplification and integrated moments,Larger group-size requirement; unconditional design coverage; constants conservative
+R14,Clean conditional moment model,Huber/adversarial contamination,OPEN QUESTION,"Robust identifiability, lower bounds, uniform robust radius moments",eta is not contamination
+R5,Injective norm coefficient,Computational-statistical confidence-length gap,OPEN QUESTION,Reduction to a precisely formulated interval decision task,Existing spectral norm hardness insufficient
+R7,Fixed c then c->infinity,Uniform growing c_n Wald approximation,LIKELY PROVABLE,Track higher-order pilot and denominator remainders,Would remain supporting known-degeneracy analysis
+R6,Gaussian pivot,Same chi-square/F pivot under only finite variance,FALSE,Counterexample C5,Must change localization
+R3,Quantitative Gram moments,Full rank alone for expected length,FALSE,Counterexample C8,Conditional coverage remains valid
+R1,Local nonzero signal,Same high-order formula at zero,FALSE,Counterexample C1,Zero has root-n inference scale
+R3,Global honest intervals,Same lower bound from pointwise coverage only,FALSE,Counterexample C7,Honesty must remain
+R11,Exact HOSVD,Any approximate pilot with deterministic residual <=C||Z-B0||,LIKELY PROVABLE,Replace sqrt(J) by certified C in existing proof,No guarantee for arbitrary numerical stationary point
+R17,Known variance upper bound,Remove bound uniformly over all finite conditional variance bounds,FALSE,C12 conditional rare mixture and expected-length obstruction,Additional restrictions needed; Gaussian unknown-variance model is a different class

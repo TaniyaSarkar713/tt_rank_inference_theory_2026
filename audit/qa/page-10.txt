@@ -1,0 +1,61 @@
+At B0 = λE0000 its scale is
+RAϵ(tn) = ϵtn + t3
+n/λ2
+√
+1 + ϵ2
+.
+Every ϵ > 0 gives contact order one, but the transition in finite-sample length is at ϵ ≍t2
+n/λ2. The
+uniform theorem quantifies this distinction. It concerns prespecified loadings, including deterministic
+triangular arrays; its expected-length formula does not directly extend to an arbitrary loading
+chosen on the inference data. Simultaneous coverage does extend, as specified in Theorem 6.
+Theorem 8 (Transfer from a confidence ball; Proved). In any statistical experiment indexed
+by B ∈Θη, let measurable (z, e), e ≥0, obey PB(∥z −b∥≤e) ≥1 −α for every B. Use the
+construction in Section 5, with either the original or improved coefficients. On that ball event,
+coverage holds simultaneously for all A, including the random target for any measurable data-selected
+loading. Conditional ball coverage gives conditional interval coverage given the same conditioning
+information, not given a subsequent selection event.
+Fix an integer 1 ≤m ≤max(J, 2). At the rank-one evaluation point suppose, for a deterministic
+rn > 0,
+EB0(∥z −b0∥+ e)k ≤Ckrk
+n,
+1 ≤k ≤m,
+rn ≤cJλ.
+Put dℓ= min(max(1, ℓ), m). Then, uniformly over deterministic A,
+EB0|I| ≤C
+( J
+X
+ℓ=0
+aℓ
+rdℓ
+n
+λdℓ−1 + ∥A∥(η ∧rn)
+)
+.
+Constants depend on dimensions and the stated moment constants. For m ≥J, the sum is RA(rn).
+No likelihood lower bound in the new experiment is implied by this upper-bound transfer alone.
+Corollary 9 (Non-Gaussian and dependent designs; Proved). Retain conditional errors ε | X ∼
+Nn(0, σ2In) and n > p, but let the law of X be arbitrary and independent of B, σ. Suppose S = X⊤X
+is positive definite almost surely and, for fixed constants L, Ck < ∞and m = max(J, 2),
+ES ⪯LnIp,
+Eλmin(S)−k/2 ≤Ckn−k/2,
+1 ≤k ≤m.
+Then Theorem 3 holds with the same scale and constants additionally depending on L, Ck, for both
+noise procedures. This includes deterministic designs with cnIp ⪯S ⪯LnIp and iid Gaussian
+designs with a fixed positive definite covariance whose eigenvalues are bounded above and below.
+Dependence among design rows is permitted if the displayed conditions hold; dependent errors are a
+different assumption.
+Proposition 10 (Finite-variance localization; Proved). For a full-rank design suppose only
+E(ε | X) = 0,
+Cov(ε | X) ⪯¯σ2In,
+where ¯σ is a known bound. The radius
+ev = ¯σ
+p
+tr(S−1)/α
+gives conditional interval coverage at least 1 −α. If additionally E tr(S−1) ≤C/n, then Theorem 8
+applies with m = 2, rn = ¯σ/√n. Thus degrees above two receive the proved upper bound r2
+n/λ, rather
+than a claim of the Gaussian higher-order rate. This is a coverage and upper-bound result for a clean
+conditional-moment model, not a contamination guarantee or a sharp weak-tail minimax theorem.
+The residual F radius is not substituted for ev under these assumptions.
+10

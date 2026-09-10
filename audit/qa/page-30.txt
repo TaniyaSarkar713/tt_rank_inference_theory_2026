@@ -1,0 +1,72 @@
+degree one, every projected loading norm is at most aℓ. Their graded expressions are consequently
+at most
+aℓρ
+(
+1 +
+J
+X
+r=2
+κJ,r
+
+ρ
+bs −ρ
+r−1)
+≤CJaℓρ,
+since ρ/(bs −ρ) ≤1/6 on G. The same bound holds for the original larger coefficients. This bounds
+each graded expression itself, without substituting a bound for its minimum. On Gc,
+H(A) ≤∥A∥ρ ≤C
+X
+ℓ
+aℓU,
+U1Gc ≤Udℓ/(cJλ)dℓ−1
+for each ℓ, including dℓ= 1. Hence the same sum of moment powers bounds H on the whole sample
+space. If η ≤rn, the assumed moments and (x+y)k ≤2k−1(xk +yk) give EUk ≤C′
+krk
+n for all k ≤m.
+Since |I| ≤2H + 2η∥A∥, this proves the desired bound in this case. If η > rn, ambient intersection
+gives |I| ≤2e∥A∥, including the zero-length empty case; the first moment bound finishes the proof.
+No stochastic-order statement is used as a substitute for integrability.
+B.2
+Proof of Corollary 9
+Roadmap.
+Retain the exact conditional Gaussian pivot, check localization moments using the
+assumed inverse Gram moments, and replace the isotropic relative-entropy identity by an upper
+bound. Conditional on X, let G ∼Np(0, Ip) represent S1/2(z −b)/σ. Its conditional law is constant,
+so G is independent of X in this representation. Then
+E∥z −b∥k ≤σkE∥G∥k Eλmin(S)−k/2 ≤C′
+ktk
+n.
+The known radius has the same moment bound. Orthogonal Gaussian projections show that bσ/σ
+has law
+q
+χ2
+n−p/(n −p), independent of X and of the standardized OLS error. Its positive moments
+are bounded uniformly in the positive integer n −p. For fixed p, α, the F upper quantiles are
+bounded over those integers, by convergence to χ2
+p/p and the finite initial set. Thus the unknown
+radius has the same bounds. Theorem 8 proves the upper result.
+For any coefficient difference δ, the common design law and conditional normality give
+KL(Pb0, Pb0+δ) = δ⊤(ES)δ
+2σ2
+≤Ln∥δ∥2
+2σ2
+.
+Choose local radius (1 −2α)tn/ max(1,
+√
+L) in the two-point lemma and use the uniform modulus
+and tube lower bounds.
+The changed constants depend on L only in addition to the earlier
+constants. For deterministic bounded Gram matrices the assumptions follow by direct eigenvalue
+bounds. For Gaussian rows with covariance Σ, write S = Σ1/2WΣ1/2, where W ∼Wp(n, I). Then
+λmin(S) ≥λmin(Σ)λmin(W) and ES = nΣ. Lemma 15 supplies the moment conditions when
+n ≥p + max(J, 2) and Σ has the stated eigenvalue bounds. This verifies the examples without
+asserting that an arbitrary full-rank design has good moments.
+B.3
+Proof of Proposition 10
+Roadmap.
+Compute a conditional second moment, use Markov’s inequality on its square, and
+transfer the first two localization moments. OLS has error S−1X⊤ε, conditional mean zero, and
+covariance at most ¯σ2S−1. Therefore
+E(∥z −b∥2 | X) ≤¯σ2 tr(S−1),
+P(∥z −b∥> ev | X) ≤α.
+30

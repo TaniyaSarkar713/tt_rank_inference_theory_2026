@@ -1,0 +1,52 @@
+C6:
+pointwise order does not imply a loading-uniform rate.
+Let Aϵ = (E1111 +
+ϵE1000)/
+√
+1 + ϵ2 at the four-way cubic point. For every ϵ > 0, its contact order is one. If ϵ = t2/λ2,
+however, Theorem 1 gives ωAϵ,0(t) ≍t3/λ2. There cannot be a positive loading-uniform lower
+constant multiplying t based solely on the label q = 1. The multiscale statement repairs this
+limitation rather than assigning a discontinuous statistical rate to an arbitrarily small coefficient.
+C7: pointwise coverage alone has no positive length bound.
+The deterministic interval
+{ψA(B0)} covers at B0 with probability one and has zero length. It generally fails elsewhere. Every
+information lower bound in this paper therefore uses honesty at alternatives as well as at B0.
+C8: full rank does not control inverse design moments.
+Take p = 1, X1 = √nV , Xi = 0 for
+i > 1, and V uniform on (0, 1). The design has full column rank almost surely and ES = n/3, but
+ES−1/2 = ∞. The known Gaussian confidence-ball radius has infinite expectation. Finite-sample
+conditional coverage still holds. This distinguishes invertibility from the sufficient moment condition
+in Corollary 9; it does not prove those particular moments necessary for every possible procedure.
+For a separate information counterexample, take deterministic Xi = 1/n, so S = 1/n despite full
+rank. Two fixed scalar coefficients separated by δ have Gaussian total variation at most |δ|/(2σ√n).
+Honesty at both therefore forces expected length at least |δ|(1 −2α −o(1)). Full rank alone cannot
+guarantee a shrinking n−1/2 length.
+C9: favorable probability events do not imply fast expected length.
+For any q > 1, a
+nonnegative variable equal to n−q/2 with probability 1 −n−1/2 and to one otherwise is OP (n−q/2),
+but its expectation is of order n−1/2. The bad-event moment calculation in Theorem 8 is therefore
+essential. No uniform-integrability step is left implicit.
+C10: a higher-order ordinary bootstrap can fail.
+In the scalar Gaussian mean experiment
+at θ = 0, √n ¯Y = Zn ∼N(0, 1).
+For the squared-mean target and a parametric bootstrap
+¯Y ∗= ¯Y + Z∗/√n, the true statistic is n ¯Y 2 = Z2
+n, but conditionally
+n{( ¯Y ∗)2 −¯Y 2} = 2ZnZ∗+ (Z∗)2.
+At any fixed z ̸= 0, this bootstrap expression is negative with probability Φ(2|z|) −1/2 > 0, whereas
+the target chi-square law is nonnegative. Since Zn does not converge to zero in probability, the
+conditional discrepancy persists with positive probability. No bootstrap validity is claimed for
+the tensor interval; this example illustrates why a generic bootstrap substitution would require a
+separate proof.
+C11: scalar validity does not imply post-selection validity.
+In an orthogonal Gaussian
+mean experiment with Z1, . . . , Zp independent standard normal at the zero coefficient, choose the
+coordinate with largest |Zj|. The usual coordinatewise 95% interval covers the selected zero target
+only when maxj |Zj| ≤z.975, which has probability 0.95p. The common-ball intervals avoid this
+problem because their coverage argument holds simultaneously for all loadings. They still do not
+assert coverage conditional on an arbitrary selection event.
+C12: no uniform shrinking interval over all unknown variance bounds.
+The known upper
+bound in Theorem 12 cannot simply be replaced by an unspecified finite bound while retaining
+distribution-free honesty. Here is an explicit regression version of the classical nonparametric
+33

@@ -1,0 +1,226 @@
+[
+  {
+    "claim": "We calculate a TT-wide contact exponent, optimal pointwise honest length, and a coefficient-tube threshold. Generic degenerate inference is already occupied.",
+    "title": "Bei–Navjeevan (2026), Inference under First-Order Degeneracy",
+    "url": "https://arxiv.org/html/2602.07377v1",
+    "access_date": "2026-09-07",
+    "locator": "Assumptions 3.2, 4.1.1; Theorem 4.2; Remark 4.2. HTML displays August 24, 2026 although URL is v1 from February; version ambiguity recorded.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "A cubic delta calculation alone is not new. Our candidate addition is explicit capped-TT modulus classification and honest length.",
+    "title": "Chen–Fang (2019), Inference on Functionals under First Order Degeneracy",
+    "url": "https://arxiv.org/pdf/1901.04861",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 2.1, Remark 2.2, Theorems 3.1–3.3; PDF pp.13,16,18–21.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Boundary-degree Wald is a necessary strong baseline. It does not by itself give coverage for drifting nonzero targets.",
+    "title": "Pillai–Meng (2016), An Unexpected Encounter with Cauchy and Lévy",
+    "url": "https://arxiv.org/pdf/1505.01957",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 2.1, PDF p.4. Annals 44(5),2089–2097, doi:10.1214/15-AOS1407.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "No claim to discover singular Wald laws. We study uniform interval length and TT feasible paths.",
+    "title": "Dufour–Renault–Zinde-Walsh (2025), Wald Tests When Restrictions Are Locally Singular",
+    "url": "https://arxiv.org/abs/1312.0569",
+    "access_date": "2026-09-07",
+    "locator": "Journal doi:10.1214/24-AOS2398. Detailed equation locators in agent review refer to the author version, not presumed identical journal numbering.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Our information argument is inherited; candidate novelty is the TT modulus evaluation and attainable procedure.",
+    "title": "Cai–Low (2004), An Adaptation Theory for Nonparametric Confidence Intervals",
+    "url": "https://arxiv.org/pdf/math/0503662",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 1; singleton submodel is allowed in the lower bound.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Geometric conservative inference predates this project. No dominance over its critical values is established.",
+    "title": "Andrews–Mikusheva (2016), A Geometric Approach to Nonlinear Econometric Models",
+    "url": "https://economics.mit.edu/sites/default/files/publications/ecta12030-%20final%20version.pdf",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 1; Econometrica 84(3),1249–1264, doi:10.3982/ECTA12030.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Our q>=2 targets have vanishing first-order variance and tolerance of order n^(-q/2); neighborhood sensitivity itself is established.",
+    "title": "Bonhomme–Weidner (2022), Minimizing Sensitivity to Model Misspecification",
+    "url": "https://arxiv.org/pdf/1807.02161",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 2; Assumption A3(ii); published QE13,907–954, doi:10.3982/QE1930.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Unknown approximation size cannot be harmlessly learned by pretesting; our tube scale is contact-dependent.",
+    "title": "Armstrong–Kolesár (2021), Sensitivity Analysis Using Approximate Moment Condition Models",
+    "url": "https://www.princeton.edu/~mkolesar/papers/sensitivity.pdf",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 4.1 in reviewed version; QE12(1),77–108, doi:10.3982/QE1609.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Our nonconvex tensor target has vanishing derivative; we do not improve their constants or general regularized regression guarantee.",
+    "title": "Armstrong–Kolesár–Kwon (2023 revision), Bias-Aware Inference in Regularized Regression Models",
+    "url": "https://arxiv.org/pdf/2012.14823",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 2.1, Corollary 2.1, arXiv v2.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Precludes a first weak-rank-inference claim. Different coefficient target and tensor contact classification.",
+    "title": "Armstrong–Weidner–Zeleneev (2026), Robust Estimation and Inference in Panels with Interactive Fixed Effects",
+    "url": "https://arxiv.org/html/2210.06639v3",
+    "access_date": "2026-09-07",
+    "locator": "Theorems 1–2 in v3; JPE2026 publication doi:10.1086/741623, confirmed by Oxford repository.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "No new general TT tangent-cone claim. We need higher functional contact and explicit feasible witnesses.",
+    "title": "Kutschan (2018), Tangent Cones to Tensor Train Varieties",
+    "url": "https://arxiv.org/pdf/1705.10152",
+    "access_date": "2026-09-07",
+    "locator": "Theorem 14 and subsequent corollaries; LAA544,370–390.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "We classify scalar orders up to J at rank-one points and translate them into honest length; first/second-order geometry is not new.",
+    "title": "Yang–Gao–Yuan (2025 v2), Variational Analysis of Determinantal Varieties",
+    "url": "https://arxiv.org/html/2511.22613v2",
+    "access_date": "2026-09-07",
+    "locator": "Proposition 2; no statistical observation experiment in this result.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "The block grading is known. Our witness construction shows attainability inside internal capped TT constraints and supplies a statistical classification.",
+    "title": "Araujo–Massarenti–Rischter (2019), On Non-Secant Defectivity of Segre-Veronese Varieties",
+    "url": "https://arxiv.org/pdf/1611.01674",
+    "access_date": "2026-09-07",
+    "locator": "Proposition 2.4 in preprint (published numbering may differ); doi:10.1090/tran/7306.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "We treat zero alignment and capped-rank boundaries, but in fixed ambient dimension. No improvement to their high-dimensional sample complexity.",
+    "title": "Xu–Chen–Han (2025), Statistical Inference for Low-Rank Tensor Models",
+    "url": "https://arxiv.org/pdf/2501.16223",
+    "access_date": "2026-09-07",
+    "locator": "Corollary 3.1, equation (10), Theorem 3.3; reviewed PDF118 pages.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Different experiment; our fixed-p degenerate lengths do not dominate efficient regular completion inference.",
+    "title": "Ma–Xia (2024), Statistical Inference in Tensor Completion: Optimal Uncertainty Quantification and Statistical-to-Computational Gaps",
+    "url": "https://arxiv.org/pdf/2410.11225",
+    "access_date": "2026-09-07",
+    "locator": "Alignment assumption and main inference theorems; d_star=product dimensions, d=max dimension.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Not a new TT estimator or risk rate; our claim concerns functional confidence length at a boundary.",
+    "title": "Qin–Zhu (2025 v2), Computational and Statistical Guarantees for Tensor-on-Tensor Regression with Tensor Train Decomposition",
+    "url": "https://arxiv.org/html/2406.06002v2",
+    "access_date": "2026-09-07",
+    "locator": "Sections II–III; factor method has extra factors, not silently equated with IHT.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Rank adaptation is not universally impossible. Our target is pointwise linear-functional length near specified TT constraints.",
+    "title": "Carpentier–Klopp–Löffler–Nickl (2018), Adaptive Confidence Sets for Matrix Completion",
+    "url": "https://arxiv.org/pdf/1608.04861",
+    "access_date": "2026-09-07",
+    "locator": "Main positive and impossibility theorems; Bernoulli24,2429–2460.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Our exact modulus constant contains this norm. This is an inherited reduction, not a new hardness theorem or inference gap.",
+    "title": "Hillar–Lim (2013), Most Tensor Problems Are NP-Hard",
+    "url": "https://arxiv.org/pdf/0911.1393",
+    "access_date": "2026-09-07",
+    "locator": "Theorems 1.10–1.11, Corollary 1.12; approximation parameter depends on input bit length, not simply dimension.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "TT uncertainty quantification already exists under another target and experiment.",
+    "title": "Sun–Chen (2026 issue; online2025), Conformalized Tensor Completion with Riemannian Optimization",
+    "url": "https://doi.org/10.1080/10618600.2025.2554671",
+    "access_date": "2026-09-07",
+    "locator": "Sections2–3; JCGS35(2),594–605. First DOI access failed; publisher search then exposed full text.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Different target. Do not turn its abstract wording into an unconditional finite-sample structure-selection theorem.",
+    "title": "Chen–Li–Zheng–Pei (2026), Dual-Channel Tensor Neural Networks",
+    "url": "https://arxiv.org/html/2605.19122v1",
+    "access_date": "2026-09-07",
+    "locator": "Theorem9 and Section6; abstract is broader than this displayed statement. Not a full proof audit.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Weak singular values violate separation; no new penalization claim.",
+    "title": "Wang–Shi–Zhao (ICML2025), High-Dimensional Tensor Regression with Oracle Properties",
+    "url": "https://proceedings.mlr.press/v267/wang25co.html",
+    "access_date": "2026-09-07",
+    "locator": "Supplied P04, Theorems5–6, Assumption4.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "A claim that all tensor inference requires debiasing would be false; our capped-TT target is different.",
+    "title": "Xia–Zhang–Zhou (2022), Inference for Low-Rank Tensors: No Need to Debias",
+    "url": "https://arxiv.org/abs/2012.14844",
+    "access_date": "2026-09-07",
+    "locator": "Adjacent reference from earlier local-corpus review; no new theorem-number assertion.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "AI motivation only; global adapters and rank adaptation already exist.",
+    "title": "Lopez-Piqueres et al. (2026 v3), MetaTT",
+    "url": "https://arxiv.org/abs/2506.09105v3",
+    "access_date": "2026-09-07",
+    "locator": "Supplied P07 and v3 metadata; accepted TMLR version.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Terminology overlap is direct; our target is an honest interval for a population coefficient functional.",
+    "title": "Gao–Tan (2026), Statistical Inference for Rank Allocation in Low-Rank Adaptation",
+    "url": "https://arxiv.org/abs/2607.20205",
+    "access_date": "2026-09-07",
+    "locator": "July2026 preprint, checked in previous project review.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "Empirical-process generalization does not establish honest functional inference. No claim about arbitrary transformers follows.",
+    "title": "Tadipatri et al. (AISTATS2025), A Convex Relaxation Approach to Generalization Analysis for Parallel Positively Homogeneous Networks",
+    "url": "https://proceedings.mlr.press/v258/tadipatri25a.html",
+    "access_date": "2026-09-07",
+    "locator": "Supplied P18; local corpus review.",
+    "confidence": "high for cited statement; moderate for inferred non-overlap"
+  },
+  {
+    "claim": "We apply independent-group amplification to OLS and explicitly integrate its polynomial tail through order J before transferring the tensor modulus. No new mean-estimation principle or confidence-level optimum claimed.",
+    "title": "Devroye–Lerasle–Lugosi–Oliveira (2016), Sub-Gaussian Mean Estimators",
+    "url": "https://arxiv.org/pdf/1509.05845",
+    "access_date": "2026-09-08",
+    "locator": "Primary arXiv PDF inspected; bibliographic volume/pages/DOI checked on author publication page. Used as prior art, not as an unverified imported theorem.",
+    "status": "PRIMARY SOURCE INSPECTED"
+  },
+  {
+    "claim": "The coordinate-median OLS localizer deliberately uses cruder fixed-dimensional constants. We do not improve this vector-mean bound; we transfer verified moments into higher-order TT functional length.",
+    "title": "Lugosi–Mendelson (2019), Sub-Gaussian Estimators of the Mean of a Random Vector",
+    "url": "https://arxiv.org/pdf/1702.00482",
+    "access_date": "2026-09-08",
+    "locator": "Primary PDF pp.3–4, displayed bound and estimator discussion; journal metadata verified through author institution/publication record.",
+    "status": "PRIMARY SOURCE INSPECTED"
+  },
+  {
+    "claim": "C12 directly constructs Gaussian-design regression alternatives with mean x^T b1, finite uniform conditional variance bound depending on epsilon, and TV tending to zero. The nonshrinking-length conclusion is proved from that construction.",
+    "title": "Bahadur–Savage (1956), The Nonexistence of Certain Statistical Procedures in Nonparametric Problems",
+    "url": "https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-27/issue-4/The-Nonexistence-of-Certain-Statistical-Procedures-in-Nonparametric-Problems/10.1214/aoms/1177728077.full",
+    "access_date": "2026-09-08",
+    "locator": "Title, authors, journal 27(4), 1115–1122 and DOI verified bibliographically; full-text mathematical verification unavailable. Explicitly limited evidence.",
+    "status": "LIMITED BIBLIOGRAPHIC CONTEXT"
+  }
+]

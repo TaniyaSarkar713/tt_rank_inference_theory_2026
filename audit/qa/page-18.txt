@@ -1,0 +1,20 @@
+LLM benchmark to support a general mathematical claim. The present theory applies independently
+of any AI interpretation.
+Research assessment.
+The completed fixed-dimensional results support a focused theoretical
+manuscript for further expert evaluation. The central novelty candidate is the cap-profile modulus,
+now uniform over loading degrees, and its inferential interpretation. Generic higher-order asymptotics
+and confidence-region inversion remain established tools. A broader theory of local moduli at singular
+structured parameters, or dimension-dependent optimality with a useful procedure, would be needed
+to make a strong case for the Annals of Statistics. The current draft should not be treated as
+submission ready solely because its proofs and experiments are complete.
+Reproducibility and proof status.
+The accompanying project includes the full literature matrix,
+theorem ledger, assumption audit, canonical proof source, fixed-seed simulation code, replicate
+outputs, vector figures, and a workbook containing the plotted summaries and source metadata.
+Results marked Proved have complete derivations and internal mathematical checks. This label
+does not certify priority or replace independent mathematical review. The empirical addenda, later
+supporting local-Wald derivation, and adversarial proof audit are disclosed in the project records.
+The audit found no false baseline numbered result under its actual assumptions and records proved
+improvements separately from open extensions.
+18

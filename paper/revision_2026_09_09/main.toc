@@ -1,0 +1,41 @@
+\contentsline {section}{Abstract}{2}{section*.2}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Related work}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tensor geometry and interpolation}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Regular and degenerate inference}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Sketching and conservative calibration}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Statistical problem}{5}{section.3}%
+\contentsline {section}{\numberline {4}Main geometric results}{6}{section.4}%
+\contentsline {section}{\numberline {5}A computable honest interval}{6}{section.5}%
+\contentsline {section}{\numberline {6}Learning supporting subspaces}{8}{section.6}%
+\contentsline {section}{\numberline {7}Numerical study}{9}{section.7}%
+\contentsline {section}{\numberline {8}Discussion}{10}{section.8}%
+\contentsline {section}{References}{10}{section*.3}%
+\contentsline {section}{Complete proof supplement}{13}{section*.5}%
+\contentsline {section}{\numberline {9}A. Rank-two geometry and the single-unfolding comparison}{14}{section.9}%
+\contentsline {subsection}{\numberline {9.1}1. Model and statement: PROVED}{14}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}2. Cross interpolation and the upper bound}{14}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}3. Attainability, the weak-bond transition and sharpness}{15}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}4. Comparison with every single prefix unfolding: PROVED}{16}{subsection.9.4}%
+\contentsline {section}{\numberline {10}B. General normal-loading geometry}{17}{section.10}%
+\contentsline {subsection}{\numberline {10.1}G1. General sharp modulus theorem}{17}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Proof of the upper bound}{18}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Proof of attainability and the sharp constant}{19}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}G2. A weak component added to a general TT background}{20}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}What these statements do and do not establish}{20}{subsection.10.5}%
+\contentsline {section}{\numberline {11}C. Selected-cross inference and calibration}{22}{section.11}%
+\contentsline {subsection}{\numberline {11.1}C1. A regression with only the required coordinates}{22}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}C2. Exact calibration with unknown effective variance}{22}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}C3. An optimized numerator certificate}{23}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}C4. A complete growing-dimension weak-bond theorem}{24}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}C5. Extension to other fixed cross patterns}{25}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Calibration status}{25}{subsection.11.6}%
+\contentsline {section}{\numberline {12}D. Learned mode compression}{26}{section.12}%
+\contentsline {subsection}{\numberline {12.1}D1. Coverage after data-dependent mode compression}{26}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}D2. Expected length with an explicit training event}{26}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}D3. A pilot supplying the training event}{27}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}D4. Interpretation of the combined result}{29}{subsection.12.4}%
+\contentsline {section}{\numberline {13}E. Minimum-distance calibration: established and partial results}{30}{section.13}%
+\contentsline {subsection}{\numberline {13.1}M1. Exact worst-case calibration for the zero-product null}{30}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}M2. A finite computation certificate for a general target null}{30}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Current status}{31}{subsection.13.3}%

@@ -1,0 +1,41 @@
+{
+  "cutoff": "2026-09-07",
+  "parent_spot_checks": [
+    {
+      "title": "Bei–Navjeevan2026",
+      "url": "https://arxiv.org/html/2602.07377v1",
+      "native_reference": "turn90view0"
+    },
+    {
+      "title": "Pillai–Meng2016",
+      "url": "https://arxiv.org/pdf/1505.01957",
+      "native_reference": "turn93view4"
+    },
+    {
+      "title": "Hillar–Lim2013",
+      "url": "https://arxiv.org/pdf/0911.1393",
+      "native_reference": "turn93view1"
+    },
+    {
+      "title": "Araujo–Massarenti–Rischter2019",
+      "url": "https://arxiv.org/pdf/1611.01674",
+      "native_reference": "turn93view2"
+    },
+    {
+      "title": "Sun–Chen2026",
+      "url": "https://doi.org/10.1080/10618600.2025.2554671",
+      "native_reference": "turn98search0"
+    },
+    {
+      "title": "Dual-Channel Tensor Neural Networks2026",
+      "url": "https://arxiv.org/html/2605.19122v1",
+      "native_reference": "turn97view0"
+    },
+    {
+      "title": "Wang–Shi–Zhao2025",
+      "url": "https://proceedings.mlr.press/v267/wang25co.html",
+      "native_reference": "turn101view0"
+    }
+  ],
+  "notes": "These identifiers are internal provenance, not citations to expose in manuscript prose. Other source locators and dates are recorded in source_cards.json."
+}

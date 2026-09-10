@@ -1,0 +1,160 @@
+\section{Contact order and honest expected length}\label{sec:theory}
+Write $\mathcal C=\{k:\bar r_k=1\}$ and partition the ordered modes at these cuts into $J=|\mathcal C|+1$ consecutive blocks. Their dimensions are $D_1,\ldots,D_J$. At
+\[
+ B_0=\lambda u_1\otimes\cdots\otimes u_K,
+ \qquad \norm{u_k}=1,\quad 0<\lambda<M/2,
+\]
+let $v_j$ be the product of the original factors in block $j$. Define $P_j=v_jv_j^\top$, $Q_j=I-P_j$, and the mutually orthogonal components
+\[
+ A_S=\left(\bigotimes_{j\in S}Q_j\bigotimes_{j\notin S}P_j\right)A,
+ \qquad S\subseteq[J],
+\]
+where operators are applied in mode order. For $A\ne0$, define
+\begin{equation}\label{eq:q}
+ q(A,B_0,\bar r)=\max\{1,\min\{|S|:A_S\ne0\}\}.
+\end{equation}
+This definition treats a nonzero radial component as first order. It is unchanged by sign choices for the signal factors. Define the local modulus
+\[
+ \omega_{A,\eta}(t;B_0)=\sup\{|\ip{A}{B-B_0}|:B\in\Th_\eta,\ \norm{B-B_0}_F\le t\}.
+\]
+
+Write $\Pi_\ell A=\sum_{|S|=\ell}A_S$, $a_\ell=\norm{\Pi_\ell A}_F$, and define
+\begin{equation}\label{eq:multiscale}
+ \mathcal R_A(t)=(a_0+a_1)t+\sum_{\ell=2}^J a_\ell\frac{t^\ell}{\lambda^{\ell-1}}.
+\end{equation}
+An empty sum is zero. Retaining all degrees in \eqref{eq:multiscale} matters when a loading approaches degeneracy.
+
+\begin{theorem}[Uniform loading modulus and contact order; \pr]\label{thm:contact}
+Fix the dimensions and positive integer caps. Uniformly over the original-mode unit factors, all deterministic loadings $A$, and $0<t\le\lambda/2$ with $\lambda+t<M$,
+\[
+ c\mathcal R_A(t)\le\omega_{A,0}(t;B_0)\le C\mathcal R_A(t),
+\]
+where $c,C>0$ depend only on the dimensions and caps. In particular, for fixed nonzero $A$ and factors, with $q$ as in \eqref{eq:q},
+\begin{equation}\label{eq:modulus}
+ c_A\frac{t^q}{\lambda^{q-1}}\le\omega_{A,0}(t;B_0)
+ \le C_A\frac{t^q}{\lambda^{q-1}}.
+\end{equation}
+The constants in \eqref{eq:modulus} may depend on $A$ and the factors. Its upper inequality, after increasing $C_A$, holds for every $t>0$. If $A$ is a unit product across the blocks, equal to $v_j$ on inactive blocks and to an elementary original-mode product $w_j\perp v_j$ on exactly $q\ge1$ active blocks, then
+\begin{equation}\label{eq:sharpconstant}
+ \lim_{t/\lambda\to0}\frac{\lambda^{q-1}\omega_{A,0}(t;B_0)}{t^q}
+ =q^{-q/2}.
+\end{equation}
+Here an elementary product uses factors from orthonormal bases whose first vectors are the $u_k$.
+\end{theorem}
+
+Only cap-one cuts determine the exponent. Internal caps constrain the feasible directions and the modulus constants, but permit a sum of two elementary products within each block. These paths attain the exponent even if the internal TT variety is singular. The block grading on the surrounding product variety is classical osculating geometry; our calculation determines which of these orders remain attainable inside the capped TT class.
+
+For example, in six binary modes with caps $(1,2,2,2,1)$, the block dimensions are $(2,16,2)$. The middle four-mode block has a proper central matrix-rank constraint at most two, singular at a rank-one signal. At $B_0=\lambda E_{000000}$ and $A=E_{111111}$, $q=3$ and the constant in \eqref{eq:sharpconstant} is $1/(3\sqrt3)$. This example includes an internal singularity; it is not a claim that the singularity itself creates the cubic exponent.
+
+\begin{proposition}[Slack at every cut; \pr]\label{prop:slack}
+Let $B\in\Th_0$ have $\norm{B}_F<M$ and
+\[
+ \rank(B^{[k]})+1\le\bar r_k\quad\text{for every }k.
+\]
+For every $A\ne0$, $\omega_{A,0}(t;B)\asymp t$ for sufficiently small $t$. In particular, at an original-mode rank-one point, if every cap is at least two, no nonzero linear functional has a higher-order modulus.
+\end{proposition}
+
+This is an exponent statement with geometry-dependent constants. It does not assert that every honest interval must have the ambient efficient variance, or that growing-dimensional constants are harmless.
+
+Let $\mathfrak I_{\eta,\alpha}$ be the measurable closed intervals satisfying coverage at least $1-\alpha$ for every $B\in\Th_\eta$ (and every $\sigma>0$ for unknown-noise procedures). Set
+\[
+ L_{\eta,\alpha}(B_0;\sigma)=\inf_{I\in\mathfrak I_{\eta,\alpha}}\E_{B_0,\sigma}|I|,
+ \qquad \tn=\sigma/\sqrt n.
+\]
+The infimum is a statistical benchmark, without a computational restriction.
+
+\begin{theorem}[Honest length and structural approximation; \pr]\label{thm:length}
+Suppose $0<\alpha<1/2$, the dimensions and caps are fixed, and $n\ge p+\max(J,2)$. There is a sufficiently small dimension-dependent $c_0>0$ such that, for $\tn\le c_0\lambda$, $0<\lambda<M/2$, and every known $\eta\ge0$,
+\begin{equation}\label{eq:length}
+ L_{\eta,\alpha}(B_0;\sigma)\asymp
+ \mathcal R_A(\tn)+\norm{A}_F(\eta\wedge\tn).
+\end{equation}
+Constants depend only on $\alpha$, dimensions and caps, uniformly over $A$, the unit factors, and $n,\sigma,\lambda,\eta$ subject to these restrictions. Thus deterministic sequences $A=A_n$ are allowed. The upper bound holds for the computable interval in Section~\ref{sec:method}, both with known and unknown noise variance. For fixed nonzero $A$ of contact order $q$, the right side is comparable to $\tn^q/\lambda^{q-1}+\eta\wedge\tn$, with loading-dependent constants.
+\end{theorem}
+
+By \eqref{eq:length}, for fixed $A$ with $q\ge2$ the exact-model rate survives a known approximation allowance only when $\eta\lesssim\tn^q/\lambda^{q-1}$. A coefficient perturbation much smaller than the ordinary noise scale can therefore destroy most of the gain. This is not resistance to contaminated observations: $\eta$ bounds the distance of the regression coefficient from the specified structural class. The neighborhood argument is general; its tensor-specific input is \eqref{eq:modulus}.
+
+\begin{corollary}[Undetectable departures; \pr]\label{cor:pretest}
+For a unit loading with $q\ge2$, let $s_n=\tn^q/\lambda^{q-1}$ and suppose $s_n=o(\eta_n)$ and $\eta_n=o(\tn)$. Then $B_n=B_0+\eta_n A$ belongs to $\Th_{\eta_n}$ for all sufficiently large $n$, $\TV(P_{B_n,\sigma}^{(n)},P_{B_0,\sigma}^{(n)})\to0$, and every interval honest over $\Th_{\eta_n}$ has expected length at $B_0$ at least $(1-2\alpha-o(1))\eta_n$. No rank pretest can make an $O(s_n)$ expected-length interval uniformly honest over that tube.
+\end{corollary}
+
+\subsection{Comparison with a single matrix constraint}
+The six-mode example has cubic contact. In a single prefix unfolding with cap one, the same elementary loading is normal in both matrix factors and has quadratic contact. For a prefix cap two, the rank-one point has slack and has first-order contact. Thus none of the five individual prefix constraints alone yields the cubic exponent. This establishes a difference from any one such matrix envelope, not from all possible nonlinear matrix parameterizations or arbitrary collections of matrix constraints.
+
+\begin{proposition}[Complexity of a leading constant; \pr]\label{prop:hardness}
+Consider the three-block rank-one class in dimensions $(m_1+1,m_2+1,m_3+1)$, $B_0=\lambda e_0^{\otimes3}$, and a loading $A$ supported entirely on the three perpendicular subspaces. Let $T$ denote its $m_1\times m_2\times m_3$ coefficient array. Then
+\[
+ \lim_{t/\lambda\to0}\frac{\lambda^2\omega_{A,0}(t;B_0)}{t^3}
+ =\frac{\norm{T}_{\rm inj}}{3\sqrt3},\qquad
+ \norm{T}_{\rm inj}=\max_{\norm{x}=\norm{y}=\norm{z}=1}|\ip{T}{x\otimes y\otimes z}|.
+\]
+Consequently, when these dimensions vary, exact evaluation of this leading coefficient contains the tensor spectral-norm problem of \citet{hillarlim2013}.
+\end{proposition}
+This is a reduction to an existing hardness theorem. It neither proves a computational--statistical minimax gap nor precludes conservative polynomial-time intervals.
+
+\section{A computable interval without contact-order selection}\label{sec:method}
+Let $X$ have rows $x_i^\top$, $S=X^\top X$, and $z=S^{-1}X^\top Y$. For known $\sigma$, use
+\[
+ e=\sigma\sqrt{\chi^2_{p,1-\alpha}/\lambda_{\min}(S)}.
+\]
+For unknown $\sigma$ and $n>p$, set $\widehat\sigma^2=\norm{Y-Xz}^2/(n-p)$ and
+\begin{equation}\label{eq:Fball}
+ e=\widehat\sigma\sqrt{pF_{p,n-p;1-\alpha}/\lambda_{\min}(S)}.
+\end{equation}
+Both the known-noise radius and \eqref{eq:Fball} give $\PP(\norm{z-b}\le e\mid X)\ge1-\alpha$ for every full-rank design under the Gaussian error model. The Euclidean ball contains the exact ellipsoid; its radius can be conservative.
+
+Reshape $z$ into the $J$ blocks and take its rank-one HOSVD approximation $\widehat B=\widehat s\bigotimes_j\widehat v_j$, with $\widehat s=\norm{\widehat B}_F\ge0$ and signs absorbed into the factors. Ties are resolved by a fixed measurable rule. This pilot need not satisfy the internal TT caps. Let $\widehat\Pi_\ell$ project onto the sum of block components with exactly $\ell$ perpendicular factors, and write $\widehat\Pi_{\le1}=\widehat\Pi_0+\widehat\Pi_1$. Put
+\[
+ \rho=\norm{z-\widehat b}+e+\eta.
+\]
+Set $\kappa_{J,\ell}=\binom J\ell^{1/2}J^{-\ell/2}$. For $\rho<\widehat s/2$, define
+\begin{equation}\label{eq:graded}
+ H=\min\left\{\norm{A}_F\rho,
+ \norm{\widehat\Pi_{\le1}A}_F\rho+
+ \sum_{\ell=2}^J \kappa_{J,\ell}
+ \norm{\widehat\Pi_\ell A}_F
+ \frac{\rho^\ell}{(\widehat s-\rho)^{\ell-1}}\right\}.
+\end{equation}
+The energy inequality in Lemma~\ref{lem:energy} justifies these coefficients. The original certificate, denoted $I^{\rm old}$ in the new comparison experiment, uses the larger coefficients $\binom J\ell^{1/2}$ and remains valid. Otherwise set $H=\norm{A}_F\rho$, including a zero pilot. The structured interval and the ambient projection are
+\[
+ I_s=[\ip{A}{\widehat B}\ \pm(H+\eta\norm{A}_F)],\qquad
+ I_a=[a^\top z\ \pm e\norm{a}],\quad a=\vecop(A).
+\]
+Return $I=I_s\cap I_a$ if the intersection is nonempty, and the singleton $\{a^\top z\}$ otherwise. Intersecting uses the same confidence-ball event; there is no additional multiplicity charge. The empty-intersection convention matters only outside that event.
+
+\begin{theorem}[Coverage and adaptation to contact order; \pr]\label{thm:procedure}
+For every $B\in\Th_\eta$, one event of conditional probability at least $1-\alpha$ ensures coverage simultaneously for every loading $A$, for any full-column-rank design and independent homoskedastic Gaussian errors. In particular a measurable data-dependent $\widehat A$ is covered for its random target $\ip{\widehat A}{B}$. This is not coverage conditional on the selected loading or selection event. For deterministic loadings, under the random-design assumptions and sample-size conditions of Theorem~\ref{thm:length},
+\[
+ \E_{B_0,\sigma}|I|\le C\left\{\mathcal R_A(\tn)+\norm{A}_F(\eta\wedge\tn)\right\}.
+\]
+The algorithm requires the caps, loading, and known approximation allowance, but does not require the true factors, $\lambda$, or $q$.
+\end{theorem}
+
+The guarantee is rate optimal in $n$ with fixed geometry. Its constants include ambient dimension through localization and can be large. Evaluating the orthogonal components by all masks uses $2^J$ terms; no efficiency claim is made when the number of blocks increases. The theory does not cover $p\ge n$. In the one-block case the pilot is $z$ and the procedure reduces to an ambient ball projection.
+
+\subsection{Why exact boundary calibration is insufficient}
+For the four-way class with caps $(1,2,1)$, consider
+\[
+ B_{n,c}=\lambda(e_0+u_ne_1)\otimes(e_{00}+u_ne_{11})
+                    \otimes(e_0+u_ne_1),\qquad u_n=c\tn/\lambda,
+\]
+and $A=E_{1111}$. Let $\widehat\psi=\ip{A}{\widehat B}$ for the three-block HOSVD pilot, and define the tangent plug-in standard error
+\[
+ \widehat{\rm se}=\sigma\sqrt{(\widehat\Pi_{\le1}a)^\top S^{-1}
+                                      (\widehat\Pi_{\le1}a)}.
+\]
+\begin{proposition}[Local Wald experiment; \pr]\label{prop:wald}
+With fixed $\lambda,\sigma>0$ and each fixed $c\ge0$, put $s_n=\tn^3/\lambda^2$. Under $B_{n,c}$,
+\[
+ \left(\frac{\widehat\psi}{s_n},\frac{\widehat{\rm se}}{s_n}\right)
+ \xrightarrow{d}
+ \left(\prod_{j=1}^3(c+Z_j),
+ \left\{\sum_{j=1}^3\prod_{k\ne j}(c+Z_k)^2\right\}^{1/2}\right),
+\]
+where the $Z_j$ are independent standard normal variables, and $\psi_A(B_{n,c})/s_n=c^3$. At $c=0$, the interval $[\widehat\psi\pm z_{1-\alpha/2}\widehat{\rm se}/3]$ has limiting coverage $1-\alpha$, by \citet{pillaimeng2016}. Its coverage, taking first $n\to\infty$ and then $c\to\infty$, instead tends to
+\[
+ 2\Phi(z_{1-\alpha/2}/3)-1,
+\]
+approximately $0.4865$ at $\alpha=0.05$. Ordinary Wald calibration has iterated limit $1-\alpha$.
+\end{proposition}
+This specializes known degeneracy phenomena and is not a separate priority claim. The result concerns the three-block pilot; the known-rank-one pilot at $c=0$ is a different estimator.

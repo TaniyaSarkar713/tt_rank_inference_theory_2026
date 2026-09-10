@@ -1,0 +1,63 @@
+103
+104
+105
+106
+Sample size n (log scale)
+10−12
+10−10
+10−8
+10−6
+10−4
+10−2
+Mean interval length (log scale)
+(a) Graded confidence intervals
+103
+104
+105
+Geometric midpoint of adjacent n (log)
+−2.25
+−2.00
+−1.75
+−1.50
+−1.25
+−1.00
+−0.75
+−0.50
+Adjacent log-length / log-n slope
+(b) Approach to predicted exponents
+q=1, p=16
+q=2, p=16
+q=3, p=8
+q=3, p=16
+q=3, p=64 (singular)
+q=4, p=16
+Figure 2: The graded interval exhibits contact orders one through four, with visible finite-dimension
+effects before the limiting regime. Each point uses 2,000 Gaussian datasets, B0 = 3E00···0 and
+A = E11···1; mean-length bars are ±1.96 Monte Carlo standard errors, often smaller than markers.
+The final two sample sizes are the disclosed addendum, and dotted slope guides mark −q/2.
+setting, the mean graded length is 1.746 × 10−5, compared with 1.741 × 10−2 for the ambient scalar
+interval and 1.704 × 10−8 for boundary-degree Wald. The last interval has empirical coverage 0.947
+at the exact point but is not honest over its neighborhood. These numbers demonstrate a rate
+gain over ambient inference, not sharp constants or dominance over other valid minimum-distance
+constructions. In the q = 1 slack setting, the graded ball is wider than the efficient scalar baseline.
+7.3
+Rank activation and two prespecified functionals
+Use the path Bn,c from Proposition 7, with c ∈{0, 1, 2, 4, 8}, λ = 3 and σ = 0.2. Its second central
+unfolding singular value is
+τ2 = λ|un|(1 + u2
+n)
+for the values used here. It is zero at the boundary and is the smaller nonzero central singular value
+for c > 0. The fixed loadings are
+Atan = E0000 + 0.35E0110
+√
+1 + 0.352
+,
+Anormal = E1111.
+The first is substantially tangent aligned; the second is cubic normal at c = 0 and nearly normal
+along the local path. Known-rank Wald uses an original-mode rank-one HOSVD when c = 0 and
+the three-block HOSVD when c > 0. Selected-rank Wald uses the former unless the second central
+singular value of OLS exceeds κσ
+p
+2/n, with prespecified κ = 1, 2, 3. These are diagnostic rank
+selectors, not asserted consistent selectors in a local-signal regime.
+13

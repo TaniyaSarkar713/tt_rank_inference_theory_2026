@@ -1,0 +1,329 @@
+{
+  "seed": 20260907,
+  "reps": 2000,
+  "settings": [
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "three_product",
+      "dims": [
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        1
+      ],
+      "q": 3,
+      "n": 131072,
+      "id": 81
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "three_product",
+      "dims": [
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        1
+      ],
+      "q": 3,
+      "n": 2097152,
+      "id": 82
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_product",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        1,
+        1
+      ],
+      "q": 4,
+      "n": 131072,
+      "id": 83
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_product",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        1,
+        1
+      ],
+      "q": 4,
+      "n": 2097152,
+      "id": 84
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_three_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 131072,
+      "id": 85
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_three_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 2097152,
+      "id": 86
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_two_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        2,
+        1,
+        2
+      ],
+      "q": 2,
+      "n": 131072,
+      "id": 87
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_two_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        2,
+        1,
+        2
+      ],
+      "q": 2,
+      "n": 2097152,
+      "id": 88
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_slack",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        2,
+        2,
+        2
+      ],
+      "q": 1,
+      "n": 131072,
+      "id": 89
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "four_slack",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        2,
+        2,
+        2
+      ],
+      "q": 1,
+      "n": 2097152,
+      "id": 90
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "six_singular",
+      "dims": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 131072,
+      "id": 91
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "six_singular",
+      "dims": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 2097152,
+      "id": 92
+    }
+  ],
+  "reason": "Additional large-n points to resolve finite-p inverse-Gram effects in the mean-length slope; methods unchanged",
+  "code_sha256": {
+    "gaussian_base.py": "1d64e11f32e905830bd361c5bc16cf5529a8cbb9f5a51ee04dc0e89204b053e1",
+    "methods.py": "17e20df09c85ad46770c4876db8d73179d3eaa0379f766fa3e40299379c36b2b",
+    "run_study.py": "b9eee3d9433ba03fb1bcc8589962ff6152646079408bfaf4c0cf2ea7c1902959",
+    "run_asymptotic.py": "e87db7a05a60f5b7c593b44157ae15ed4bd545f7eaca1d51d25d529733670aac"
+  }
+}

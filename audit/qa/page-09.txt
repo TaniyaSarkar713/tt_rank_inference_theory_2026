@@ -1,0 +1,70 @@
+Theorem 6 (Coverage and adaptation to contact order; Proved). For every B ∈Θη, one event
+of conditional probability at least 1 −α ensures coverage simultaneously for every loading A, for any
+full-column-rank design and independent homoskedastic Gaussian errors. In particular a measurable
+data-dependent bA is covered for its random target ⟨bA, B⟩. This is not coverage conditional on the
+selected loading or selection event. For deterministic loadings, under the random-design assumptions
+and sample-size conditions of Theorem 3,
+EB0,σ|I| ≤C {RA(tn) + ∥A∥F (η ∧tn)} .
+The algorithm requires the caps, loading, and known approximation allowance, but does not require
+the true factors, λ, or q.
+The guarantee is rate optimal in n with fixed geometry. Its constants include ambient dimension
+through localization and can be large. Evaluating the orthogonal components by all masks uses 2J
+terms; no efficiency claim is made when the number of blocks increases. The theory does not cover
+p ≥n. In the one-block case the pilot is z and the procedure reduces to an ambient ball projection.
+5.1
+Why exact boundary calibration is insufficient
+For the four-way class with caps (1, 2, 1), consider
+Bn,c = λ(e0 + une1) ⊗(e00 + une11) ⊗(e0 + une1),
+un = ctn/λ,
+and A = E1111. Let bψ = ⟨A, bB⟩for the three-block HOSVD pilot, and define the tangent plug-in
+standard error
+bse = σ
+q
+(bΠ≤1a)⊤S−1(bΠ≤1a).
+Proposition 7 (Local Wald experiment; Proved). With fixed λ, σ > 0 and each fixed c ≥0, put
+sn = t3
+n/λ2. Under Bn,c,
+ bψ
+sn
+, bse
+sn
+!
+d−→
+
+
+
+3
+Y
+j=1
+(c + Zj),
+
+
+
+3
+X
+j=1
+Y
+k̸=j
+(c + Zk)2
+
+
+
+1/2
+
+,
+where the Zj are independent standard normal variables, and ψA(Bn,c)/sn = c3. At c = 0, the
+interval [ bψ ±z1−α/2 bse/3] has limiting coverage 1−α, by Pillai and Meng (2016). Its coverage, taking
+first n →∞and then c →∞, instead tends to
+2Φ(z1−α/2/3) −1,
+approximately 0.4865 at α = 0.05. Ordinary Wald calibration has iterated limit 1 −α.
+This specializes known degeneracy phenomena and is not a separate priority claim. The result
+concerns the three-block pilot; the known-rank-one pilot at c = 0 is a different estimator.
+6
+Localization assumptions and transitions near degeneracy
+The rate in Theorem 3 is uniform in deterministic loadings, not just pointwise in an integer contact
+order. For example, with four binary modes and caps (1, 2, 1), let
+Aϵ = (E1111 + ϵE1000)/
+p
+1 + ϵ2,
+ϵ ≥0.
+9

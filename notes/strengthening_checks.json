@@ -1,0 +1,11 @@
+{
+  "seed": 20260908,
+  "random_TT_checks": 300,
+  "max_cross_identity_absolute_error": 2.117582368135751e-22,
+  "max_sharp_witness_relative_error": 9.99999993922529e-09,
+  "cubic_NP_lower": 3.6183903491205167,
+  "cubic_lower_quadrature": 3.618390349120516,
+  "cubic_projection_upper": 34.94888820357323,
+  "compression_identities": true,
+  "interpretation": "Algebraic checks, not proof or coverage Monte Carlo validation."
+}

@@ -1,0 +1,11 @@
+# Audited TT inference project: canonical research decision
+
+Completed 8 September 2026 in `tt_rank_inference_theory_2026`. The revised manuscript and all audit deliverables are indexed in README.md and audit/final_verdict.md. The input manuscript is preserved with hashes.
+
+The verified theoretical improvement is a loading-uniform local modulus and honest-length scale retaining every orthogonal block degree. Signed feasible TT paths isolate the coefficients without lower-degree cancellation. An energy refinement gives a shorter confidence certificate on every dataset; a general localization theorem then supports design relaxations and full-rate independent finite-variance inference with a known conditional variance bound. Twelve counterexamples identify which extensions fail, including uniform shrinking inference without any common variance bound.
+
+These additions do not make generic higher-order inference, [modulus lower bounds](https://arxiv.org/pdf/math/0503662), [product osculating geometry](https://arxiv.org/pdf/1611.01674), or [finite-variance mean estimation](https://arxiv.org/pdf/1702.00482) new. The candidate contribution is the explicit constrained tensor calculation and its uniform inferential consequences. The 28-row novelty matrix documents source-specific comparisons and access limits; all 18 original supplied-PDF reviews are retained.
+
+All 17 numbered results have complete checked internal proofs, and essential inline claims are separately inventoried. The two audit simulation studies add 12,000 unique datasets to the original 186,000. The energy certificate reduces mean length substantially at the tested cubic point, but both it and the median-localized procedure remain conservative. Finite-grid heavy-tail slopes are reported without claiming exact agreement with limiting exponents. There is no real-data or LLM experiment.
+
+Mathematical verdict: **B — rigorous but can be strengthened**. Publication recommendation: **Promising — further work needed for a strong top-journal case**. The most valuable next result is dimension-dependent sharp inference or a broader non-rank-one TT phenomenon. Mathematical correctness, novelty, and publication importance are separate judgments; no top-journal acceptance or exhaustive novelty certification is asserted.

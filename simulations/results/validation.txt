@@ -1,0 +1,5 @@
+study: all 81 settings reaggregated; execution-source hashes match.
+asymptotic: all 12 settings reaggregated; execution-source hashes match.
+PASS 1,410,000 replicate rows, including direct coverage checks from stored endpoints; 705 summary rows; workbook agrees with plotted inputs.
+Monte Carlo coverage intervals are Wilson intervals; no all-success result is interpreted as certain population coverage.
+No old-project Monte Carlo runs were pooled into this study.

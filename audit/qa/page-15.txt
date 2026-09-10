@@ -1,0 +1,61 @@
+10−5
+10−4
+10−3
+10−2
+10−1
+100
+η/(σ/√n) (log scale)
+10−8
+10−7
+10−6
+10−5
+10−4
+10−3
+10−2
+Mean length at exact B0 (log)
+(a) Cost of the known allowance
+10−5
+10−4
+10−3
+10−2
+10−1
+100
+η/(σ/√n) (log scale)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Coverage at B0 + ηA
+(b) Consequence of ignoring it
+Exact-model graded
+Tube-aware graded
+Ambient scalar
+Boundary-degree Wald
+Figure 3: A known structural allowance increases honest length and protects against departures that
+invalidate exact-model inference. Four binary modes have caps (1, 2, 1), n = 2048, λ = 3, σ = 0.2,
+and A = E1111. The left panel evaluates length at B0 and the right coverage at B0 + ηA, each with
+2,000 replications; length bars are ±1.96 Monte Carlo standard errors and coverage bars are Wilson
+95% Monte Carlo intervals.
+0.23626 with paired Monte Carlo standard error 0.00041. Both intervals cover in all 2,000 repetitions,
+with Wilson interval [0.9981, 1]. The improved mean length remains about 389 times RA(tn), so
+the reduction does not establish sharp confidence constants. At κ = 10000, the ratio increases to
+0.99261 (Monte Carlo standard error 0.00003), consistent with the tangent term dominating the
+certificate. Figure 4 examines both the multiscale normalization and paired comparison.
+7.7
+Audit addendum: independent finite-variance noise
+A final study, specified after the proof of Theorem 12, uses independent Gaussian designs, B0 =
+3E0000, A = E1111, and a known variance bound ¯σ2 = 0.22. The errors are either Gaussian or
+standardized Student t2.5; the latter have finite variance but no finite third or fourth moment. Each
+noise/sample-size cohort contains 1,000 datasets at n = 512, 2048, 8192, and the same observations
+are used for the q = 3 and q = 4 cap profiles. Thus there are 6,000 additional datasets and 12,000
+intervals.
+Every median-localized interval covers in these runs; the Wilson interval for 1,000 successes is
+[0.9962, 1]. Under t2.5 noise the fitted mean-length slopes are −1.598 and −2.133 for q = 3, 4, with
+Monte Carlo standard errors 0.0010 and 0.0015. These slopes remain steeper than −1.5 and −2
+over this finite grid and are not presented as precise asymptotic confirmation. Figure 5 displays the
+finite-sample behavior. The deliberately large variance-bound radius explains the conservatism; the
+result establishes a proved order under weaker noise assumptions, not a practically efficient robust
+interval.
+15

@@ -1,0 +1,56 @@
+A.5
+Localization and moment control
+Lemma 15 (Gaussian OLS localization). Both radii in Section 5 give conditional coverage at least
+1−α when X has full column rank. Under isotropic Gaussian design, for fixed p, J, α and n ≥p+m,
+m = max(J, 2), for every integer 1 ≤k ≤max(J, 2),
+E∥z −b∥k + Eek ≤Ck(σ/√n)k.
+Proof. Roadmap: use orthogonal Gaussian projections for coverage, then explicit inverse-chi-square
+moments for expectations. Conditional on X, S1/2(z−b)/σ is standard normal, and hence ∥z−b∥2 ≤
+σ2χ2
+p/λmin(S) under a coupling. The squared residual norm divided by σ2 is independent χ2
+n−p by
+orthogonal Gaussian projections. The normalized squared Mahalanobis error divided by pbσ2 is
+therefore Fp,n−p. These facts prove both coverage statements.
+Here are details ensuring the expectation bound does not discard a localization failure event.
+Write S = X⊤X ∼Wp(n, I). The reciprocal of (S−1)jj is the squared norm of column j after
+projecting off the other p −1 columns.
+Conditioning on those columns shows it has law χ2
+ν,
+ν = n −p + 1. For a > 0 with ν > 2a,
+E(χ2
+ν)−a = 2−a Γ(ν/2 −a)
+Γ(ν/2)
+.
+For fixed a = k/2, integer 1 ≤k ≤m, and integer ν ≥m+1, this is at most Caν−a: the gamma-ratio
+asymptotic proves boundedness after multiplication by νa at infinity, and continuity bounds it on
+the remaining finite set of integer degrees of freedom. In particular ν > k, so the gamma argument is
+positive. This use of the gamma ratio involves fixed moment order only. Since λmin(S)−1 ≤tr(S−1),
+for a ≥1 the inequality (P
+j xj)a ≤pa−1 P
+j xa
+j gives
+Eλmin(S)−a ≤Ca,pn−a.
+For 0 < a < 1, Jensen’s inequality and E tr(S−1) = p/(n −p −1) give the same conclusion.
+Conditional Gaussian moments now bound E∥z −b∥k by Ck,pσkEλmin(S)−k/2.
+The residual scale has kth moment bounded by Ckσk, uniformly in n−p ≥1, and is independent
+of S since its conditional distribution does not depend on X. The fixed upper quantiles Fp,n−p;1−α
+are bounded over integers n −p bounded away from zero: their distributions converge to χ2
+p/p, and
+the finite initial set has finite quantiles. Thus the known- and unknown-noise radii have the asserted
+moment bounds. Here ν = n −p + 1 ≥m + 1 > k, and n/(n −p −1) ≤(p + m)/(m −1); these facts
+justify the uniform constants used above. The original condition n ≥2p + 2J + 8 is unnecessary.
+The revised condition is sufficient, not necessary for the interval itself.
+Lemma 16 (HOSVD pilot and changing block projectors). Let bB be the rank-one HOSVD approxi-
+mation to Z. For every block-product B0,
+∥Z −bB∥≤
+√
+J∥Z −B0∥,
+h := ∥bB −B0∥≤(1 +
+√
+J)∥Z −B0∥.
+If h < λ/2 and A has no true block components of degree below q ≥1, then
+∥bΠℓA∥≤CJ∥A∥(h/λ)(q−ℓ)+,
+0 ≤ℓ≤J.
+(10)
+For q = 1 with a radial loading component, only the trivial bounds needed below are asserted.
+25

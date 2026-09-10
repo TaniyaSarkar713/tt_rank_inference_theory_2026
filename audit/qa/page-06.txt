@@ -1,0 +1,66 @@
+let vj be the product of the original factors in block j. Define Pj = vjv⊤
+j , Qj = I −Pj, and the
+mutually orthogonal components
+AS =
+
+O
+j∈S
+Qj
+O
+j /∈S
+Pj
+
+A,
+S ⊆[J],
+where operators are applied in mode order. For A ̸= 0, define
+q(A, B0, ¯r) = max{1, min{|S| : AS ̸= 0}}.
+(2)
+This definition treats a nonzero radial component as first order. It is unchanged by sign choices for
+the signal factors. Define the local modulus
+ωA,η(t; B0) = sup{|⟨A, B −B0⟩| : B ∈Θη, ∥B −B0∥F ≤t}.
+Write ΠℓA = P
+|S|=ℓAS, aℓ= ∥ΠℓA∥F , and define
+RA(t) = (a0 + a1)t +
+J
+X
+ℓ=2
+aℓ
+tℓ
+λℓ−1 .
+(3)
+An empty sum is zero. Retaining all degrees in (3) matters when a loading approaches degeneracy.
+Theorem 1 (Uniform loading modulus and contact order; Proved). Fix the dimensions and
+positive integer caps. Uniformly over the original-mode unit factors, all deterministic loadings A,
+and 0 < t ≤λ/2 with λ + t < M,
+cRA(t) ≤ωA,0(t; B0) ≤CRA(t),
+where c, C > 0 depend only on the dimensions and caps. In particular, for fixed nonzero A and
+factors, with q as in (2),
+cA
+tq
+λq−1 ≤ωA,0(t; B0) ≤CA
+tq
+λq−1 .
+(4)
+The constants in (4) may depend on A and the factors. Its upper inequality, after increasing CA,
+holds for every t > 0. If A is a unit product across the blocks, equal to vj on inactive blocks and to
+an elementary original-mode product wj ⊥vj on exactly q ≥1 active blocks, then
+lim
+t/λ→0
+λq−1ωA,0(t; B0)
+tq
+= q−q/2.
+(5)
+Here an elementary product uses factors from orthonormal bases whose first vectors are the uk.
+Only cap-one cuts determine the exponent. Internal caps constrain the feasible directions and
+the modulus constants, but permit a sum of two elementary products within each block. These
+paths attain the exponent even if the internal TT variety is singular. The block grading on the
+surrounding product variety is classical osculating geometry; our calculation determines which of
+these orders remain attainable inside the capped TT class.
+For example, in six binary modes with caps (1, 2, 2, 2, 1), the block dimensions are (2, 16, 2).
+The middle four-mode block has a proper central matrix-rank constraint at most two, singular at a
+rank-one signal. At B0 = λE000000 and A = E111111, q = 3 and the constant in (5) is 1/(3
+√
+3). This
+example includes an internal singularity; it is not a claim that the singularity itself creates the cubic
+exponent.
+6

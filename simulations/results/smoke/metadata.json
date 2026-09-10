@@ -1,0 +1,116 @@
+{
+  "seed": 20260907,
+  "reps": 20,
+  "settings": [
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "classification",
+      "profile": "three_product",
+      "dims": [
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        1
+      ],
+      "q": 3,
+      "n": 512,
+      "id": 0
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "activation",
+      "profile": "four_three_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 512,
+      "id": 18
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "gaussian",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "fast",
+      "departure": true,
+      "family": "tube",
+      "profile": "four_three_blocks",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 512,
+      "id": 35
+    },
+    {
+      "sigma": 0.2,
+      "lam": 3.0,
+      "covariance": 0.0,
+      "noise": "contamination_0.05",
+      "dense": false,
+      "c": 0.0,
+      "eta_kind": "zero",
+      "departure": false,
+      "family": "stress",
+      "profile": "contamination_0.05",
+      "dims": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "caps": [
+        1,
+        2,
+        1
+      ],
+      "q": 3,
+      "n": 512,
+      "id": 80
+    }
+  ],
+  "code_sha256": {
+    "run_study.py": "d22af45a1fba172ae1f89aebd8bfb9a3748fb15fc04c53ba91cf6e143acd83f5",
+    "methods.py": "17e20df09c85ad46770c4876db8d73179d3eaa0379f766fa3e40299379c36b2b",
+    "gaussian_base.py": "1d64e11f32e905830bd361c5bc16cf5529a8cbb9f5a51ee04dc0e89204b053e1"
+  },
+  "numpy": "2.3.5",
+  "sampler": "Exact Bartlett law for Gaussian settings; raw observations for stress settings",
+  "design_locked": "2026-09-07"
+}

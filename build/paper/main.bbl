@@ -1,0 +1,220 @@
+\begin{thebibliography}{28}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Andrews and Mikusheva(2016)]{andrews2016}
+Isaiah Andrews and Anna Mikusheva.
+\newblock A geometric approach to nonlinear econometric models.
+\newblock \emph{Econometrica}, 84\penalty0 (3):\penalty0 1249--1264, 2016.
+\newblock \doi{10.3982/ECTA12030}.
+\newblock URL
+  \url{https://economics.mit.edu/sites/default/files/publications/ecta12030-%20final%20version.pdf}.
+
+\bibitem[Araujo et~al.(2019)Araujo, Massarenti, and Rischter]{araujo2019}
+Carolina Araujo, Alex Massarenti, and Rick Rischter.
+\newblock On non-secant defectivity of {Segre--Veronese} varieties.
+\newblock \emph{Transactions of the American Mathematical Society}, 2019.
+\newblock \doi{10.1090/tran/7306}.
+\newblock URL \url{https://arxiv.org/abs/1611.01674}.
+
+\bibitem[Armstrong and Koles{\'a}r(2021)]{armstrong2021}
+Timothy~B. Armstrong and Michal Koles{\'a}r.
+\newblock Sensitivity analysis using approximate moment condition models.
+\newblock \emph{Quantitative Economics}, 12\penalty0 (1):\penalty0 77--108,
+  2021.
+\newblock \doi{10.3982/QE1609}.
+\newblock URL \url{https://arxiv.org/abs/1808.07387}.
+
+\bibitem[Armstrong et~al.(2023)Armstrong, Koles{\'a}r, and Kwon]{armstrong2023}
+Timothy~B. Armstrong, Michal Koles{\'a}r, and Soonwoo Kwon.
+\newblock Bias-aware inference in regularized regression models, 2023.
+\newblock URL \url{https://arxiv.org/abs/2012.14823}.
+\newblock arXiv:2012.14823, version 2.
+
+\bibitem[Armstrong et~al.(2026)Armstrong, Weidner, and Zeleneev]{armstrong2026}
+Timothy~B. Armstrong, Martin Weidner, and Andrei Zeleneev.
+\newblock Robust estimation and inference in panels with interactive fixed
+  effects.
+\newblock \emph{Journal of Political Economy}, 2026.
+\newblock \doi{10.1086/741623}.
+\newblock URL \url{https://arxiv.org/abs/2210.06639}.
+\newblock Mathematical comparisons use arXiv version 3.
+
+\bibitem[Bahadur and Savage(1956)]{bahadur1956}
+R.~R. Bahadur and Leonard~J. Savage.
+\newblock The nonexistence of certain statistical procedures in nonparametric
+  problems.
+\newblock \emph{The Annals of Mathematical Statistics}, 27\penalty0
+  (4):\penalty0 1115--1122, 1956.
+\newblock \doi{10.1214/aoms/1177728077}.
+
+\bibitem[Bei and Navjeevan(2026)]{bei2026}
+Xinyue Bei and Manu Navjeevan.
+\newblock Inference under first-order degeneracy, 2026.
+\newblock URL \url{https://arxiv.org/abs/2602.07377}.
+\newblock arXiv:2602.07377.
+
+\bibitem[Bonhomme and Weidner(2022)]{bonhomme2022}
+St{\'e}phane Bonhomme and Martin Weidner.
+\newblock Minimizing sensitivity to model misspecification.
+\newblock \emph{Quantitative Economics}, 13\penalty0 (3):\penalty0 907--954,
+  2022.
+\newblock \doi{10.3982/QE1930}.
+\newblock URL \url{https://arxiv.org/abs/1807.02161}.
+
+\bibitem[Cai and Low(2004)]{cailow2004}
+T.~Tony Cai and Mark~G. Low.
+\newblock An adaptation theory for nonparametric confidence intervals.
+\newblock \emph{The Annals of Statistics}, 32\penalty0 (5):\penalty0
+  1805--1840, 2004.
+\newblock \doi{10.1214/009053604000000049}.
+\newblock URL \url{https://arxiv.org/abs/math/0503662}.
+
+\bibitem[Carpentier et~al.(2018)Carpentier, Klopp, L{\"o}ffler, and
+  Nickl]{carpentier2018}
+Alexandra Carpentier, Olga Klopp, Matthias L{\"o}ffler, and Richard Nickl.
+\newblock Adaptive confidence sets for matrix completion.
+\newblock \emph{Bernoulli}, 24\penalty0 (4A):\penalty0 2429--2460, 2018.
+\newblock \doi{10.3150/17-BEJ933}.
+\newblock URL \url{https://arxiv.org/abs/1608.04861}.
+
+\bibitem[Chen et~al.(2026)Chen, Li, Zheng, and Pei]{dual2026}
+Elynn Chen, Jiayu Li, Zheshi Zheng, and Jian Pei.
+\newblock Dual-channel tensor neural networks: Finite-sample theory and
+  conformal structure selection, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.19122}.
+\newblock arXiv:2605.19122.
+
+\bibitem[Chen and Fang(2019)]{chenfang2019}
+Qihui Chen and Zheng Fang.
+\newblock Inference on functionals under first order degeneracy.
+\newblock \emph{Journal of Econometrics}, 210\penalty0 (2):\penalty0 459--481,
+  2019.
+\newblock URL \url{https://arxiv.org/abs/1901.04861}.
+
+\bibitem[Devroye et~al.(2016)Devroye, Lerasle, Lugosi, and
+  Oliveira]{devroye2016}
+Luc Devroye, Matthieu Lerasle, Gabor Lugosi, and Roberto~I. Oliveira.
+\newblock Sub-gaussian mean estimators.
+\newblock \emph{The Annals of Statistics}, 44\penalty0 (6):\penalty0
+  2695--2725, 2016.
+\newblock \doi{10.1214/16-AOS1440}.
+\newblock URL \url{https://arxiv.org/abs/1509.05845}.
+
+\bibitem[Dufour et~al.(2025)Dufour, Renault, and Zinde-Walsh]{dufour2025}
+Jean-Marie Dufour, Eric Renault, and Victoria Zinde-Walsh.
+\newblock Wald tests when restrictions are locally singular.
+\newblock \emph{The Annals of Statistics}, 53\penalty0 (2):\penalty0 457--476,
+  2025.
+\newblock \doi{10.1214/24-AOS2398}.
+\newblock URL \url{https://arxiv.org/abs/1312.0569}.
+
+\bibitem[Gao and Tan(2026)]{gao2026}
+Yihang Gao and Vincent Y.~F. Tan.
+\newblock Statistical inference for rank allocation in low-rank adaptation,
+  2026.
+\newblock URL \url{https://arxiv.org/abs/2607.20205}.
+\newblock arXiv:2607.20205.
+
+\bibitem[Hillar and Lim(2013)]{hillarlim2013}
+Christopher~J. Hillar and Lek-Heng Lim.
+\newblock Most tensor problems are {NP}-hard.
+\newblock \emph{Journal of the ACM}, 2013.
+\newblock URL \url{https://arxiv.org/abs/0911.1393}.
+
+\bibitem[Kossaifi et~al.(2020)Kossaifi, Lipton, Kolbeinsson, Khanna,
+  Furlanello, and Anandkumar]{kossaifi2020}
+Jean Kossaifi, Zachary~C. Lipton, Arinbjorn Kolbeinsson, Aran Khanna, Tommaso
+  Furlanello, and Anima Anandkumar.
+\newblock Tensor regression networks.
+\newblock \emph{Journal of Machine Learning Research}, 21:\penalty0 1--21,
+  2020.
+\newblock URL \url{https://jmlr.org/papers/v21/18-503.html}.
+
+\bibitem[Kutschan(2018)]{kutschan2018}
+Benjamin Kutschan.
+\newblock Tangent cones to tensor train varieties.
+\newblock \emph{Linear Algebra and its Applications}, 544:\penalty0 370--390,
+  2018.
+\newblock \doi{10.1016/j.laa.2018.01.012}.
+\newblock URL \url{https://arxiv.org/abs/1705.10152}.
+
+\bibitem[Lopez-Piqueres et~al.(2026)Lopez-Piqueres, Deshpande, Ray, Villani,
+  Pistoia, and Kumar]{metatt2026}
+Javier Lopez-Piqueres, Pranav Deshpande, Archan Ray, Mattia~J. Villani, Marco
+  Pistoia, and Niraj Kumar.
+\newblock {MetaTT}: A global tensor-train adapter for parameter-efficient
+  fine-tuning, 2026.
+\newblock URL \url{https://arxiv.org/abs/2506.09105v3}.
+\newblock arXiv:2506.09105, version 3; accepted version for TMLR.
+
+\bibitem[Lugosi and Mendelson(2019)]{lugosi2019}
+Gabor Lugosi and Shahar Mendelson.
+\newblock Sub-gaussian estimators of the mean of a random vector.
+\newblock \emph{The Annals of Statistics}, 47\penalty0 (2):\penalty0 783--794,
+  2019.
+\newblock \doi{10.1214/17-AOS1639}.
+\newblock URL \url{https://arxiv.org/abs/1702.00482}.
+
+\bibitem[Ma and Xia(2024)]{maxia2024}
+Wanteng Ma and Dong Xia.
+\newblock Statistical inference in tensor completion: Optimal uncertainty
+  quantification and statistical-to-computational gaps, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.11225}.
+\newblock arXiv:2410.11225.
+
+\bibitem[Pillai and Meng(2016)]{pillaimeng2016}
+Natesh~S. Pillai and Xiao-Li Meng.
+\newblock An unexpected encounter with cauchy and l{\'e}vy.
+\newblock \emph{The Annals of Statistics}, 44\penalty0 (5):\penalty0
+  2089--2097, 2016.
+\newblock \doi{10.1214/15-AOS1407}.
+\newblock URL \url{https://arxiv.org/abs/1505.01957}.
+
+\bibitem[Qin and Zhu(2025)]{qin2025}
+Zhen Qin and Zhihui Zhu.
+\newblock Computational and statistical guarantees for tensor-on-tensor
+  regression with tensor train decomposition, 2025.
+\newblock URL \url{https://arxiv.org/abs/2406.06002v2}.
+\newblock arXiv:2406.06002, version 2.
+
+\bibitem[Sun and Chen(2026)]{suncheng2026}
+Hu~Sun and Yang Chen.
+\newblock Conformalized tensor completion with riemannian optimization.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 35\penalty0
+  (2):\penalty0 594--605, 2026.
+\newblock \doi{10.1080/10618600.2025.2554671}.
+\newblock URL \url{https://arxiv.org/abs/2405.00581}.
+\newblock Published online in 2025.
+
+\bibitem[Wang et~al.(2025)Wang, Shi, and Zhao]{wang2025}
+Wenbin Wang, Yu~Shi, and Ziping Zhao.
+\newblock High-dimensional tensor regression with oracle properties.
+\newblock In \emph{Proceedings of the International Conference on Machine
+  Learning}, volume 267, pages 64302--64342, 2025.
+\newblock URL \url{https://proceedings.mlr.press/v267/wang25co.html}.
+
+\bibitem[Xia et~al.(2022)Xia, Zhang, and Zhou]{xia2022}
+Dong Xia, Anru~R. Zhang, and Yuchen Zhou.
+\newblock Inference for low-rank tensors: No need to debias.
+\newblock \emph{The Annals of Statistics}, 50\penalty0 (2):\penalty0
+  1220--1245, 2022.
+\newblock \doi{10.1214/21-AOS2146}.
+\newblock URL \url{https://arxiv.org/abs/2012.14844}.
+
+\bibitem[Xu et~al.(2025)Xu, Chen, and Han]{xu2025}
+Ke~Xu, Elynn Chen, and Yuefeng Han.
+\newblock Statistical inference for low-rank tensor models, 2025.
+\newblock URL \url{https://arxiv.org/abs/2501.16223}.
+\newblock arXiv:2501.16223.
+
+\bibitem[Yang et~al.(2025)Yang, Gao, and Yuan]{yang2025}
+Yan Yang, Bin Gao, and Ya-xiang Yuan.
+\newblock Variational analysis of determinantal varieties, 2025.
+\newblock URL \url{https://arxiv.org/abs/2511.22613}.
+\newblock arXiv:2511.22613, version 2.
+
+\end{thebibliography}

@@ -1,0 +1,33 @@
+impossibility mechanism associated with Bahadur and Savage (1956); no external theorem is needed
+for the argument. Fix a baseline Y | x ∼N(x⊤b0, σ2
+0) and any alternative coefficient b1 = b0 + δ in
+the declared class. For 0 < ϵ < 1, let
+wϵ(x) = min{1, ϵ[1 + (x⊤δ)2]}.
+At the alternative, take the conditional response law
+(1 −wϵ)N(x⊤b0, σ2
+0) + wϵN(x⊤b0 + x⊤δ/wϵ, σ2
+0).
+Its conditional mean is x⊤b1. Its conditional error variance is
+σ2
+0 + 1 −wϵ
+wϵ
+(x⊤δ)2 ≤σ2
+0 + ϵ−1,
+a finite uniform bound for each ϵ, although these bounds grow as ϵ ↓0. With iid Gaussian designs the
+one-observation total variation from the baseline is at most Ewϵ ≤ϵ(1 + ∥δ∥2); coupling independent
+observations bounds the n-observation distance by n times this quantity. Therefore, for fixed n,
+honesty over every finite variance bound implies
+PB0,σ0{ψA(B1) ∈I} ≥1 −α
+by sending ϵ ↓0 in the coverage inequality at B1. Let T = {ψA(B) : B ∈Θ0}. The bounded TT
+class is symmetric and closed under scaling toward zero, so T is an interval; it has positive length
+for nonzero A, since an elementary product has a nonzero coefficient. Tonelli’s theorem applied to
+interval membership gives
+EB0,σ0|I| ≥
+Z
+T
+PB0,σ0{t ∈I} dt ≥(1 −α) length(T ).
+This nonshrinking bound holds for every n. For the unbounded rank class, T = R and the expected
+length is infinite. The conclusion concerns honesty uniformly over all finite conditional variance
+bounds, not pointwise asymptotic inference for a fixed noise law or the Gaussian unknown-variance
+model.
+34

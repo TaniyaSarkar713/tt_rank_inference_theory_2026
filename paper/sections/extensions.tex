@@ -1,0 +1,80 @@
+\section{Localization assumptions and transitions near degeneracy}\label{sec:extensions}
+The rate in Theorem~\ref{thm:length} is uniform in deterministic loadings, not just pointwise in an integer contact order. For example, with four binary modes and caps $(1,2,1)$, let
+\[
+ A_\epsilon=(E_{1111}+\epsilon E_{1000})/\sqrt{1+\epsilon^2},\qquad \epsilon\ge0.
+\]
+At $B_0=\lambda E_{0000}$ its scale is
+\[
+ \mathcal R_{A_\epsilon}(\tn)
+ =\frac{\epsilon\tn+\tn^3/\lambda^2}{\sqrt{1+\epsilon^2}}.
+\]
+Every $\epsilon>0$ gives contact order one, but the transition in finite-sample length is at $\epsilon\asymp\tn^2/\lambda^2$. The uniform theorem quantifies this distinction. It concerns prespecified loadings, including deterministic triangular arrays; its expected-length formula does not directly extend to an arbitrary loading chosen on the inference data. Simultaneous coverage does extend, as specified in Theorem~\ref{thm:procedure}.
+
+\begin{theorem}[Transfer from a confidence ball; \pr]\label{thm:transfer}
+In any statistical experiment indexed by $B\in\Th_\eta$, let measurable $(z,e)$, $e\ge0$, obey $\PP_B(\norm{z-b}\le e)\ge1-\alpha$ for every $B$. Use the construction in Section~\ref{sec:method}, with either the original or improved coefficients. On that ball event, coverage holds simultaneously for all $A$, including the random target for any measurable data-selected loading. Conditional ball coverage gives conditional interval coverage given the same conditioning information, not given a subsequent selection event.
+
+Fix an integer $1\le m\le\max(J,2)$. At the rank-one evaluation point suppose, for a deterministic $r_n>0$,
+\[
+ \E_{B_0}(\norm{z-b_0}+e)^k\le C_k r_n^k,
+ \qquad 1\le k\le m,\qquad r_n\le c_J\lambda.
+\]
+Put $d_\ell=\min(\max(1,\ell),m)$. Then, uniformly over deterministic $A$,
+\[
+ \E_{B_0}|I|\le C\left\{\sum_{\ell=0}^J
+ a_\ell\frac{r_n^{d_\ell}}{\lambda^{d_\ell-1}}
+       +\norm{A}(\eta\wedge r_n)\right\}.
+\]
+Constants depend on dimensions and the stated moment constants. For $m\ge J$, the sum is $\mathcal R_A(r_n)$. No likelihood lower bound in the new experiment is implied by this upper-bound transfer alone.
+\end{theorem}
+
+\begin{corollary}[Non-Gaussian and dependent designs; \pr]\label{cor:design}
+Retain conditional errors $\varepsilon\mid X\sim N_n(0,\sigma^2 I_n)$ and $n>p$, but let the law of $X$ be arbitrary and independent of $B,\sigma$. Suppose $S=X^\top X$ is positive definite almost surely and, for fixed constants $L,C_k<\infty$ and $m=\max(J,2)$,
+\[
+ \E S\preceq LnI_p,\qquad
+ \E\lambda_{\min}(S)^{-k/2}\le C_kn^{-k/2},\quad 1\le k\le m.
+\]
+Then Theorem~\ref{thm:length} holds with the same scale and constants additionally depending on $L,C_k$, for both noise procedures. This includes deterministic designs with $cnI_p\preceq S\preceq LnI_p$ and iid Gaussian designs with a fixed positive definite covariance whose eigenvalues are bounded above and below. Dependence among design rows is permitted if the displayed conditions hold; dependent errors are a different assumption.
+\end{corollary}
+
+\begin{proposition}[Finite-variance localization; \pr]\label{prop:variance}
+For a full-rank design suppose only
+\[
+ \E(\varepsilon\mid X)=0,\qquad
+ \operatorname{Cov}(\varepsilon\mid X)\preceq\bar\sigma^2 I_n,
+\]
+where $\bar\sigma$ is a known bound. The radius
+\[
+ e_{\rm v}=\bar\sigma\sqrt{\operatorname{tr}(S^{-1})/\alpha}
+\]
+gives conditional interval coverage at least $1-\alpha$. If additionally $\E\operatorname{tr}(S^{-1})\le C/n$, then Theorem~\ref{thm:transfer} applies with $m=2$, $r_n=\bar\sigma/\sqrt n$. Thus degrees above two receive the proved upper bound $r_n^2/\lambda$, rather than a claim of the Gaussian higher-order rate. This is a coverage and upper-bound result for a clean conditional-moment model, not a contamination guarantee or a sharp weak-tail minimax theorem. The residual $F$ radius is not substituted for $e_{\rm v}$ under these assumptions.
+\end{proposition}
+
+\begin{corollary}[Removing the norm cap; \pr]\label{cor:unbounded}
+Let $\widetilde\Th_0=\{B:r_k(B)\le\bar r_k\}$ and $\widetilde\Th_\eta=\{B:\dist_F(B,\widetilde\Th_0)\le\eta\}$. Theorems~\ref{thm:contact}, \ref{thm:length}, \ref{thm:procedure}, and \ref{thm:transfer} remain valid over these unbounded classes after removing restrictions involving $M$. All other conditions, in particular $\lambda>0$ and the local signal condition, remain in force. The procedure does not use $M$.
+\end{corollary}
+
+\begin{theorem}[Full contact rate under finite variance; \pr]\label{thm:robust}
+Let the pairs $(x_i,\varepsilon_i)$ be iid, $x_i\sim N_p(0,I)$, with
+\[
+ \E(\varepsilon_i\mid x_i)=0,\qquad
+ \E(\varepsilon_i^2\mid x_i)\le\bar\sigma^2,
+\]
+where $\bar\sigma>0$ is a known upper bound. The response is $Y_i=x_i^\top b+\varepsilon_i$. Put $h=\lfloor J/2\rfloor+1$, $g=2h-1$, $k=\lfloor n/g\rfloor$, and suppose $k\ge2p+2$. Divide the first $gk$ observations into $g$ groups, fit ambient OLS in each, and let $z_{\rm med}$ be the coordinatewise median of these $g$ estimates. Define
+\[
+ D=\left\{p\binom gh\right\}^{1/(2h)}
+                \bar\sigma\sqrt{2p/k},\qquad
+ e_{\rm med}=D\alpha^{-1/(2h)}.
+\]
+Use $(z_{\rm med},e_{\rm med})$ in the confidence-ball procedure. It is honest uniformly over the stated noise laws and coefficient class. If $\bar t_n=\bar\sigma/\sqrt n\le c\lambda$, its expected length, uniformly over those noise laws at $B_0$, is at most
+\[
+ C\{\mathcal R_A(\bar t_n)+\norm A(\eta\wedge\bar t_n)\}.
+\]
+Constants depend on the fixed dimensions and $\alpha$. Moreover, if $\mathcal Q$ is the class of conditional noise laws just specified and $\mathfrak I^{\rm FV}_{\eta,\alpha}$ imposes honesty over every $B\in\Th_\eta$ and $Q\in\mathcal Q$, then
+\[
+ \inf_{I\in\mathfrak I^{\rm FV}_{\eta,\alpha}}
+       \sup_{Q\in\mathcal Q}\E_{B_0,Q}|I|
+ \asymp\mathcal R_A(\bar t_n)+\norm A(\eta\wedge\bar t_n).
+\]
+This is an optimum over noise laws at a specified coefficient, subject to global honesty. It is not an adaptive unknown-variance result. Ball coverage here is unconditional over the design; the theorem does not claim the conditional-on-design guarantee of the original Gaussian pivot.
+\end{theorem}
+The improvement over Proposition~\ref{prop:variance} uses independence of observation groups. Coordinatewise median amplification converts second-moment bounds for each group estimate into sufficiently many moments of the localization error. This is a robust localization construction applied to the tensor modulus; median amplification and finite-variance mean estimation are established tools \citep{devroye2016,lugosi2019}. Counterexample C12 in Appendix~\ref{app:counterexamples} explains why a variance bound or further noise-family restrictions cannot simply be omitted.

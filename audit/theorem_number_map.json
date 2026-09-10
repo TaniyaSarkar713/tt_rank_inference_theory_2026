@@ -1,0 +1,104 @@
+{
+  "R1": {
+    "label": "thm:contact",
+    "printed_number": "1",
+    "page": 6,
+    "status": "VERIFIED"
+  },
+  "R2": {
+    "label": "prop:slack",
+    "printed_number": "2",
+    "page": 7,
+    "status": "VERIFIED"
+  },
+  "R3": {
+    "label": "thm:length",
+    "printed_number": "3",
+    "page": 7,
+    "status": "VERIFIED"
+  },
+  "R4": {
+    "label": "cor:pretest",
+    "printed_number": "4",
+    "page": 7,
+    "status": "VERIFIED"
+  },
+  "R5": {
+    "label": "prop:hardness",
+    "printed_number": "5",
+    "page": 8,
+    "status": "VERIFIED"
+  },
+  "R6": {
+    "label": "thm:procedure",
+    "printed_number": "6",
+    "page": 9,
+    "status": "VERIFIED"
+  },
+  "R7": {
+    "label": "prop:wald",
+    "printed_number": "7",
+    "page": 9,
+    "status": "VERIFIED"
+  },
+  "R8": {
+    "label": "lem:blocks",
+    "printed_number": "13",
+    "page": 22,
+    "status": "VERIFIED"
+  },
+  "R9": {
+    "label": "lem:twopoint",
+    "printed_number": "14",
+    "page": 24,
+    "status": "VERIFIED"
+  },
+  "R10": {
+    "label": "lem:OLS",
+    "printed_number": "15",
+    "page": 25,
+    "status": "VERIFIED"
+  },
+  "R11": {
+    "label": "lem:pilot",
+    "printed_number": "16",
+    "page": 25,
+    "status": "VERIFIED"
+  },
+  "R12": {
+    "label": "thm:transfer",
+    "printed_number": "8",
+    "page": 10,
+    "status": "VERIFIED"
+  },
+  "R13": {
+    "label": "cor:design",
+    "printed_number": "9",
+    "page": 10,
+    "status": "VERIFIED"
+  },
+  "R14": {
+    "label": "prop:variance",
+    "printed_number": "10",
+    "page": 10,
+    "status": "VERIFIED"
+  },
+  "R15": {
+    "label": "cor:unbounded",
+    "printed_number": "11",
+    "page": 11,
+    "status": "VERIFIED"
+  },
+  "R16": {
+    "label": "lem:energy",
+    "printed_number": "17",
+    "page": 28,
+    "status": "VERIFIED"
+  },
+  "R17": {
+    "label": "thm:robust",
+    "printed_number": "12",
+    "page": 11,
+    "status": "VERIFIED"
+  }
+}

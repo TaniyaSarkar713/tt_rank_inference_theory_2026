@@ -1,0 +1,27 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Contact Orders and the Fragility of Honest Tensor Inference}
+\author{Research draft for author review}
+\date{8 September 2026: audited revision}
+\begin{document}
+\maketitle
+\begin{abstract}
+A linear functional of a tensor coefficient can have several vanishing derivatives on a rank-constrained model. We study globally honest inference in Gaussian tensor regression with fixed ambient dimension. At original-mode rank-one signals, cuts with tensor-train rank cap one partition the modes into blocks. We prove a local modulus formula that retains every orthogonal loading degree, uniformly over loadings and signal directions. The resulting optimal pointwise expected interval length describes transitions between regular and degenerate functionals, including loadings that vary with sample size. For a fixed loading of first nonzero degree $q$, the scale reduces to $(\sigma/\sqrt n)^q/\lambda^{q-1}$, with radial degree treated as first order. A known coefficient neighborhood adds $\norm A\min\{\eta,\sigma/\sqrt n\}$. A computable HOSVD confidence-ball certificate attains these orders, with an exact unknown-variance version and simultaneous coverage over contrasts. An energy refinement shortens the original certificate on every dataset. We separate geometric inference from localization, extending the analysis to quantitative non-Gaussian design conditions and retaining the full contact rate with a median-based localizer under independent observations and a known conditional variance bound. Simulations approach the predicted exponents and illustrate local Wald failure; a separate paired study confirms the certificate improvement while documenting remaining conservatism. The contribution is the constrained tensor modulus and its inferential consequences, rather than generic higher-order inference or a new modulus lower-bound principle.
+\end{abstract}
+\noindent\textbf{Keywords:} confidence intervals; tensor train; local modulus; singular inference; model approximation; higher-order contact.
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/problem}
+\input{sections/theory}
+\input{sections/extensions}
+\input{sections/experiments}
+\input{sections/discussion}
+\clearpage
+\bibliography{references}
+\clearpage
+\appendix
+\input{appendix}
+\input{appendix_strengthening}
+\input{appendix_counterexamples}
+\end{document}

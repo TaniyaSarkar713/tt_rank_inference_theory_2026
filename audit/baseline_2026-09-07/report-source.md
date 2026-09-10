@@ -1,0 +1,13 @@
+# Contact orders and honest TT inference: research decision
+
+Audience: theoretical statistics researchers. Date: 7 September 2026. Scope: reassess the tt_rank_inference idea, derive a defensible theoretical nucleus and produce a complete research draft. All work is in this new project; the prior draft is preserved separately.
+
+The original higher-order tensor-adapter framing is not enough. Existing [degeneracy theory](https://arxiv.org/pdf/1901.04861), [uniform minimum-distance inference](https://arxiv.org/html/2602.07377v1), [TT tangent geometry](https://arxiv.org/pdf/1705.10152), [modulus lower bounds](https://arxiv.org/pdf/math/0503662), and [osculating product geometry](https://arxiv.org/pdf/1611.01674) remove broad novelty claims. The revised classification and its inferential consequences are the candidate contribution.
+
+At B0=lambda times an original-mode product, split the TT chain at caps equal to one. If q is the first nonzero loading degree in the resulting blocks, with radial degree treated as first order, the complete derivation gives honest expected length comparable to (sigma/sqrt(n))^q/lambda^(q-1)+min(eta,sigma/sqrt(n)) over a known structural tube. A graded HOSVD confidence-ball interval attains this in fixed geometry, including unknown variance. An internally singular six-mode example has cubic contact. If every cut has rank slack, all nonzero linear functionals instead have first-order contact.
+
+The mathematical claims, scope and complete proofs are in paper/main.tex and paper/appendix.tex. Theorem status is tracked in theory/theorem_statements.md. The 25-row novelty matrix and retained 18-paper corpus review separate primary results from inferred non-overlap. Source dates and version ambiguities are documented. No exhaustive novelty certificate is claimed.
+
+The primary and disclosed addendum studies total 186,000 Gaussian/stress datasets in 93 settings, 2,000 replications each. They test the rate hierarchy, rank activation, pointwise versus uniform Wald calibration, structural sensitivity and noise assumptions. The computed interval is markedly conservative. No real-data/LLM result is claimed; real_data/README.md gives a protocol and explains the missing assumptions.
+
+Recommendation: **Promising — theory requires further work**. The mathematical nucleus supports a focused draft, but a top-journal claim needs clearer novelty separation and either sharper dimension-dependent inference or a genuinely broader non-rank-one phenomenon. Venue-specific judgments and the complete final checkpoint are in notes/publication_assessment.md. These are research judgments, not promises of acceptance.

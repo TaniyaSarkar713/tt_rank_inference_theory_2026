@@ -1,0 +1,21 @@
+# Previous theory → original manuscript → final verified theory
+
+| Topic | Previous theory | Original manuscript | Final verified theory | Improvement / qualification |
+|---|---|---|---|---|
+| Degenerate functional inference | Higher-order delta methods and uniform minimum-distance inference already exist | Fixed-loading order q at a TT rank-one point | Uniform omega_A(t) ≍ (a0+a1)t + Σ_{l≥2} a_l t^l/lambda^{l−1} | Stronger than this project's pointwise statement; no generic first claim |
+| Honest length | Between-class modulus lower bounds already cover nonconvex evaluation classes | L ≍ t_n^q/lambda^{q−1}+min(eta,t_n), A-dependent constants | L ≍ R_A(t_n)+||A||min(eta,t_n), constants independent of A and unit directions | Handles deterministic A_n approaching degeneracy |
+| Structural geometry | Segre osculating grading and TT tangent cones known | Feasible minimum-degree elementary TT path | Signed paths isolate every degree despite lower-degree terms | Explicit constrained modulus computation; not new abstract osculating geometry |
+| Computable interval | Confidence-region inversion and HOSVD approximation known | Per-mask certificate coefficient sqrt(C(J,l)) | Coefficient sqrt(C(J,l))/J^{l/2}; no larger length on any dataset | Same coverage, smaller certificate constants; no sharp minimax constant |
+| Sample regime | Inverse-Wishart moments classical | n≥2p+2J+8 | n≥p+max(J,2) | Strict relaxation for fixed dimensions, not a proportional-dimension rate theorem |
+| Design | Conditional Gaussian regression pivots classical | Isotropic Gaussian design for length | Arbitrary common design law satisfying explicit information/Gram moments | Allows deterministic and dependent design rows; Gaussian errors retained here |
+| Weak tails | Moment-based confidence regions classical | No non-Gaussian noise theorem | Cov(ε|X)≼sigma_bar²I with known bound gives coverage and degree-capped upper length | Weaker assumptions at a slower proved rate; not weak-tail minimax optimality |
+| Loading choice | Simultaneous confidence regions protect contrasts | Deterministic A stated throughout | Common-event coverage for measurable selected A and its random target | Classical inversion implication; no conditional selective guarantee |
+| Parameter boundedness | Projection onto nonempty closed sets attained in finite dimension | Global norm cap M | Closed unbounded TT class permitted | Larger honest class; same local rates; zero-signal exclusion remains |
+| Computational hardness | Tensor spectral norm NP-hard | Cubic coefficient contains injective norm | Claim retained with exact source scope | Supporting reduction, not a new statistical-computational gap |
+| Matrix comparison | Matrix rank-one normal direction has quadratic order | Six-mode TT example cubic | Retained; all-degree weights now explicit | Comparison across different restrictions; internal singularity does not create cubic order |
+
+For a concrete transition set A_epsilon=(E1111+epsilon E1000)/sqrt(1+epsilon²). Then the original q is one for every epsilon>0, whereas the revised scale is (epsilon*t_n+t_n³/lambda²)/sqrt(1+epsilon²). The transition occurs at epsilon≈t_n²/lambda². This is the clearest mathematical benefit of retaining every degree.
+
+Minimax terminology is restricted: L is a pointwise expected-length optimum under global honesty. The matched theorem does not establish a growing-dimensional minimax estimation rate or the exact shortest honest interval. At fixed deterministic loading the powers of n and lambda and the tube contribution match upper/lower bounds; the constants can be very conservative.
+
+Additional proved comparison: Gaussian errors for the full contact rate → iid observation pairs with Gaussian design, conditional error mean zero and known conditional variance upper bound, using a median of independent OLS groups. The full R_A(tbar_n)+||A||min(eta,tbar_n) scale is preserved in a worst-noise expected-length benchmark. The price is a larger sufficient sample size, worse constants, known upper scale, and unconditional rather than conditional-on-design coverage. R14 remains the broader dependent-noise upper result with degrees capped at two. C12 proves that no uniformly shrinking interval survives removal of every noise-scale restriction in the broad conditional-moment family.

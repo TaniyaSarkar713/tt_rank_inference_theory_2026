@@ -1,0 +1,227 @@
+\section{Complete derivations}\label{app:proofs}
+Throughout, finite-dimensional norms are Euclidean or Frobenius. Every constant is allowed to depend on the fixed geometry specified in the theorem. The label \pr\ records a complete internal derivation, not independent peer review, a computer-verified proof, or a priority certificate.
+
+\subsection{Product structure at cap-one cuts}
+\begin{lemma}\label{lem:blocks}
+Every nonzero tensor obeying the cap-one prefix constraints is a product across the induced consecutive blocks. Conversely, if a product of block tensors has within-block TT ranks at most the corresponding internal caps, it belongs to the full capped TT class whenever its norm is at most $M$.
+\end{lemma}
+\begin{proof}
+At the first cap-one cut, a nonzero rank-one unfolding factors as a vector for the first block times a vector for the remaining modes. A later prefix unfolding is, up to row ordering, the Kronecker product of the first vector and the corresponding prefix unfolding of the remaining tensor. Multiplication by a nonzero vector preserves rank. The next cap-one constraint therefore factors the remaining tensor again. Induction proves the first assertion. The same rank-preservation calculation shows that an internal unfolding of a block product has the rank of that block's internal unfolding; a block boundary has rank one. This proves the converse. Zero belongs to both classes separately.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:contact}}
+Let $B=s\bigotimes_j w_j$ be a feasible nonzero tensor with unit block factors and $\norm{B-B_0}\le t$. Projecting $B_0-B$ orthogonally to the line spanned by $w_j$ in block $j$ gives
+\[
+ \lambda\sqrt{1-(v_j^\top w_j)^2}\le t.
+\]
+Consequently its component on the true block mask $S$ satisfies
+\begin{equation}\label{eq:componentupper}
+ \norm{B_S}\le(\lambda+t)(t/\lambda)^{|S|}.
+\end{equation}
+For $q\ge2$, all loading components of degree below $q$ vanish, as does $\ip{A}{B_0}$. Orthogonality, Cauchy--Schwarz, and \eqref{eq:componentupper} yield
+\[
+ |\ip{A}{B-B_0}|\le
+ \sum_{|S|\ge q}\norm{A_S}(\lambda+t)(t/\lambda)^{|S|}
+ \le 2^{J+1}\norm{A}\,t^q/\lambda^{q-1}
+\]
+when $t\le\lambda$. For $q=1$, ordinary Cauchy--Schwarz gives $\norm{A}t$. If $t\ge\lambda$, $\norm{A}t\le\norm{A}t^q/\lambda^{q-1}$, so the asserted global upper bound follows. Zero creates no exception, since it cannot be within $t<\lambda$ and is covered by Cauchy--Schwarz otherwise.
+
+For the lower bound, first suppose $A_\varnothing\ne0$. The radial path $(\lambda+s)\bigotimes_jv_j$ is feasible for $|s|$ small, and its target change is a nonzero constant times $s$. Now suppose the minimum nonzero degree is $q\ge1$. Choose a mask $S$ of cardinality $q$ with $A_S\ne0$. Extend each original-mode signal factor to an orthonormal basis. The elementary basis products on each active block except its all-signal vector form an orthonormal basis for $v_j^\perp$. Thus some coefficient
+\[
+ c_A=\left\langle A,\bigotimes_{j\in S}w_j\bigotimes_{j\notin S}v_j\right\rangle
+\]
+is nonzero, with each $w_j$ an elementary original-mode product perpendicular to $v_j$. Consider
+\[
+ B(s)=\lambda\bigotimes_{j\in S}(v_j+s w_j)
+                \bigotimes_{j\notin S}v_j.
+\]
+Within each active block this is the sum of two original-mode rank-one products, so every internal unfolding has rank at most two. Internal caps are at least two by construction; the boundary cuts have rank one. Lemma~\ref{lem:blocks} establishes feasibility. All terms of degree less than $q$ pair to zero with $A$, and there are no higher-degree terms. Therefore
+\[
+ \ip{A}{B(s)-B_0}=\lambda c_A s^q,\qquad
+ \norm{B(s)-B_0}^2=\lambda^2\{(1+s^2)^q-1\}.
+\]
+Taking $s^2=(1+t^2/\lambda^2)^{1/q}-1$ gives the lower bound, since $s/(t/\lambda)\to q^{-1/2}$. The norm is $\sqrt{\lambda^2+t^2}<\lambda+t<M$.
+
+For the exact elementary coefficient, use a local product chart for any feasible $B$ within $t<\lambda$:
+\[
+ B=c\bigotimes_{j=1}^J(v_j+z_j),\quad z_j\perp v_j,
+ \quad c=\ip{B}{\bigotimes_jv_j}\ge\lambda-t>0.
+\]
+Nonzero projections onto every $v_j$ follow from the same positive $c$. Orthogonal expansion gives
+\[
+ t^2\ge(c-\lambda)^2+c^2\left\{\prod_j(1+\norm{z_j}^2)-1\right\}
+ \ge c^2\sum_j\norm{z_j}^2.
+\]
+For the elementary loading active on $S$, its target is $c\prod_{j\in S}\ip{w_j}{z_j}$. Cauchy--Schwarz and the arithmetic--geometric mean inequality give
+\[
+ |\ip{A}{B}|\le c\prod_{j\in S}\norm{z_j}
+ \le\frac{t^q}{q^{q/2}c^{q-1}}
+ \le\frac{t^q}{q^{q/2}(\lambda-t)^{q-1}}.
+\]
+The previous path with $c_A=1$ has the matching leading coefficient. For $q=1$ it also attains the exact Cauchy--Schwarz bound $t$. This proves every claim of the theorem.
+
+\subsection{Proof of Proposition~\ref{prop:slack} and the singular example}
+Choose a unit elementary original-mode product $H$ with $\ip{A}{H}\ne0$, which exists because elementary products span the ambient space. Rank subadditivity gives
+\[
+ \rank((B+sH)^{[k]})\le\rank(B^{[k]})+1\le\bar r_k.
+\]
+For $|s|<M-\norm{B}$ the norm constraint also holds. This gives the lower bound $|\ip{A}{H}|t$; Cauchy--Schwarz gives the upper bound.
+
+In the six-mode example, the middle block has dimensions $2\times2\times2\times2$. The internal edge unfoldings have rank at most two automatically. Its central $4\times4$ unfolding is constrained to rank at most two, a proper determinantal variety. At a rank-one point this variety is singular: the differentials of all its $3\times3$ minors vanish, so its algebraic tangent space is the full 16-dimensional space, whereas the dimension of the rank-at-most-two variety is $2(4+4-2)=12$. Factoring the two external nonzero lines gives a local product chart with this variety; its singularity persists. The elementary path in the preceding proof remains feasible and gives cubic contact. For any one prefix cut with cap one, the corresponding elementary contrast is perpendicular on both matrix sides and the two-factor calculation gives order two. At the other cuts cap two leaves rank-one slack, giving order one. This verifies the stated scope of the matrix comparison.
+
+\subsection{Information bound and tube geometry}
+\begin{lemma}[Two-point expected-length bound]\label{lem:twopoint}
+If an interval has coverage at least $1-\alpha$ at $B_0$ and $B_1$, then
+\[
+ \E_{B_0,\sigma}|I|\ge|\ip{A}{B_1-B_0}|
+ \left[1-2\alpha-\frac{\sqrt n\norm{B_1-B_0}}{2\sigma}\right]_+.
+\]
+\end{lemma}
+\begin{proof}
+The design distributions are identical at the two coefficients. Conditional Gaussian relative entropy equals $\norm{X(b_1-b_0)}^2/(2\sigma^2)$; its expectation under isotropic design is $n\norm{b_1-b_0}^2/(2\sigma^2)$. Pinsker's inequality therefore bounds total variation by $\sqrt n\norm{b_1-b_0}/(2\sigma)$. Under $B_0$, the event that the interval contains both target values has probability at least $1-2\alpha-\TV$. On that event its length is at least their separation. Integrating proves the bound. This is the usual two-point modulus argument, not a new information inequality.
+\end{proof}
+
+For a unit loading, compactness of $\Th_0$ and Cauchy--Schwarz give the tube sandwich, for small $t$ with $\lambda+t<M$:
+\begin{equation}\label{eq:tubesandwich}
+ \max\{\omega_{A,0}(t),\eta\wedge t\}
+ \le\omega_{A,\eta}(t)
+ \le\min\{t,\eta+\omega_{A,0}(t+\eta)\}.
+\end{equation}
+Indeed $\Th_0\subseteq\Th_\eta$ and $B_0+(\eta\wedge t)A$ supplies the two lower bounds. For any feasible $B$, choose a nearest $B^\dagger\in\Th_0$. Then $\norm{B-B^\dagger}\le\eta$ and $\norm{B^\dagger-B_0}\le t+\eta$, proving the upper bound. For a nonunit loading the corresponding factors are $\norm{A}$, which are absorbed in constants. If $\eta\le t$, Theorem~\ref{thm:contact} and $(t+\eta)^q\le2^qt^q$ give an upper bound of order $\eta+t^q/\lambda^{q-1}$. If $\eta>t$, use the upper bound $t$. The lower bounds combine via $\max(x,y)\ge(x+y)/2$.
+
+Take $h=1-2\alpha>0$ and $t=h\tn$ in Lemma~\ref{lem:twopoint}. Its bracket is at least $h/2$. A supremizing local alternative, or a sequence approaching the supremum, gives the lower bound in Theorem~\ref{thm:length}, using \eqref{eq:tubesandwich}. The signal condition ensures these alternatives stay within the norm cap. For unknown $\sigma$, restricting the honest procedure to alternatives with this same $\sigma$ proves exactly the same lower bound. At a slack point Proposition~\ref{prop:slack} and the same lemma give a root-$n$ lower bound, matched by ambient inference.
+
+For Corollary~\ref{cor:pretest}, the explicit alternative is within $\eta_n$ of $B_0$ and its norm is below $M$ eventually. The entropy calculation yields $\KL=\eta_n^2/(2\tn^2)\to0$, while its target separation is $\eta_n$. Apply the two-point bound. The argument applies to any measurable interval, including those obtained after an arbitrary rank pretest.
+
+\subsection{Localization and moment control}
+\begin{lemma}[Gaussian OLS localization]\label{lem:OLS}
+Both radii in Section~\ref{sec:method} give conditional coverage at least $1-\alpha$ when $X$ has full column rank. Under isotropic Gaussian design, for fixed $p,J,\alpha$ and $n\ge2p+2J+8$, for every integer $1\le k\le\max(J,2)$,
+\[
+ \E\norm{z-b}^k+\E e^k\le C_k(\sigma/\sqrt n)^k.
+\]
+\end{lemma}
+\begin{proof}
+Conditional on $X$, $S^{1/2}(z-b)/\sigma$ is standard normal, and hence $\norm{z-b}^2\le\sigma^2\chi_p^2/\lambda_{\min}(S)$ under a coupling. The squared residual norm divided by $\sigma^2$ is independent $\chi^2_{n-p}$ by orthogonal Gaussian projections. The normalized squared Mahalanobis error divided by $p\widehat\sigma^2$ is therefore $F_{p,n-p}$. These facts prove both coverage statements.
+
+Here are details ensuring the expectation bound does not discard a localization failure event. Write $S=X^\top X\sim W_p(n,I)$. The reciprocal of $(S^{-1})_{jj}$ is the squared norm of column $j$ after projecting off the other $p-1$ columns. Conditioning on those columns shows it has law $\chi^2_{\nu}$, $\nu=n-p+1$. For $a>0$ with $\nu>2a$,
+\[
+ \E(\chi_\nu^2)^{-a}=2^{-a}\frac{\Gamma(\nu/2-a)}{\Gamma(\nu/2)}.
+\]
+For fixed $a$ and $\nu\ge2a+2$, this is at most $C_a\nu^{-a}$: the gamma-ratio asymptotic proves boundedness after multiplication by $\nu^a$ at infinity, and continuity bounds it on the remaining closed interval. This use of the gamma ratio involves fixed moment order only. Since $\lambda_{\min}(S)^{-1}\le\operatorname{tr}(S^{-1})$, for $a\ge1$ the inequality $(\sum_jx_j)^a\le p^{a-1}\sum_jx_j^a$ gives
+\[
+ \E\lambda_{\min}(S)^{-a}\le C_{a,p}n^{-a}.
+\]
+For $0<a<1$, Jensen's inequality and $\E\operatorname{tr}(S^{-1})=p/(n-p-1)$ give the same conclusion. Conditional Gaussian moments now bound $\E\norm{z-b}^k$ by $C_{k,p}\sigma^k\E\lambda_{\min}(S)^{-k/2}$.
+
+The residual scale has $k$th moment bounded by $C_k\sigma^k$, uniformly in $n-p\ge1$, and is independent of $S$ since its conditional distribution does not depend on $X$. The fixed upper quantiles $F_{p,n-p;1-\alpha}$ are bounded over integers $n-p$ bounded away from zero: their distributions converge to $\chi_p^2/p$, and the finite initial set has finite quantiles. Thus the known- and unknown-noise radii have the asserted moment bounds. The displayed sample-size condition is sufficient for all these inverse moments; it is not claimed necessary.
+\end{proof}
+
+\begin{lemma}[HOSVD pilot and changing block projectors]\label{lem:pilot}
+Let $\widehat B$ be the rank-one HOSVD approximation to $Z$. For every block-product $B_0$,
+\[
+ \norm{Z-\widehat B}\le\sqrt J\norm{Z-B_0},\qquad
+ h:=\norm{\widehat B-B_0}\le(1+\sqrt J)\norm{Z-B_0}.
+\]
+If $h<\lambda/2$ and $A$ has no true block components of degree below $q\ge1$, then
+\begin{equation}\label{eq:mixing}
+ \norm{\widehat\Pi_\ell A}\le C_J\norm{A}
+ (h/\lambda)^{(q-\ell)_+},\qquad 0\le\ell\le J.
+\end{equation}
+For $q=1$ with a radial loading component, only the trivial bounds needed below are asserted.
+\end{lemma}
+\begin{proof}
+Let $\widehat P_j$ be the leading left-singular-vector projection in mode $j$. It minimizes the mode-$j$ rank-one projection residual, which is at most $\norm{Z-B_0}$ because the true block line is an admissible competitor. The commuting orthogonal projections have the telescoping expansion
+\[
+ Z-\prod_j\widehat P_j Z
+ =\sum_j\left(\prod_{i<j}\widehat P_i\right)(I-\widehat P_j)Z.
+\]
+Terms are orthogonal: for terms $j<k$, the first lies in the complement of the $j$th line and the second lies in that line. Summing squared norms proves the first bound; the triangle inequality proves the second.
+
+Projection of $B_0-\widehat B$ off the pilot line in block $j$ gives $\lambda\sin\theta_j\le h$. The two cross-line operators satisfy $\norm{\widehat P_jQ_j}_{\rm op}=\norm{(I-\widehat P_j)P_j}_{\rm op}=\sin\theta_j$. If a true mask $S$ has size at least $q$ and a pilot mask $T$ has size $\ell<q$, then $|S\setminus T|\ge q-\ell$. The tensor product of mask operators therefore has operator norm at most $(h/\lambda)^{q-\ell}$; all other factors have norm at most one. Sum over the at most $2^{2J}$ pairs of masks and use $\sum_S\norm{A_S}\le2^{J/2}\norm{A}$. For $\ell\ge q$, use the contractivity of an orthogonal projection. These steps establish \eqref{eq:mixing} with a finite $J$-dependent constant.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:procedure}}
+On the OLS ball event, take a closest $B^\dagger\in\Th_0$ to the true $B\in\Th_\eta$. Compactness ensures existence, and
+\[
+ \norm{B^\dagger-\widehat B}\le\eta+\norm{B-z}+\norm{z-\widehat b}\le\rho.
+\]
+By Lemma~\ref{lem:blocks}, $B^\dagger$ is in the block-product envelope. If $\rho<\widehat s/2$, write it in the pilot chart as $c\bigotimes_j(\widehat v_j+z_j)$, where $z_j\perp\widehat v_j$ and $c\ge\widehat s-\rho>0$. Its orthogonal expansion implies $c\norm{z_j}\le\rho$ for each $j$. For every mask $S$ of size $\ell\ge2$,
+\[
+ \norm{(B^\dagger)_S}=c\prod_{j\in S}\norm{z_j}
+ \le\rho^\ell/c^{\ell-1}.
+\]
+The components are orthogonal, so their combined norm is bounded by $\binom{J}{\ell}^{1/2}\rho^\ell/(\widehat s-\rho)^{\ell-1}$. The degree-zero and degree-one part of $B^\dagger-\widehat B$ has norm at most $\rho$. Pairing with the corresponding loading projections proves the second expression in \eqref{eq:graded}; Cauchy--Schwarz proves the first. The fallback is valid for the same reason. The difference between the true and projected targets is at most $\eta\norm{A}$. Thus $I_s$ contains the true target on the ball event. So does $I_a$. Their intersection is nonempty and contains it on that event. This proves conditional coverage, without any independence between pilot and ball.
+
+It remains to prove expected length, not merely length on a favorable event. At $B_0$, put $r=\norm{z-b_0}$ and $T=r+e$. Lemma~\ref{lem:pilot} gives
+\[
+ h\le(1+\sqrt J)r,\quad \norm{z-\widehat b}\le\sqrt J r,
+ \quad\rho\le(1+\sqrt J)(T+\eta).
+\]
+First let $\eta\le\tn$. Choose a fixed small $c_J>0$ so that on $G=\{T+\eta\le c_J\lambda\}$, $h\le\lambda/8$, $\rho\le\lambda/8$, and $\widehat s-\rho\ge3\lambda/4$. When $q\ge2$, \eqref{eq:mixing} bounds the first part of \eqref{eq:graded} by
+\[
+ C\norm{A}(h/\lambda)^{q-1}\rho
+ \le C\norm{A}(T+\eta)^q/\lambda^{q-1}.
+\]
+For $2\le\ell<q$, the same inequality bounds its $\ell$th summand by
+\[
+ C\norm{A}(h/\lambda)^{q-\ell}\rho^\ell/\lambda^{\ell-1}
+ \le C\norm{A}(T+\eta)^q/\lambda^{q-1}.
+\]
+For $\ell\ge q$, use $\rho/\lambda\le1$ to reach the same bound. For $q=1$ use $H\le\norm{A}\rho$ directly, including a nonzero radial component. Thus on $G$, $H\le C\norm{A}(T+\eta)^q/\lambda^{q-1}$.
+
+On $G^c$ the definition always gives $H\le\norm{A}\rho\le C\norm{A}(T+\eta)$. Moreover
+\[
+ (T+\eta)\one_{G^c}\le
+ \frac{(T+\eta)^q}{(c_J\lambda)^{q-1}},
+\]
+also for $q=1$. Lemma~\ref{lem:OLS}, $\eta\le\tn$, and $(x+y)^q\le2^{q-1}(x^q+y^q)$ now yield
+\[
+ \E|I|\le2\eta\norm{A}+2\E H
+ \le C\{\eta+\tn^q/\lambda^{q-1}\}.
+\]
+If $\eta>\tn$, intersection with $I_a$ gives $|I|\le2e\norm{A}$ (the empty case has zero length), so its expectation is at most $C\tn$. This proves the assertion for every $\eta$. Together with the two-point lower bound it completes Theorem~\ref{thm:length}.
+
+\subsection{Proof of Proposition~\ref{prop:hardness}}
+In the local chart $B=c(e_0+x)\otimes(e_0+y)\otimes(e_0+z)$, each vector is perpendicular to $e_0$. The target equals $c\ip{T}{x\otimes y\otimes z}$. The energy bound gives $c^2(\norm{x}^2+\norm{y}^2+\norm{z}^2)\le t^2$. Hence
+\[
+ |\ip{A}{B}|\le c\norm{T}_{\rm inj}\norm{x}\norm{y}\norm{z}
+ \le\frac{\norm{T}_{\rm inj}t^3}{3\sqrt3(\lambda-t)^2}.
+\]
+Compactness of the unit spheres gives maximizing directions for $\norm{T}_{\rm inj}$. The product path with those directions and $s^2=(1+t^2/\lambda^2)^{1/3}-1$ is feasible in the three-block product class and attains the matching limit. Setting $\lambda=1$ identifies the squared spectral norm with 27 times the squared modulus coefficient. Thus an oracle evaluating this coefficient exactly also evaluates a known NP-hard tensor quantity as dimensions vary. The reduction adds no claim about approximation factors beyond those established for that source problem.
+
+\subsection{Proof of Proposition~\ref{prop:wald}}
+Under the triangular sequence $B_{n,c}$, the OLS error distribution is independent of the coefficient. The law of large numbers gives $S/n\to I$ in probability, and conditional normality implies
+\[
+ (z-b_{n,c})/\tn\xrightarrow{d}G,\qquad G\sim N_p(0,I).
+\]
+This implication can be verified directly from conditional characteristic functions:
+\[
+ \E[\exp\{-h^\top(nS^{-1})h/2\}]\to\exp(-\norm{h}^2/2),
+\]
+by bounded convergence in probability. Expand $B_{n,c}=B_0+c\tn\sum_{j=1}^3 E_j+O(\tn^2/\lambda)$, where $E_j$ changes the designated coordinate in exactly block $j$. These three elementary tensors are orthonormal.
+
+For completeness, the required HOSVD first-order expansion follows from its eigenvector equation. In any block unfolding, $Z=\lambda e_0w_0^\top+\tn D_n$, with $D_n=O_P(1)$, so
+\[
+ ZZ^\top=\lambda^2e_0e_0^\top+
+ \lambda\tn(e_0g_n^\top+g_ne_0^\top)+O_P(\tn^2),\quad g_n=D_nw_0.
+\]
+Weyl's bound, obtained here from the Rayleigh variational formula, places the largest eigenvalue at $\lambda^2+O_P(\tn)$ and all other eigenvalues at $O_P(\tn)$. Choose the leading unit eigenvector with positive first coordinate, and write it $a_ne_0+h_n$, $h_n\perp e_0$. Projecting its eigenvector equation orthogonally to $e_0$ first gives $h_n=O_P(\tn/\lambda)$, then substitution gives
+\[
+ h_n=(\tn/\lambda)(I-e_0e_0^\top)g_n+O_P(\tn^2/\lambda^2),
+ \qquad a_n=1+O_P(\tn^2/\lambda^2).
+\]
+Indeed the projected linear operator on $h_n$ has inverse norm $O_P(\lambda^{-2})$, and the cross block is $\lambda\tn(I-e_0e_0^\top)g_n+O_P(\tn^2)$, which justifies both substitutions. The HOSVD scalar coefficient equals $\lambda+O_P(\tn)$. The designated perpendicular coordinate in block $j$ therefore equals $(\tn/\lambda)(c+Z_{n,j})+o_P(\tn/\lambda)$, where jointly $Z_{n,j}\to Z_j$ and their independence follows from the orthonormal $E_j$ coordinates of $G$.
+
+Contracting the pure-normal loading with the fitted product yields the asserted product limit. For its tangent projection, the leading terms are the three mutually orthogonal $E_j$ directions, with coefficients
+\[
+ (\tn/\lambda)^2\prod_{k\ne j}(c+Z_{n,k})+o_P(\tn^2/\lambda^2).
+\]
+The radial term is of order $(\tn/\lambda)^3$; perturbing the remaining unit directions changes the leading terms only by a smaller order. Since $nS^{-1}\to I$, the standard-error limit follows.
+
+The limiting denominator is positive almost surely. The equality boundary of the coverage event has probability zero: after squaring, it is the zero set of a nonzero polynomial in a Gaussian vector. To see the latter fact without a regularity assumption, induct on dimension, condition on all but one coordinate, and use that a nonzero univariate polynomial has finitely many roots; the exceptional coefficient-zero sets are treated by the induction hypothesis. Thus convergence in distribution gives convergence of coverage probabilities. At $c=0$ apply the cited monomial law. Finally, as $c\to\infty$,
+\[
+ \frac{\prod_j(c+Z_j)-c^3}
+ {\{\sum_j\prod_{k\ne j}(c+Z_k)^2\}^{1/2}}
+ =\frac{Z_1+Z_2+Z_3}{\sqrt3}+o_P(1).
+\]
+This follows by dividing numerator and denominator by $c^2$ and expanding the finite products. The displayed iterated limits now follow from the standard normal distribution. No uniform-in-$c$ approximation or arbitrary growing-$c_n$ limit is asserted.

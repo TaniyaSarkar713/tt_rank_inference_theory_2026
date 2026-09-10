@@ -1,0 +1,41 @@
+Contact Orders and the Fragility of Honest Tensor Inference
+Research draft for author review
+8 September 2026: audited revision
+Abstract
+A linear functional of a tensor coefficient can have several vanishing derivatives on a rank-
+constrained model. We study globally honest inference in Gaussian tensor regression with fixed
+ambient dimension. At original-mode rank-one signals, cuts with tensor-train rank cap one
+partition the modes into blocks. We prove a local modulus formula that retains every orthogonal
+loading degree, uniformly over loadings and signal directions. The resulting optimal pointwise
+expected interval length describes transitions between regular and degenerate functionals, in-
+cluding loadings that vary with sample size. For a fixed loading of first nonzero degree q, the
+scale reduces to (σ/√n)q/λq−1, with radial degree treated as first order. A known coefficient
+neighborhood adds ∥A∥min{η, σ/√n}. A computable HOSVD confidence-ball certificate attains
+these orders, with an exact unknown-variance version and simultaneous coverage over contrasts.
+An energy refinement shortens the original certificate on every dataset. We separate geometric
+inference from localization, extending the analysis to quantitative non-Gaussian design conditions
+and retaining the full contact rate with a median-based localizer under independent observations
+and a known conditional variance bound. Simulations approach the predicted exponents and
+illustrate local Wald failure; a separate paired study confirms the certificate improvement while
+documenting remaining conservatism. The contribution is the constrained tensor modulus
+and its inferential consequences, rather than generic higher-order inference or a new modulus
+lower-bound principle.
+Keywords: confidence intervals; tensor train; local modulus; singular inference; model approxima-
+tion; higher-order contact.
+1
+Introduction
+Structural restrictions can reduce uncertainty about a regression functional by more than a variance
+constant. Consider a four-way coefficient B ∈R2×2×2×2 whose TT rank caps are (1, 2, 1). The outer
+rank-one cuts force a product of blocks of dimensions (2, 4, 2). At B0 = λE0000, the coordinate
+functional B 7→B1111 changes only when all three blocks change. A perturbation of Frobenius
+size t can change this functional by order t3/λ2. This raises a statistical question: can an interval
+exploit that cubic behavior while retaining coverage over the whole rank-constrained class, including
+neighboring rank strata?
+Existing theory makes a simple higher-order calculation insufficient as a contribution. Functional
+inference under degeneracy, including corrected bootstrap and minimum-distance methods, is well
+developed (Chen and Fang, 2019; Bei and Navjeevan, 2026). Tensor inference with nondegenerate
+tangent alignment also has strong guarantees (Xu et al., 2025; Ma and Xia, 2024). What requires a
+separate calculation here is the local modulus across a specified collection of TT constraints and the
+corresponding expected length under global honesty. In addition, structural rank restrictions may
+be approximate, and a small coefficient departure can be larger than a higher-order inferential scale.
+1

@@ -1,0 +1,68 @@
+\section{Counterexamples and boundaries of the conclusions}\label{app:counterexamples}
+These examples test proposed relaxations. They do not contradict the stated theorems.
+
+\paragraph{C1: zero signal changes the order.}
+At $B_0=0$ any elementary rank-one $H$ gives a feasible path $sH$ under every positive cap profile. For nonzero $A$, choose $H$ with $\ip A H\ne0$. Then $\omega_{A,0}(t;0)\asymp t$, including classes with several cap-one cuts. Thus the order $t^q/\lambda^{q-1}$ cannot be continued through $\lambda=0$. More generally $\omega\le\norm A t$, so a higher-order formula cannot hold without a local restriction on $t/\lambda$.
+
+\paragraph{C2: uncertain validity of cap-one restrictions.}
+In four binary modes, $B_0=\lambda E_{0000}$ and $A=E_{1111}$ have cubic contact under caps $(1,2,1)$. If the honesty class instead permits caps $(2,2,2)$, the path $B_0+sE_{1111}$ is feasible and changes the target by $s$. The root-$n$ two-point lower bound then applies. Choosing the smaller caps from the same data does not remove the larger-class alternatives.
+
+\paragraph{C3: an unobserved structured direction.}
+For a two-mode coefficient with cap one, consider $B_\theta=\theta E_{11}$ and a design satisfying $X_{i,11}=0$ almost surely. Distinct $\theta$ produce exactly the same data distribution, although all coefficients in this submodel have rank at most one. The coordinate functional is not identifiable. Thus full ambient identifiability can be weakened to injectivity on structured differences, but no such injectivity assumption can simply be omitted. This example does not assert impossibility for every structured model with $p\ge n$.
+
+\paragraph{C4: independent-error scaling cannot cover arbitrary dependence.}
+Take scalar regression with $X_i=1$ and errors $\varepsilon_i=Z$ for all $i$, where $Z\sim N(0,\sigma^2)$. Then $z-b=Z$ does not shrink, whereas residual variance is zero. The residual-$F$ interval is the singleton $\{z\}$ and has zero coverage for $b$. This example embeds in $K\ge2$ by taking all mode dimensions one. Its error covariance has largest eigenvalue $n\sigma^2$, violating the bounded conditional covariance assumption in Proposition~\ref{prop:variance}.
+
+\paragraph{C5: finite variance does not give the Gaussian pivot.}
+For $p=1$, $n=2$ and fixed $X=(1,0)^\top$, let the first error be zero with probability $0.9$ and equal to $\pm\sqrt{10}\sigma$ with probability $0.05$ each; take the second error independently with the same distribution. These errors have mean zero and variance $\sigma^2$. The known-Gaussian 95\% radius is $1.96\sigma$ and its coverage is $0.9$. The variance-bound radius in Proposition~\ref{prop:variance} avoids this failure. This is a finite-sample pivot counterexample, not a claim that asymptotic Gaussian approximation is impossible under finite variance.
+
+\paragraph{C6: pointwise order does not imply a loading-uniform rate.}
+Let $A_\epsilon=(E_{1111}+\epsilon E_{1000})/\sqrt{1+\epsilon^2}$ at the four-way cubic point. For every $\epsilon>0$, its contact order is one. If $\epsilon=t^2/\lambda^2$, however, Theorem~\ref{thm:contact} gives $\omega_{A_\epsilon,0}(t)\asymp t^3/\lambda^2$. There cannot be a positive loading-uniform lower constant multiplying $t$ based solely on the label $q=1$. The multiscale statement repairs this limitation rather than assigning a discontinuous statistical rate to an arbitrarily small coefficient.
+
+\paragraph{C7: pointwise coverage alone has no positive length bound.}
+The deterministic interval $\{\psi_A(B_0)\}$ covers at $B_0$ with probability one and has zero length. It generally fails elsewhere. Every information lower bound in this paper therefore uses honesty at alternatives as well as at $B_0$.
+
+\paragraph{C8: full rank does not control inverse design moments.}
+Take $p=1$, $X_1=\sqrt n V$, $X_i=0$ for $i>1$, and $V$ uniform on $(0,1)$. The design has full column rank almost surely and $\E S=n/3$, but $\E S^{-1/2}=\infty$. The known Gaussian confidence-ball radius has infinite expectation. Finite-sample conditional coverage still holds. This distinguishes invertibility from the sufficient moment condition in Corollary~\ref{cor:design}; it does not prove those particular moments necessary for every possible procedure. For a separate information counterexample, take deterministic $X_i=1/n$, so $S=1/n$ despite full rank. Two fixed scalar coefficients separated by $\delta$ have Gaussian total variation at most $|\delta|/(2\sigma\sqrt n)$. Honesty at both therefore forces expected length at least $|\delta|(1-2\alpha-o(1))$. Full rank alone cannot guarantee a shrinking $n^{-1/2}$ length.
+
+\paragraph{C9: favorable probability events do not imply fast expected length.}
+For any $q>1$, a nonnegative variable equal to $n^{-q/2}$ with probability $1-n^{-1/2}$ and to one otherwise is $O_P(n^{-q/2})$, but its expectation is of order $n^{-1/2}$. The bad-event moment calculation in Theorem~\ref{thm:transfer} is therefore essential. No uniform-integrability step is left implicit.
+
+\paragraph{C10: a higher-order ordinary bootstrap can fail.}
+In the scalar Gaussian mean experiment at $\theta=0$, $\sqrt n\bar Y=Z_n\sim N(0,1)$. For the squared-mean target and a parametric bootstrap $\bar Y^*=\bar Y+Z^*/\sqrt n$, the true statistic is $n\bar Y^2=Z_n^2$, but conditionally
+\[
+ n\{(\bar Y^*)^2-\bar Y^2\}=2Z_nZ^*+(Z^*)^2.
+\]
+At any fixed $z\ne0$, this bootstrap expression is negative with probability $\Phi(2|z|)-1/2>0$, whereas the target chi-square law is nonnegative. Since $Z_n$ does not converge to zero in probability, the conditional discrepancy persists with positive probability. No bootstrap validity is claimed for the tensor interval; this example illustrates why a generic bootstrap substitution would require a separate proof.
+
+\paragraph{C11: scalar validity does not imply post-selection validity.}
+In an orthogonal Gaussian mean experiment with $Z_1,\ldots,Z_p$ independent standard normal at the zero coefficient, choose the coordinate with largest $|Z_j|$. The usual coordinatewise 95\% interval covers the selected zero target only when $\max_j|Z_j|\le z_{.975}$, which has probability $0.95^p$. The common-ball intervals avoid this problem because their coverage argument holds simultaneously for all loadings. They still do not assert coverage conditional on an arbitrary selection event.
+
+\paragraph{C12: no uniform shrinking interval over all unknown variance bounds.}
+The known upper bound in Theorem~\ref{thm:robust} cannot simply be replaced by an unspecified finite bound while retaining distribution-free honesty. Here is an explicit regression version of the classical nonparametric impossibility mechanism associated with \citet{bahadur1956}; no external theorem is needed for the argument.
+Fix a baseline $Y\mid x\sim N(x^\top b_0,\sigma_0^2)$ and any alternative coefficient $b_1=b_0+\delta$ in the declared class. For $0<\epsilon<1$, let
+\[
+ w_\epsilon(x)=\min\{1,\epsilon[1+(x^\top\delta)^2]\}.
+\]
+At the alternative, take the conditional response law
+\[
+ (1-w_\epsilon)N(x^\top b_0,\sigma_0^2)
+ +w_\epsilon N(x^\top b_0+x^\top\delta/w_\epsilon,\sigma_0^2).
+\]
+Its conditional mean is $x^\top b_1$. Its conditional error variance is
+\[
+ \sigma_0^2+\frac{1-w_\epsilon}{w_\epsilon}(x^\top\delta)^2
+ \le\sigma_0^2+\epsilon^{-1},
+\]
+a finite uniform bound for each $\epsilon$, although these bounds grow as $\epsilon\downarrow0$. With iid Gaussian designs the one-observation total variation from the baseline is at most $\E w_\epsilon\le\epsilon(1+\norm\delta^2)$; coupling independent observations bounds the $n$-observation distance by $n$ times this quantity. Therefore, for fixed $n$, honesty over every finite variance bound implies
+\[
+ \PP_{B_0,\sigma_0}\{\psi_A(B_1)\in I\}\ge1-\alpha
+\]
+by sending $\epsilon\downarrow0$ in the coverage inequality at $B_1$.
+Let $\mathcal T=\{\psi_A(B):B\in\Th_0\}$. The bounded TT class is symmetric and closed under scaling toward zero, so $\mathcal T$ is an interval; it has positive length for nonzero $A$, since an elementary product has a nonzero coefficient. Tonelli's theorem applied to interval membership gives
+\[
+ \E_{B_0,\sigma_0}|I|\ge\int_{\mathcal T}
+       \PP_{B_0,\sigma_0}\{t\in I\}\,dt
+ \ge(1-\alpha)\operatorname{length}(\mathcal T).
+\]
+This nonshrinking bound holds for every $n$. For the unbounded rank class, $\mathcal T=\R$ and the expected length is infinite. The conclusion concerns honesty uniformly over all finite conditional variance bounds, not pointwise asymptotic inference for a fixed noise law or the Gaussian unknown-variance model.

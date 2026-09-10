@@ -1,0 +1,1270 @@
+Contact Orders and the Fragility of Honest Tensor Inference
+Research draft for author review
+7 September 2026
+Abstract
+A linear functional of a tensor coefficient can have a vanishing first-order derivative when
+restricted to a rank-constrained model. We study the resulting inference problem in Gaussian
+tensor regression with fixed ambient dimension. At an original-mode rank-one signal, we classify
+the local modulus for every tensor-train rank-cap profile: cuts constrained to rank one partition
+the modes into blocks, and the first nonzero block degree of the loading determines the contact
+order q. The optimal pointwise expected length among intervals honest over the entire class
+is of order (σ/√n)q/λq−1, where λ is signal magnitude. The classification includes examples
+with singular internal rank constraints. In a known Frobenius neighborhood of radius η, the
+optimal order acquires the term η ∧(σ/√n). We construct a computable interval using a
+Gaussian confidence ball, an HOSVD pilot, and all block orders, with an exact extension to
+unknown variance. Simulations recover the predicted exponents and distinguish exact-boundary
+Wald calibration from locally honest inference, while documenting substantial conservatism
+of the proposed interval. The contribution is a tensor-specific classification and sensitivity
+calculation; generic higher-order inference, modulus lower bounds, and tensor tangent geometry
+are established tools.
+Keywords: confidence intervals; tensor train; local modulus; singular inference; model approxima-
+tion; higher-order contact.
+1
+Introduction
+Structural restrictions can reduce uncertainty about a regression functional by more than a variance
+constant. Consider a four-way coefficient B ∈R2×2×2×2 whose TT rank caps are (1, 2, 1). The outer
+rank-one cuts force a product of blocks of dimensions (2, 4, 2). At B0 = λE0000, the coordinate
+functional B 7→B1111 changes only when all three blocks change. A perturbation of Frobenius
+size t can change this functional by order t3/λ2. This raises a statistical question: can an interval
+exploit that cubic behavior while retaining coverage over the whole rank-constrained class, including
+neighboring rank strata?
+Existing theory makes a simple higher-order calculation insufficient as a contribution. Functional
+inference under degeneracy, including corrected bootstrap and minimum-distance methods, is well
+developed (Chen and Fang, 2019; Bei and Navjeevan, 2026). Tensor inference with nondegenerate
+tangent alignment also has strong guarantees (Xu et al., 2025; Ma and Xia, 2024). What requires a
+separate calculation here is the local modulus across a specified collection of TT constraints and the
+corresponding expected length under global honesty. In addition, structural rank restrictions may
+be approximate, and a small coefficient departure can be larger than a higher-order inferential scale.
+We therefore study a deliberately explicit experiment: independent isotropic Gaussian designs,
+independent Gaussian regression errors, and a fixed-dimensional coefficient in a bounded TT rank
+class or a known neighborhood of that class. The estimand is a fixed linear functional of the
+1
+
+
+coefficient, not an individual TT core, a training-trajectory statistic, or an unobserved neural-
+network parameterization. Our main objective is to classify the best expected interval length
+at rank-one coefficients subject to coverage for every coefficient in the declared class. We allow
+unknown error variance but do not claim inference when ambient least squares is unavailable.
+Three obstacles distinguish the calculation from a direct delta-method exercise. First, a path in
+an enclosing product model may violate an internal TT rank cap, so a lower modulus bound requires
+an actually feasible tensor path. Second, a confidence interval calibrated at the exact boundary
+can fail under statistically indistinguishable local changes, as Figure 1 illustrates. Third, the fitted
+loading projections have lower-order components even when the true ones vanish; these terms and
+the event of poor pilot localization must be controlled to bound expected length.
+The construction uses the cuts whose rank cap equals one to partition the tensor chain. Or-
+thogonal loading components are graded by the number of blocks perpendicular to the signal. The
+smallest nonzero degree determines the modulus exponent. Within-block sums of two elementary
+products provide feasible witness paths despite the remaining TT constraints. Confidence-ball
+inversion then supplies global coverage, while a graded product bound makes the calculation explicit.
+In the four-way example this recovers cubic inference. A six-way example with a proper singular
+internal rank constraint has the same cubic order, demonstrating both the scope of the classification
+and the limited role of that singularity.
+The paper makes three claims, each proved in the appendix:
+1. Section 4 classifies local contact and optimal honest expected length at rank-one signals for
+arbitrary positive TT cap profiles. It also shows that slack at every cut restores first-order
+contact for every nonzero loading.
+2. Theorem 3 determines the additional length required by a known structural approximation
+allowance and identifies departures that cannot be detected but invalidate exact-model lengths.
+3. Section 5 gives a computable, globally honest interval that attains these orders without
+selecting the contact order. The experiments test the exponents, local coverage distinction,
+and approximation sensitivity.
+2
+Related work and the scope of the contribution
+Degenerate functionals and singular tests.
+Chen and Fang (2019) develops second-order
+functional inference and explains ordinary-bootstrap failure; higher-order extensions are explicitly
+discussed. Dufour et al. (2025) studies locally singular polynomial Wald restrictions. Pillai and
+Meng (2016) gives the exact Gaussian monomial Wald law, including the cubic χ2
+1/9 case. Bei and
+Navjeevan (2026) constructs uniformly valid minimum-distance inference under degeneracy and
+discusses extensions beyond a nonsingular Hessian. These results preclude novelty claims based
+solely on a cubic delta method or a nonstandard Wald limit. Our explicit local Wald calculation is
+a supporting specialization of that literature.
+Moduli, curved models, and model neighborhoods.
+The connection between honest interval
+length and between-class moduli is central to Cai and Low (2004). Its lower-bound logic applies
+to singleton evaluation classes and does not require a new tensor information inequality. Andrews
+and Mikusheva (2016) already obtains conservative inference from curved-model geometry. Model-
+misspecification sensitivity is studied by Bonhomme and Weidner (2022), and bias-aware intervals
+and efficiency comparisons by Armstrong and Koles´ar (2021); Armstrong et al. (2023).
+Our
+neighborhood calculation uses the elementary modulus sandwich; the specific input is the classified
+TT contact order. We do not claim a new general theory of robust confidence intervals.
+2
+
+
+0
+2
+4
+6
+8
+Central bond τ2/(σ/√n)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Coverage probability
+(a) Tangent-aligned loading
+0
+2
+4
+6
+8
+Central bond τ2/(σ/√n)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(b) Nearly normal loading
+Graded honest
+Ambient scalar
+Known-rank Wald
+Selected-rank Wald (2)
+Boundary-degree Wald
+Figure 1: Exact-boundary calibration can fail under a local change in the central TT bond. Four
+binary modes have caps (1, 2, 1), n = 2048, λ = 3, and σ = 0.2; the path and two fixed loadings are
+specified in Section 6. Points use 2,000 replications with Wilson 95% Monte Carlo intervals; the
+horizontal line is nominal coverage 0.95. “Selected-rank Wald (2)” uses the prespecified threshold
+multiplier two.
+Rank uncertainty and tensor inference.
+Carpentier et al. (2018) shows that rank-adaptive
+matrix confidence sets can exist, with feasibility depending on the observation and noise experiment.
+Armstrong et al. (2026) allows weak factors in panel inference. Thus rank uncertainty is not a
+universal impossibility mechanism. In regular tensor settings, Xu et al. (2025) and Ma and Xia
+(2024) obtain functional Gaussian limits under signal, initialization, and nondegenerate alignment
+conditions. Their dimensions can increase, and their regular-regime results are stronger than the
+fixed-dimensional analysis here in that respect. We address a different boundary regime rather than
+improving their sample complexity. Xia et al. (2022) also establishes important tensor inference
+results without a universal need for debiasing.
+Tensor geometry, estimation, and computation.
+Kutschan (2018) characterizes TT tangent
+cones, and Yang et al. (2025) gives first- and second-order variational formulas for determinantal
+tensor formats. Higher block-degree spans for product varieties appear in the osculating geometry of
+Araujo et al. (2019). We use that grading and verify feasible lower-bound paths inside the additional
+TT constraints. TT regression estimation and algorithmic guarantees are already supplied by Qin
+and Zhu (2025); oracle tensor regression under separation is studied by Wang et al. (2025). The
+spectral-norm hardness observation in Proposition 5 inherits the result of Hillar and Lim (2013); it
+is not an independent complexity theorem.
+Modern tensor models and other inferential targets.
+Tensor regression networks (Kossaifi
+et al., 2020), global rank-adaptive TT adapters (Lopez-Piqueres et al., 2026), and statistical rank
+3
+
+
+allocation for LoRA (Gao and Tan, 2026) motivate attention to rank restrictions. Their architectural
+or optimization targets should not be conflated with the present population coefficient. Tensor
+conformal completion (Sun and Chen, 2026) and the recent dual-channel tensor framework (Chen
+et al., 2026) further demonstrate that tensor uncertainty quantification is already an active area.
+Predictive intervals and structure-comparison guarantees in those experiments do not determine the
+honest length studied here.
+The literature assessment is current through 7 September 2026. The accompanying novelty
+matrix records mathematical settings, assumptions, guarantees, versions and differences for 25
+comparisons, with a retained review of all 18 supplied PDFs. No reviewed source states the cap-
+profile classification and structural-neighborhood length formula in the form proved below. That
+observation supports a candidate contribution, not an assertion that all overlapping unpublished
+results have been excluded.
+3
+Statistical experiment and inferential objective
+3.1
+Data, loss, and structural parameters
+Fix an integer K ≥2 and positive mode dimensions d1, . . . , dK, and set p = QK
+k=1 dk. We observe
+independent pairs (Xi, Yi), where Xi ∈Rd1×···×dK, xi = vec(Xi), and
+xi
+iid
+∼Np(0, Ip),
+Yi = x⊤
+i b + εi,
+εi
+iid
+∼N(0, σ2),
+b = vec(B).
+(1)
+Designs and errors are independent.
+Vectorization preserves the mode order throughout; the
+implementation uses C order. There are no latent random structural factors in this experiment. TT
+cores are nonunique parameterizations of the coefficient and are not inferential targets. Write P (n)
+B,σ
+for the joint law of all observations. The noise scale is either known or estimated as specified later.
+The half-squared loss is ℓ(B; x, y) = (y −x⊤b)2/2. Its risk and empirical risk are
+R(B) = EB⋆,σℓ(B; x, Y ),
+Rn(B) = 1
+n
+n
+X
+i=1
+ℓ(B; xi, Yi).
+In (1), R(B) −R(B⋆) = ∥B −B⋆∥2
+F /2, so the coefficient is identifiable even before structural
+restrictions. Ambient OLS is the unique empirical minimizer for full-column-rank design. Our
+structured pilot is a rank-one HOSVD of OLS in specified blocks, not an assertion that a globally
+optimal constrained least-squares tensor can be computed.
+For the prefix unfolding B[k] ∈R(d1···dk)×(dk+1···dK), define rk(B) = rank(B[k]). Given positive
+integer caps ¯r = (¯r1, . . . , ¯rK−1) and M > 0, let
+Θ0 = {B : rk(B) ≤¯rk for 1 ≤k < K, ∥B∥F ≤M},
+Θη = {B : ∥B∥F ≤M, distF (B, Θ0) ≤η},
+η ≥0.
+These sets are closed and bounded. The caps and the allowance η are specified independently of the
+data. All actual ranks below the caps are allowed, including simultaneous rank drops. A known η is
+a sensitivity parameter bounding coefficient approximation; it is not a contamination proportion or
+a data-derived certificate.
+4
+
+
+3.2
+Target, honesty, and regime
+Fix a nonzero deterministic loading A and target ψA(B) = ⟨A, B⟩. Examples are individual entries
+or prespecified weighted contrasts. The evaluation metrics are coverage and expected interval length,
+not support recovery or generalization error of a trained feature map. Honesty means
+inf
+B∈Θη PB,σ{ψA(B) ∈I} ≥1 −α,
+0 < α < 1/2,
+with the infimum also over σ > 0 for a procedure that does not know σ. A short interval at one point
+is only useful for this objective if coverage holds over the declared class. No regularity, equivariance
+or asymptotic-linearity condition is imposed on competing intervals in the lower bound.
+The length analysis fixes K, dk, ¯r, A and the signal directions, and evaluates rank-one points
+B0 = λ N
+k uk with 0 < λ < M/2. Constants are not dimension free. We assume n ≥2p + 2J + 8,
+where J is the number of cap-one-induced blocks, and σ/√n is sufficiently small relative to λ. The
+latter condition keeps the local alternatives away from zero signal. These restrictions are sufficient
+for the inverse-design moments used in the proof; finite-sample coverage alone needs only n > p and
+full-column-rank design.
+The roles of the assumptions are distinct. Original-mode rank one makes the within-block
+witness paths feasible with internal ranks at most two. The known cap-one cuts exclude the ambient
+directions responsible for slower inference. The norm cap provides compactness and an interior
+margin. Gaussian errors give exact chi-square and F localization; isotropic random design gives
+the stated information distance and length moments. Conditional coverage permits other full-rank
+designs, but the displayed sharp rate calculation uses (1). No sparsity, observation contamination,
+dependent-noise validity, or growing-dimensional optimality is implicit in these assumptions.
+4
+Contact order and honest expected length
+Write C = {k : ¯rk = 1} and partition the ordered modes at these cuts into J = |C| + 1 consecutive
+blocks. Their dimensions are D1, . . . , DJ. At
+B0 = λu1 ⊗· · · ⊗uK,
+∥uk∥= 1,
+0 < λ < M/2,
+let vj be the product of the original factors in block j. Define Pj = vjv⊤
+j , Qj = I −Pj, and the
+mutually orthogonal components
+AS =
+
+O
+j∈S
+Qj
+O
+j /∈S
+Pj
+
+A,
+S ⊆[J],
+where operators are applied in mode order. For A ̸= 0, define
+q(A, B0, ¯r) = max{1, min{|S| : AS ̸= 0}}.
+(2)
+This definition treats a nonzero radial component as first order. It is unchanged by sign choices for
+the signal factors. Define the local modulus
+ωA,η(t; B0) = sup{|⟨A, B −B0⟩| : B ∈Θη, ∥B −B0∥F ≤t}.
+5
+
+
+Theorem 1 (Contact-order classification; Proved). Fix the dimensions, positive integer caps, unit
+factors, and nonzero loading A, with q as in (2). There are positive constants c, C, t0, depending on
+this fixed geometry, such that, for 0 < t ≤t0λ and λ + t < M,
+c tq
+λq−1 ≤ωA,0(t; B0) ≤C tq
+λq−1 .
+(3)
+The upper inequality, after increasing C, holds for every t > 0. If A is a unit product across the
+blocks, equal to vj on inactive blocks and to an elementary original-mode product wj ⊥vj on exactly
+q ≥1 active blocks, then
+lim
+t/λ→0
+λq−1ωA,0(t; B0)
+tq
+= q−q/2.
+(4)
+Here an elementary product uses factors from orthonormal bases whose first vectors are the uk.
+Only cap-one cuts determine the exponent. Internal caps constrain the feasible directions and
+the modulus constants, but permit a sum of two elementary products within each block. These
+paths attain the exponent even if the internal TT variety is singular. The block grading on the
+surrounding product variety is classical osculating geometry; our calculation determines which of
+these orders remain attainable inside the capped TT class.
+For example, in six binary modes with caps (1, 2, 2, 2, 1), the block dimensions are (2, 16, 2).
+The middle four-mode block has a proper central matrix-rank constraint at most two, singular at a
+rank-one signal. At B0 = λE000000 and A = E111111, q = 3 and the constant in (4) is 1/(3
+√
+3). This
+example includes an internal singularity; it is not a claim that the singularity itself creates the cubic
+exponent.
+Proposition 2 (Slack at every cut; Proved). Let B ∈Θ0 have ∥B∥F < M and
+rank(B[k]) + 1 ≤¯rk
+for every k.
+For every A ̸= 0, ωA,0(t; B) ≍t for sufficiently small t. In particular, at an original-mode rank-one
+point, if every cap is at least two, no nonzero linear functional has a higher-order modulus.
+This is an exponent statement with geometry-dependent constants. It does not assert that every
+honest interval must have the ambient efficient variance, or that growing-dimensional constants are
+harmless.
+Let Iη,α be the measurable closed intervals satisfying coverage at least 1 −α for every B ∈Θη
+(and every σ > 0 for unknown-noise procedures). Set
+Lη,α(B0; σ) =
+inf
+I∈Iη,α EB0,σ|I|,
+tn = σ/√n.
+The infimum is a statistical benchmark, without a computational restriction.
+Theorem 3 (Honest length and structural approximation; Proved). Suppose 0 < α < 1/2, the
+fixed-geometry assumptions of Theorem 1 hold, and n ≥2p + 2J + 8. There is a sufficiently small
+geometry-dependent c0 > 0 such that, for tn ≤c0λ and every known η ≥0,
+Lη,α(B0; σ) ≍
+tq
+n
+λq−1 + (η ∧tn).
+(5)
+Constants may depend on α, A, dimensions, factors, and caps, but not on n, σ, λ, η subject to the
+stated restrictions. The upper bound holds for the computable interval in Section 5, both with known
+and unknown noise variance.
+6
+
+
+By (5), when q ≥2 the exact-model rate survives a known approximation allowance only when
+η ≲tq
+n/λq−1. A coefficient perturbation much smaller than the ordinary noise scale can therefore
+destroy most of the gain. This is not resistance to contaminated observations: η bounds the distance
+of the regression coefficient from the specified structural class. The neighborhood argument is
+general; its tensor-specific input is (3).
+Corollary 4 (Undetectable departures; Proved). For a unit loading with q ≥2, let sn = tq
+n/λq−1
+and suppose sn = o(ηn) and ηn = o(tn). Then Bn = B0 + ηnA belongs to Θηn for all sufficiently
+large n, TV(P (n)
+Bn,σ, P (n)
+B0,σ) →0, and every interval honest over Θηn has expected length at B0 at least
+(1 −2α −o(1))ηn. No rank pretest can make an O(sn) expected-length interval uniformly honest
+over that tube.
+4.1
+Comparison with a single matrix constraint
+The six-mode example has cubic contact. In a single prefix unfolding with cap one, the same
+elementary loading is normal in both matrix factors and has quadratic contact. For a prefix cap
+two, the rank-one point has slack and has first-order contact. Thus none of the five individual prefix
+constraints alone yields the cubic exponent. This establishes a difference from any one such matrix
+envelope, not from all possible nonlinear matrix parameterizations or arbitrary collections of matrix
+constraints.
+Proposition 5 (Complexity of a leading constant; Proved). Consider the three-block rank-one
+class in dimensions (m1 + 1, m2 + 1, m3 + 1), B0 = λe⊗3
+0 , and a loading A supported entirely on the
+three perpendicular subspaces. Let T denote its m1 × m2 × m3 coefficient array. Then
+lim
+t/λ→0
+λ2ωA,0(t; B0)
+t3
+= ∥T∥inj
+3
+√
+3 ,
+∥T∥inj =
+max
+∥x∥=∥y∥=∥z∥=1 |⟨T, x ⊗y ⊗z⟩|.
+Consequently, when these dimensions vary, exact evaluation of this leading coefficient contains the
+tensor spectral-norm problem of Hillar and Lim (2013).
+This is a reduction to an existing hardness theorem. It neither proves a computational–statistical
+minimax gap nor precludes conservative polynomial-time intervals.
+5
+A computable interval without contact-order selection
+Let X have rows x⊤
+i , S = X⊤X, and z = S−1X⊤Y . For known σ, use
+e = σ
+q
+χ2
+p,1−α/λmin(S).
+For unknown σ and n > p, set bσ2 = ∥Y −Xz∥2/(n −p) and
+e = bσ
+q
+pFp,n−p;1−α/λmin(S).
+(6)
+Both the known-noise radius and (6) give P(∥z −b∥≤e | X) ≥1 −α for every full-rank design
+under the Gaussian error model. The Euclidean ball contains the exact ellipsoid; its radius can be
+conservative.
+Reshape z into the J blocks and take its rank-one HOSVD approximation bB = bs N
+j bvj, with
+bs = ∥bB∥F ≥0 and signs absorbed into the factors. Ties are resolved by a fixed measurable rule.
+7
+
+
+This pilot need not satisfy the internal TT caps. Let bΠℓproject onto the sum of block components
+with exactly ℓperpendicular factors, and write bΠ≤1 = bΠ0 + bΠ1. Put
+ρ = ∥z −bb∥+ e + η.
+For ρ < bs/2, define
+H = min
+(
+∥A∥F ρ, ∥bΠ≤1A∥F ρ +
+J
+X
+ℓ=2
+J
+ℓ
+1/2
+∥bΠℓA∥F
+ρℓ
+(bs −ρ)ℓ−1
+)
+.
+(7)
+Otherwise set H = ∥A∥F ρ, including a zero pilot. The structured interval and the ambient projection
+are
+Is = [⟨A, bB⟩± (H + η∥A∥F )],
+Ia = [a⊤z ± e∥a∥],
+a = vec(A).
+Return I = Is ∩Ia if the intersection is nonempty, and the singleton {a⊤z} otherwise. Intersecting
+uses the same confidence-ball event; there is no additional multiplicity charge. The empty-intersection
+convention matters only outside that event.
+Theorem 6 (Coverage and adaptation to contact order; Proved). For every B ∈Θη, the above
+interval has conditional coverage at least 1 −α for any full-column-rank design and independent
+homoskedastic Gaussian errors. Under the random-design assumptions and sample-size conditions
+of Theorem 3,
+EB0,σ|I| ≤C
+
+tq
+n/λq−1 + η ∧tn
+	
+.
+The algorithm requires the caps, loading, and known approximation allowance, but does not require
+the true factors, λ, or q.
+The guarantee is rate optimal in n with fixed geometry. Its constants include ambient dimension
+through localization and can be large. Evaluating the orthogonal components by all masks uses 2J
+terms; no efficiency claim is made when the number of blocks increases. The theory does not cover
+p ≥n. In the one-block case the pilot is z and the procedure reduces to an ambient ball projection.
+5.1
+Why exact boundary calibration is insufficient
+For the four-way class with caps (1, 2, 1), consider
+Bn,c = λ(e0 + une1) ⊗(e00 + une11) ⊗(e0 + une1),
+un = ctn/λ,
+and A = E1111. Let bψ = ⟨A, bB⟩for the three-block HOSVD pilot, and define the tangent plug-in
+standard error
+bse = σ
+q
+(bΠ≤1a)⊤S−1(bΠ≤1a).
+Proposition 7 (Local Wald experiment; Proved). With fixed λ, σ > 0 and each fixed c ≥0, put
+sn = t3
+n/λ2. Under Bn,c,
+ bψ
+sn
+, bse
+sn
+!
+d−→
+
+
+
+3
+Y
+j=1
+(c + Zj),
+
+
+
+3
+X
+j=1
+Y
+k̸=j
+(c + Zk)2
+
+
+
+1/2
+
+,
+where the Zj are independent standard normal variables, and ψA(Bn,c)/sn = c3. At c = 0, the
+interval [ bψ ±z1−α/2 bse/3] has limiting coverage 1−α, by Pillai and Meng (2016). Its coverage, taking
+first n →∞and then c →∞, instead tends to
+2Φ(z1−α/2/3) −1,
+approximately 0.4865 at α = 0.05. Ordinary Wald calibration has iterated limit 1 −α.
+8
+
+
+This specializes known degeneracy phenomena and is not a separate priority claim. The result
+concerns the three-block pilot; the known-rank-one pilot at c = 0 is a different estimator.
+6
+Experiments linked to the theory
+6.1
+Design, estimators, and Monte Carlo uncertainty
+The primary design was recorded after the main derivations and before execution. It contains 81
+settings, each with 2,000 independent replications, at nominal coverage 0.95. A separate, explicitly
+post-primary addendum contains 12 larger-sample settings to investigate finite-sample slope effects.
+Together these use 186,000 datasets and 1,410,000 method–functional interval evaluations. All
+random streams are determined by a master seed and a setting identifier. The full design, per-setting
+metadata, compressed replicate records, and analysis code accompany the paper.
+For the Gaussian experiments we simulate the exact joint distribution of the sufficient statistics
+using Bartlett’s Wishart construction. Specifically, if S = LL⊤, G ∼Np(0, I) and V ∼χ2
+n−p are
+independent of the design, then
+z = b + σL−⊤G,
+bσ = σ
+p
+V/(n −p).
+This has the same law as ambient OLS and its residual scale from n Gaussian observations. Large
+values of n therefore do not require storing an n by p matrix. The stress experiments instead
+generate the actual observations because their error laws are outside this construction.
+The operational baseline with an exact finite-sample scalar guarantee is ambient OLS: a⊤z ±
+z.975σ
+√
+a⊤S−1a, or its residual-t version. We compare the graded interval with this baseline, ordinary
+HOSVD tangent plug-in Wald, the boundary-degree calibration, and a single-prefix-matrix envelope.
+The last method applies two-block graded inversion at the first available cap-one cut and otherwise
+uses ambient inference. It is a containing-model baseline, not a claim to optimize every possible
+unfolding method. Exact inversion of the nonconvex TT confidence region is a theoretical benchmark;
+the graded procedure computes an outer certificate rather than globally optimized endpoints.
+For an interval I(r), reported coverage is bc = R−1 P
+r 1{ψA(B) ∈I(r)} and its binomial Monte
+Carlo standard error is
+p
+bc(1 −bc)/R. At R = 2000 and c = 0.95, this is 0.00487. Wilson 95% Monte
+Carlo intervals are also reported, including at zero or full empirical coverage. Mean lengths have
+standard errors equal to their sample standard deviations divided by
+√
+R. At 2,000 successes out of
+2,000, a zero plug-in standard error does not imply certainty: the Wilson interval is approximately
+[0.9981, 1].
+6.2
+Contact orders and internal singularity
+We take B0 = 3E00···0, A = E11···1, and σ = 0.2. Three binary modes with caps (1, 1) give q = 3.
+Four binary modes with caps (1, 1, 1), (1, 2, 1), (2, 1, 2), and (2, 2, 2) give q = 4, 3, 2, 1, respectively.
+Six binary modes with caps (1, 2, 2, 2, 1) give the internally singular q = 3 example. The primary
+sample sizes are 512, 2048 and 8192.
+The mean-length slopes approach the predicted −q/2 exponents; Table 1 reports both the
+primary and larger-n estimates. The primary six-mode slope is −1.776, so those sample sizes alone
+should not be described as a precise confirmation of −1.5. The addendum uses n = 131072 and
+2097152, with unchanged methods and tuning. Its six-mode slope is −1.511, while the four-way
+product slope is −2.010. Monte Carlo errors in the table describe uncertainty in simulated means,
+not error from approximating an asymptotic exponent.
+9
+
+
+Profile
+p
+Predicted
+Primary
+Large-n (MCSE)
+Four-mode slack
+16
+-0.50
+-0.548
+-0.503 (9.4 × 10−6)
+Four-mode two blocks
+16
+-1.00
+-1.071
+-1.003 (0.002)
+Three-mode product
+8
+-1.50
+-1.563
+-1.504 (0.004)
+Four-mode three blocks
+16
+-1.50
+-1.605
+-1.500 (0.003)
+Six-mode singular
+64
+-1.50
+-1.776
+-1.511 (0.002)
+Four-mode product
+16
+-2.00
+-2.136
+-2.010 (0.004)
+Table 1: Mean-length log–log slopes approach the contact-order predictions. Primary slopes fit
+the three prespecified sample sizes; large-n slopes use the two addendum sizes. Parentheses give
+delta-method Monte Carlo standard errors for the latter, using independent settings.
+All graded intervals in the exactly specified contact experiments cover their targets. This
+demonstrates substantial conservatism. For example, at n = 2048 in the four-way three-block
+setting, the mean graded length is 1.746 × 10−5, compared with 1.741 × 10−2 for the ambient scalar
+interval and 1.704 × 10−8 for boundary-degree Wald. The last interval has empirical coverage 0.947
+at the exact point but is not honest over its neighborhood. These numbers demonstrate a rate
+gain over ambient inference, not sharp constants or dominance over other valid minimum-distance
+constructions. In the q = 1 slack setting, the graded ball is wider than the efficient scalar baseline.
+6.3
+Rank activation and two prespecified functionals
+Use the path Bn,c from Proposition 7, with c ∈{0, 1, 2, 4, 8}, λ = 3 and σ = 0.2. Its second central
+unfolding singular value is
+τ2 = λ|un|(1 + u2
+n)
+for the values used here. It is zero at the boundary and is the smaller nonzero central singular value
+for c > 0. The fixed loadings are
+Atan = E0000 + 0.35E0110
+√
+1 + 0.352
+,
+Anormal = E1111.
+The first is substantially tangent aligned; the second is cubic normal at c = 0 and nearly normal
+along the local path. Known-rank Wald uses an original-mode rank-one HOSVD when c = 0 and
+the three-block HOSVD when c > 0. Selected-rank Wald uses the former unless the second central
+singular value of OLS exceeds κσ
+p
+2/n, with prespecified κ = 1, 2, 3. These are diagnostic rank
+selectors, not asserted consistent selectors in a local-signal regime.
+At n = 2048, c = 2, normal-loading coverage is 1.000 for graded inversion, 0.849 for known-rank
+Wald, 0.5525 for selected-rank Wald with κ = 2, and 0.475 for boundary-degree Wald. The last
+value has Monte Carlo standard error about 0.0112. At c = 0, its coverage is 0.9535. At c = 8, it is
+0.488, consistent with the approximately 0.4865 iterated limit in Proposition 7. Thus knowledge
+of the actual rank does not remove functional degeneracy, and exact-boundary calibration does
+not provide uniform inference. For the tangent loading at c = 2, corresponding known-rank and
+selected-κ = 2 coverages are 0.9475 and 0.9255, showing a smaller but visible selection effect.
+6.4
+Approximate structure and sensitivity
+For the four-way cubic loading, let sn = t3
+n/λ2. The allowance grid is
+η ∈{0, sn, 100sn, 10000sn, t2
+n/λ, tn}.
+10
+
+
+103
+104
+105
+106
+Sample size n (log scale)
+10−12
+10−10
+10−8
+10−6
+10−4
+10−2
+Mean interval length (log scale)
+(a) Graded confidence intervals
+103
+104
+105
+Geometric midpoint of adjacent n (log)
+−2.25
+−2.00
+−1.75
+−1.50
+−1.25
+−1.00
+−0.75
+−0.50
+Adjacent log-length / log-n slope
+(b) Approach to predicted exponents
+q=1, p=16
+q=2, p=16
+q=3, p=8
+q=3, p=16
+q=3, p=64 (singular)
+q=4, p=16
+Figure 2: The graded interval exhibits contact orders one through four, with visible finite-dimension
+effects before the limiting regime. Each point uses 2,000 Gaussian datasets, B0 = 3E00···0 and
+A = E11···1; mean-length bars are ±1.96 Monte Carlo standard errors, often smaller than markers.
+The final two sample sizes are the disclosed addendum, and dotted slope guides mark −q/2.
+We evaluate both B0 and the admissible departure B0 + ηA, comparing exact-model and tube-
+aware graded intervals. At n = 2048, sn = 9.591 × 10−9. A departure η = t2
+n/λ = 6.510 × 10−6
+reduces exact-model graded coverage to 0.847; tube-aware coverage is 1.000. At η = 10000sn, the
+exact-model interval has zero empirical coverage, while the tube-aware interval again covers in all
+replications and increases its mean length to 2.092 × 10−4.
+The honest interval’s large finite-sample constants delay the visible transition relative to the
+asymptotic threshold sn. It still covers all tested departures at 100sn even though its exact-model
+guarantee does not apply there. This is consistent with a rate theorem whose constants are not
+sharp. Figure 3 shows both the cost of a known allowance at the exact point and the coverage
+consequence of ignoring a departure.
+6.5
+Unknown noise, dense signals, and assumption diagnostics
+The study also varies λ ∈{0.5, 1, 3}, rotates the signal and loading densely within modes, uses
+Gaussian design covariance Σij = 0.5|i−j|, and evaluates the residual-F procedure. The latter retains
+exact conditional coverage under Gaussian homoskedastic errors; a correlated full-rank design does
+not invalidate that statement. Dense rotations illustrate that coefficient sparsity is not needed.
+Separate stress cases use standardized t5 errors, heteroskedastic Gaussian errors, AR(1) errors
+with correlation 0.6, and Gaussian scale mixtures with 1% or 5% outlier probability and outlier
+standard deviation 5σ. These cases are outside the exact noise theorem. For instance, at 5%
+contamination the ambient interval using the uncontaminated σ covers only 0.8045, while its
+residual-t version covers 0.947 in this experiment. Conservative graded coverage at the tested
+11
+
+
+10−5
+10−4
+10−3
+10−2
+10−1
+100
+η/(σ/√n) (log scale)
+10−8
+10−7
+10−6
+10−5
+10−4
+10−3
+10−2
+Mean length at exact B0 (log)
+(a) Cost of the known allowance
+10−5
+10−4
+10−3
+10−2
+10−1
+100
+η/(σ/√n) (log scale)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Coverage at B0 + ηA
+(b) Consequence of ignoring it
+Exact-model graded
+Tube-aware graded
+Ambient scalar
+Boundary-degree Wald
+Figure 3: A known structural allowance increases honest length and protects against departures that
+invalidate exact-model inference. Four binary modes have caps (1, 2, 1), n = 2048, λ = 3, σ = 0.2,
+and A = E1111. The left panel evaluates length at B0 and the right coverage at B0 + ηA, each with
+2,000 replications; length bars are ±1.96 Monte Carlo standard errors and coverage bars are Wilson
+95% Monte Carlo intervals.
+boundary does not establish robustness to any of these departures. All diagnostic results, rather
+than only favorable settings, are included in the companion tables.
+7
+Discussion and limitations
+The main conclusion is a classification of functional contact at original-mode rank-one points in
+capped TT classes. Cap-one cuts determine the exponent, while internal constraints can leave a
+singular feasible set without changing that exponent. If every cut permits an additional rank, all
+nonzero linear functionals return to first order. These statements describe the geometry of the
+declared class, not a universal benefit of tensor parameterization or rank selection.
+The approximation result is consequential for interpretation. A confidence interval with an
+n−3/2 pointwise length relies on a structural allowance of the same order if that gain is to persist
+uniformly. An ambient coefficient departure of order between n−3/2 and n−1/2 can be statistically
+undetectable and still dominate the target uncertainty. The theorem therefore argues for explicit
+sensitivity analysis whenever rank restrictions are approximate. It does not provide a way to infer
+the required small allowance from the same sample without additional assumptions.
+The limitations are substantial. The pointwise length theorem fixes ambient dimension and
+the signal directions, with an original-mode rank-one evaluation point. The OLS ball can incur
+large dimension constants, and the experiments show that the computable interval is far from a
+sharp constant procedure. No matching dimension-dependent minimax length, efficient confidence
+constant, or general classification at non-rank-one TT points has been established. The inherited
+12
+
+
+hardness of an exact local coefficient does not establish hardness of statistically optimal inference.
+Status of possible extensions.
+Partial: growing-dimensional inference has a valid ambient
+localization construction and fixed-geometry lower bounds, but their dimension factors do not
+match. Conjectured: a general classification at non-rank-one points with several weak bonds may
+require higher-order feasible arcs beyond the present elementary paths; no universal rate is asserted.
+Partial: the spectral-norm reduction identifies a difficult constant but leaves computationally
+optimal intervals unresolved. Conjectured: non-Gaussian or dependent-noise versions would need
+new honest localization and moment bounds. These statements are research questions, not theorems
+of this paper.
+7.1
+Relevance to modern AI and why no LLM benchmark is claimed
+A tensor regression head on frozen features offers a direct statistical setting for coefficient functionals.
+In a locally linear adapter model, a fixed evaluation contrast has the form ⟨A, B⟩, with A determined
+by held-out or externally fixed Jacobian features. Existing TT adapters make such restrictions
+plausible modeling choices, but a trained LLM does not automatically satisfy isotropic design,
+Gaussian residuals, fixed dimensions, or a known approximation allowance.
+A fully observed
+checkpoint is also a deterministic approximation object, not the sampling experiment in (1).
+Accordingly, this draft contains no real-data or trained-LLM result. The companion application
+protocol specifies a frozen-feature regression study with a separately fixed functional, sample splitting
+for any learned loading, residual checks, and an explicit sensitivity grid. A convincing application
+would need to justify the population target and structural approximation bound, rather than add an
+LLM benchmark to support a general mathematical claim. The present theory applies independently
+of any AI interpretation.
+Research assessment.
+The completed fixed-dimensional results support a focused theoretical
+manuscript for further expert evaluation. The central novelty candidate is the cap-profile classification
+and its inferential interpretation, not generic higher-order asymptotics. A broader theory of local
+moduli at singular structured parameters, or dimension-dependent optimality with a useful procedure,
+would be needed to make a strong case for the Annals of Statistics. The current draft should not be
+treated as submission ready solely because its proofs and experiments are complete.
+Reproducibility and proof status.
+The accompanying project includes the full literature matrix,
+theorem ledger, assumption audit, canonical proof source, fixed-seed simulation code, replicate
+outputs, vector figures, and a workbook containing the plotted summaries and source metadata.
+Results marked Proved have complete derivations and internal mathematical checks. This label
+does not certify priority or replace independent mathematical review. The empirical addendum and
+the later supporting local-Wald derivation are disclosed in the project records.
+13
+
+
+References
+Isaiah Andrews and Anna Mikusheva. A geometric approach to nonlinear econometric models.
+Econometrica, 84(3):1249–1264, 2016. doi: 10.3982/ECTA12030. URL https://economics.mit.
+edu/sites/default/files/publications/ecta12030-%20final%20version.pdf.
+Carolina Araujo, Alex Massarenti, and Rick Rischter. On non-secant defectivity of Segre–Veronese
+varieties. Transactions of the American Mathematical Society, 2019. doi: 10.1090/tran/7306.
+URL https://arxiv.org/abs/1611.01674.
+Timothy B. Armstrong and Michal Koles´ar.
+Sensitivity analysis using approximate moment
+condition models. Quantitative Economics, 12(1):77–108, 2021. doi: 10.3982/QE1609. URL
+https://arxiv.org/abs/1808.07387.
+Timothy B. Armstrong, Michal Koles´ar, and Soonwoo Kwon. Bias-aware inference in regularized
+regression models, 2023. URL https://arxiv.org/abs/2012.14823. arXiv:2012.14823, version
+2.
+Timothy B. Armstrong, Martin Weidner, and Andrei Zeleneev. Robust estimation and inference in
+panels with interactive fixed effects. Journal of Political Economy, 2026. doi: 10.1086/741623.
+URL https://arxiv.org/abs/2210.06639. Mathematical comparisons use arXiv version 3.
+Xinyue Bei and Manu Navjeevan.
+Inference under first-order degeneracy, 2026.
+URL https:
+//arxiv.org/abs/2602.07377. arXiv:2602.07377.
+St´ephane Bonhomme and Martin Weidner.
+Minimizing sensitivity to model misspecification.
+Quantitative Economics, 13(3):907–954, 2022. doi: 10.3982/QE1930. URL https://arxiv.org/
+abs/1807.02161.
+T. Tony Cai and Mark G. Low. An adaptation theory for nonparametric confidence intervals.
+The Annals of Statistics, 32(5):1805–1840, 2004.
+doi: 10.1214/009053604000000049.
+URL
+https://arxiv.org/abs/math/0503662.
+Alexandra Carpentier, Olga Klopp, Matthias L¨offler, and Richard Nickl. Adaptive confidence
+sets for matrix completion. Bernoulli, 24(4A):2429–2460, 2018. doi: 10.3150/17-BEJ933. URL
+https://arxiv.org/abs/1608.04861.
+Elynn Chen, Jiayu Li, Zheshi Zheng, and Jian Pei. Dual-channel tensor neural networks: Finite-
+sample theory and conformal structure selection, 2026. URL https://arxiv.org/abs/2605.
+19122. arXiv:2605.19122.
+Qihui Chen and Zheng Fang. Inference on functionals under first order degeneracy. Journal of
+Econometrics, 210(2):459–481, 2019. URL https://arxiv.org/abs/1901.04861.
+Jean-Marie Dufour, Eric Renault, and Victoria Zinde-Walsh. Wald tests when restrictions are
+locally singular. The Annals of Statistics, 53(2):457–476, 2025. doi: 10.1214/24-AOS2398. URL
+https://arxiv.org/abs/1312.0569.
+Yihang Gao and Vincent Y. F. Tan. Statistical inference for rank allocation in low-rank adaptation,
+2026. URL https://arxiv.org/abs/2607.20205. arXiv:2607.20205.
+Christopher J. Hillar and Lek-Heng Lim. Most tensor problems are NP-hard. Journal of the ACM,
+2013. URL https://arxiv.org/abs/0911.1393.
+14
+
+
+Jean Kossaifi, Zachary C. Lipton, Arinbjorn Kolbeinsson, Aran Khanna, Tommaso Furlanello, and
+Anima Anandkumar. Tensor regression networks. Journal of Machine Learning Research, 21:
+1–21, 2020. URL https://jmlr.org/papers/v21/18-503.html.
+Benjamin Kutschan. Tangent cones to tensor train varieties. Linear Algebra and its Applications,
+544:370–390, 2018. doi: 10.1016/j.laa.2018.01.012. URL https://arxiv.org/abs/1705.10152.
+Javier Lopez-Piqueres, Pranav Deshpande, Archan Ray, Mattia J. Villani, Marco Pistoia, and
+Niraj Kumar. MetaTT: A global tensor-train adapter for parameter-efficient fine-tuning, 2026.
+URL https://arxiv.org/abs/2506.09105v3. arXiv:2506.09105, version 3; accepted version for
+TMLR.
+Wanteng Ma and Dong Xia.
+Statistical inference in tensor completion: Optimal uncertainty
+quantification and statistical-to-computational gaps, 2024. URL https://arxiv.org/abs/2410.
+11225. arXiv:2410.11225.
+Natesh S. Pillai and Xiao-Li Meng. An unexpected encounter with cauchy and l´evy. The Annals
+of Statistics, 44(5):2089–2097, 2016. doi: 10.1214/15-AOS1407. URL https://arxiv.org/abs/
+1505.01957.
+Zhen Qin and Zhihui Zhu.
+Computational and statistical guarantees for tensor-on-tensor re-
+gression with tensor train decomposition, 2025. URL https://arxiv.org/abs/2406.06002v2.
+arXiv:2406.06002, version 2.
+Hu Sun and Yang Chen. Conformalized tensor completion with riemannian optimization. Journal of
+Computational and Graphical Statistics, 35(2):594–605, 2026. doi: 10.1080/10618600.2025.2554671.
+URL https://arxiv.org/abs/2405.00581. Published online in 2025.
+Wenbin Wang, Yu Shi, and Ziping Zhao. High-dimensional tensor regression with oracle properties. In
+Proceedings of the International Conference on Machine Learning, volume 267, pages 64302–64342,
+2025. URL https://proceedings.mlr.press/v267/wang25co.html.
+Dong Xia, Anru R. Zhang, and Yuchen Zhou. Inference for low-rank tensors: No need to debias.
+The Annals of Statistics, 50(2):1220–1245, 2022. doi: 10.1214/21-AOS2146. URL https://arxiv.
+org/abs/2012.14844.
+Ke Xu, Elynn Chen, and Yuefeng Han. Statistical inference for low-rank tensor models, 2025. URL
+https://arxiv.org/abs/2501.16223. arXiv:2501.16223.
+Yan Yang, Bin Gao, and Ya-xiang Yuan. Variational analysis of determinantal varieties, 2025. URL
+https://arxiv.org/abs/2511.22613. arXiv:2511.22613, version 2.
+15
+
+
+A
+Complete derivations
+Throughout, finite-dimensional norms are Euclidean or Frobenius. Every constant is allowed to
+depend on the fixed geometry specified in the theorem. The label Proved records a complete
+internal derivation, not independent peer review, a computer-verified proof, or a priority certificate.
+A.1
+Product structure at cap-one cuts
+Lemma 8. Every nonzero tensor obeying the cap-one prefix constraints is a product across the
+induced consecutive blocks. Conversely, if a product of block tensors has within-block TT ranks at
+most the corresponding internal caps, it belongs to the full capped TT class whenever its norm is at
+most M.
+Proof. At the first cap-one cut, a nonzero rank-one unfolding factors as a vector for the first block
+times a vector for the remaining modes. A later prefix unfolding is, up to row ordering, the
+Kronecker product of the first vector and the corresponding prefix unfolding of the remaining tensor.
+Multiplication by a nonzero vector preserves rank. The next cap-one constraint therefore factors the
+remaining tensor again. Induction proves the first assertion. The same rank-preservation calculation
+shows that an internal unfolding of a block product has the rank of that block’s internal unfolding; a
+block boundary has rank one. This proves the converse. Zero belongs to both classes separately.
+A.2
+Proof of Theorem 1
+Let B = s N
+j wj be a feasible nonzero tensor with unit block factors and ∥B −B0∥≤t. Projecting
+B0 −B orthogonally to the line spanned by wj in block j gives
+λ
+q
+1 −(v⊤
+j wj)2 ≤t.
+Consequently its component on the true block mask S satisfies
+∥BS∥≤(λ + t)(t/λ)|S|.
+(8)
+For q ≥2, all loading components of degree below q vanish, as does ⟨A, B0⟩.
+Orthogonality,
+Cauchy–Schwarz, and (8) yield
+|⟨A, B −B0⟩| ≤
+X
+|S|≥q
+∥AS∥(λ + t)(t/λ)|S| ≤2J+1∥A∥tq/λq−1
+when t ≤λ. For q = 1, ordinary Cauchy–Schwarz gives ∥A∥t. If t ≥λ, ∥A∥t ≤∥A∥tq/λq−1, so the
+asserted global upper bound follows. Zero creates no exception, since it cannot be within t < λ and
+is covered by Cauchy–Schwarz otherwise.
+For the lower bound, first suppose A∅̸= 0. The radial path (λ + s) N
+j vj is feasible for |s| small,
+and its target change is a nonzero constant times s. Now suppose the minimum nonzero degree
+is q ≥1. Choose a mask S of cardinality q with AS ̸= 0. Extend each original-mode signal factor
+to an orthonormal basis. The elementary basis products on each active block except its all-signal
+vector form an orthonormal basis for v⊥
+j . Thus some coefficient
+cA =
+*
+A,
+O
+j∈S
+wj
+O
+j /∈S
+vj
++
+16
+
+
+is nonzero, with each wj an elementary original-mode product perpendicular to vj. Consider
+B(s) = λ
+O
+j∈S
+(vj + swj)
+O
+j /∈S
+vj.
+Within each active block this is the sum of two original-mode rank-one products, so every internal
+unfolding has rank at most two. Internal caps are at least two by construction; the boundary cuts
+have rank one. Lemma 8 establishes feasibility. All terms of degree less than q pair to zero with A,
+and there are no higher-degree terms. Therefore
+⟨A, B(s) −B0⟩= λcAsq,
+∥B(s) −B0∥2 = λ2{(1 + s2)q −1}.
+Taking s2 = (1 + t2/λ2)1/q −1 gives the lower bound, since s/(t/λ) →q−1/2.
+The norm is
+√
+λ2 + t2 < λ + t < M.
+For the exact elementary coefficient, use a local product chart for any feasible B within t < λ:
+B = c
+J
+O
+j=1
+(vj + zj),
+zj ⊥vj,
+c = ⟨B,
+O
+j
+vj⟩≥λ −t > 0.
+Nonzero projections onto every vj follow from the same positive c. Orthogonal expansion gives
+t2 ≥(c −λ)2 + c2
+
+
+
+Y
+j
+(1 + ∥zj∥2) −1
+
+
+≥c2 X
+j
+∥zj∥2.
+For the elementary loading active on S, its target is c Q
+j∈S⟨wj, zj⟩. Cauchy–Schwarz and the
+arithmetic–geometric mean inequality give
+|⟨A, B⟩| ≤c
+Y
+j∈S
+∥zj∥≤
+tq
+qq/2cq−1 ≤
+tq
+qq/2(λ −t)q−1 .
+The previous path with cA = 1 has the matching leading coefficient. For q = 1 it also attains the
+exact Cauchy–Schwarz bound t. This proves every claim of the theorem.
+A.3
+Proof of Proposition 2 and the singular example
+Choose a unit elementary original-mode product H with ⟨A, H⟩̸= 0, which exists because elementary
+products span the ambient space. Rank subadditivity gives
+rank((B + sH)[k]) ≤rank(B[k]) + 1 ≤¯rk.
+For |s| < M −∥B∥the norm constraint also holds. This gives the lower bound |⟨A, H⟩|t; Cauchy–
+Schwarz gives the upper bound.
+In the six-mode example, the middle block has dimensions 2 × 2 × 2 × 2. The internal edge
+unfoldings have rank at most two automatically. Its central 4 × 4 unfolding is constrained to rank
+at most two, a proper determinantal variety. At a rank-one point this variety is singular: the
+differentials of all its 3 × 3 minors vanish, so its algebraic tangent space is the full 16-dimensional
+space, whereas the dimension of the rank-at-most-two variety is 2(4 + 4 −2) = 12. Factoring the
+two external nonzero lines gives a local product chart with this variety; its singularity persists. The
+elementary path in the preceding proof remains feasible and gives cubic contact. For any one prefix
+cut with cap one, the corresponding elementary contrast is perpendicular on both matrix sides and
+the two-factor calculation gives order two. At the other cuts cap two leaves rank-one slack, giving
+order one. This verifies the stated scope of the matrix comparison.
+17
+
+
+A.4
+Information bound and tube geometry
+Lemma 9 (Two-point expected-length bound). If an interval has coverage at least 1 −α at B0 and
+B1, then
+EB0,σ|I| ≥|⟨A, B1 −B0⟩|
+
+1 −2α −
+√n∥B1 −B0∥
+2σ
+
++
+.
+Proof. The design distributions are identical at the two coefficients. Conditional Gaussian relative
+entropy equals ∥X(b1 −b0)∥2/(2σ2); its expectation under isotropic design is n∥b1 −b0∥2/(2σ2).
+Pinsker’s inequality therefore bounds total variation by √n∥b1 −b0∥/(2σ). Under B0, the event
+that the interval contains both target values has probability at least 1 −2α −TV. On that event
+its length is at least their separation. Integrating proves the bound. This is the usual two-point
+modulus argument, not a new information inequality.
+For a unit loading, compactness of Θ0 and Cauchy–Schwarz give the tube sandwich, for small t
+with λ + t < M:
+max{ωA,0(t), η ∧t} ≤ωA,η(t) ≤min{t, η + ωA,0(t + η)}.
+(9)
+Indeed Θ0 ⊆Θη and B0 + (η ∧t)A supplies the two lower bounds. For any feasible B, choose
+a nearest B† ∈Θ0. Then ∥B −B†∥≤η and ∥B† −B0∥≤t + η, proving the upper bound. For
+a nonunit loading the corresponding factors are ∥A∥, which are absorbed in constants. If η ≤t,
+Theorem 1 and (t + η)q ≤2qtq give an upper bound of order η + tq/λq−1. If η > t, use the upper
+bound t. The lower bounds combine via max(x, y) ≥(x + y)/2.
+Take h = 1 −2α > 0 and t = htn in Lemma 9. Its bracket is at least h/2. A supremizing local
+alternative, or a sequence approaching the supremum, gives the lower bound in Theorem 3, using
+(9). The signal condition ensures these alternatives stay within the norm cap. For unknown σ,
+restricting the honest procedure to alternatives with this same σ proves exactly the same lower
+bound. At a slack point Proposition 2 and the same lemma give a root-n lower bound, matched by
+ambient inference.
+For Corollary 4, the explicit alternative is within ηn of B0 and its norm is below M eventually.
+The entropy calculation yields KL = η2
+n/(2t2
+n) →0, while its target separation is ηn. Apply the
+two-point bound. The argument applies to any measurable interval, including those obtained after
+an arbitrary rank pretest.
+A.5
+Localization and moment control
+Lemma 10 (Gaussian OLS localization). Both radii in Section 5 give conditional coverage at
+least 1 −α when X has full column rank. Under isotropic Gaussian design, for fixed p, J, α and
+n ≥2p + 2J + 8, for every integer 1 ≤k ≤max(J, 2),
+E∥z −b∥k + Eek ≤Ck(σ/√n)k.
+Proof. Conditional on X, S1/2(z −b)/σ is standard normal, and hence ∥z −b∥2 ≤σ2χ2
+p/λmin(S)
+under a coupling. The squared residual norm divided by σ2 is independent χ2
+n−p by orthogonal
+Gaussian projections. The normalized squared Mahalanobis error divided by pbσ2 is therefore Fp,n−p.
+These facts prove both coverage statements.
+Here are details ensuring the expectation bound does not discard a localization failure event.
+Write S = X⊤X ∼Wp(n, I). The reciprocal of (S−1)jj is the squared norm of column j after
+18
+
+
+projecting off the other p −1 columns.
+Conditioning on those columns shows it has law χ2
+ν,
+ν = n −p + 1. For a > 0 with ν > 2a,
+E(χ2
+ν)−a = 2−a Γ(ν/2 −a)
+Γ(ν/2)
+.
+For fixed a and ν ≥2a + 2, this is at most Caν−a: the gamma-ratio asymptotic proves boundedness
+after multiplication by νa at infinity, and continuity bounds it on the remaining closed interval.
+This use of the gamma ratio involves fixed moment order only. Since λmin(S)−1 ≤tr(S−1), for a ≥1
+the inequality (P
+j xj)a ≤pa−1 P
+j xa
+j gives
+Eλmin(S)−a ≤Ca,pn−a.
+For 0 < a < 1, Jensen’s inequality and E tr(S−1) = p/(n −p −1) give the same conclusion.
+Conditional Gaussian moments now bound E∥z −b∥k by Ck,pσkEλmin(S)−k/2.
+The residual scale has kth moment bounded by Ckσk, uniformly in n−p ≥1, and is independent
+of S since its conditional distribution does not depend on X. The fixed upper quantiles Fp,n−p;1−α
+are bounded over integers n −p bounded away from zero: their distributions converge to χ2
+p/p, and
+the finite initial set has finite quantiles. Thus the known- and unknown-noise radii have the asserted
+moment bounds. The displayed sample-size condition is sufficient for all these inverse moments; it
+is not claimed necessary.
+Lemma 11 (HOSVD pilot and changing block projectors). Let bB be the rank-one HOSVD approxi-
+mation to Z. For every block-product B0,
+∥Z −bB∥≤
+√
+J∥Z −B0∥,
+h := ∥bB −B0∥≤(1 +
+√
+J)∥Z −B0∥.
+If h < λ/2 and A has no true block components of degree below q ≥1, then
+∥bΠℓA∥≤CJ∥A∥(h/λ)(q−ℓ)+,
+0 ≤ℓ≤J.
+(10)
+For q = 1 with a radial loading component, only the trivial bounds needed below are asserted.
+Proof. Let bPj be the leading left-singular-vector projection in mode j. It minimizes the mode-j
+rank-one projection residual, which is at most ∥Z −B0∥because the true block line is an admissible
+competitor. The commuting orthogonal projections have the telescoping expansion
+Z −
+Y
+j
+bPjZ =
+X
+j
+
+Y
+i<j
+bPi
+
+(I −bPj)Z.
+Terms are orthogonal: for terms j < k, the first lies in the complement of the jth line and the
+second lies in that line. Summing squared norms proves the first bound; the triangle inequality
+proves the second.
+Projection of B0 −bB off the pilot line in block j gives λ sin θj ≤h. The two cross-line operators
+satisfy ∥bPjQj∥op = ∥(I −bPj)Pj∥op = sin θj. If a true mask S has size at least q and a pilot mask T
+has size ℓ< q, then |S \ T| ≥q −ℓ. The tensor product of mask operators therefore has operator
+norm at most (h/λ)q−ℓ; all other factors have norm at most one. Sum over the at most 22J pairs of
+masks and use P
+S∥AS∥≤2J/2∥A∥. For ℓ≥q, use the contractivity of an orthogonal projection.
+These steps establish (10) with a finite J-dependent constant.
+19
+
+
+A.6
+Proof of Theorem 6
+On the OLS ball event, take a closest B† ∈Θ0 to the true B ∈Θη. Compactness ensures existence,
+and
+∥B† −bB∥≤η + ∥B −z∥+ ∥z −bb∥≤ρ.
+By Lemma 8, B† is in the block-product envelope. If ρ < bs/2, write it in the pilot chart as
+c N
+j(bvj + zj), where zj ⊥bvj and c ≥bs −ρ > 0. Its orthogonal expansion implies c∥zj∥≤ρ for each
+j. For every mask S of size ℓ≥2,
+∥(B†)S∥= c
+Y
+j∈S
+∥zj∥≤ρℓ/cℓ−1.
+The components are orthogonal, so their combined norm is bounded by
+ J
+ℓ
+1/2ρℓ/(bs −ρ)ℓ−1. The
+degree-zero and degree-one part of B† −bB has norm at most ρ. Pairing with the corresponding
+loading projections proves the second expression in (7); Cauchy–Schwarz proves the first. The
+fallback is valid for the same reason. The difference between the true and projected targets is at most
+η∥A∥. Thus Is contains the true target on the ball event. So does Ia. Their intersection is nonempty
+and contains it on that event. This proves conditional coverage, without any independence between
+pilot and ball.
+It remains to prove expected length, not merely length on a favorable event.
+At B0, put
+r = ∥z −b0∥and T = r + e. Lemma 11 gives
+h ≤(1 +
+√
+J)r,
+∥z −bb∥≤
+√
+Jr,
+ρ ≤(1 +
+√
+J)(T + η).
+First let η ≤tn. Choose a fixed small cJ > 0 so that on G = {T + η ≤cJλ}, h ≤λ/8, ρ ≤λ/8, and
+bs −ρ ≥3λ/4. When q ≥2, (10) bounds the first part of (7) by
+C∥A∥(h/λ)q−1ρ ≤C∥A∥(T + η)q/λq−1.
+For 2 ≤ℓ< q, the same inequality bounds its ℓth summand by
+C∥A∥(h/λ)q−ℓρℓ/λℓ−1 ≤C∥A∥(T + η)q/λq−1.
+For ℓ≥q, use ρ/λ ≤1 to reach the same bound. For q = 1 use H ≤∥A∥ρ directly, including a
+nonzero radial component. Thus on G, H ≤C∥A∥(T + η)q/λq−1.
+On Gc the definition always gives H ≤∥A∥ρ ≤C∥A∥(T + η). Moreover
+(T + η)1Gc ≤(T + η)q
+(cJλ)q−1 ,
+also for q = 1. Lemma 10, η ≤tn, and (x + y)q ≤2q−1(xq + yq) now yield
+E|I| ≤2η∥A∥+ 2EH ≤C{η + tq
+n/λq−1}.
+If η > tn, intersection with Ia gives |I| ≤2e∥A∥(the empty case has zero length), so its expectation
+is at most Ctn. This proves the assertion for every η. Together with the two-point lower bound it
+completes Theorem 3.
+20
+
+
+A.7
+Proof of Proposition 5
+In the local chart B = c(e0 + x) ⊗(e0 + y) ⊗(e0 + z), each vector is perpendicular to e0. The target
+equals c⟨T, x ⊗y ⊗z⟩. The energy bound gives c2(∥x∥2 + ∥y∥2 + ∥z∥2) ≤t2. Hence
+|⟨A, B⟩| ≤c∥T∥inj∥x∥∥y∥∥z∥≤
+∥T∥injt3
+3
+√
+3(λ −t)2 .
+Compactness of the unit spheres gives maximizing directions for ∥T∥inj. The product path with
+those directions and s2 = (1 + t2/λ2)1/3 −1 is feasible in the three-block product class and attains
+the matching limit. Setting λ = 1 identifies the squared spectral norm with 27 times the squared
+modulus coefficient. Thus an oracle evaluating this coefficient exactly also evaluates a known
+NP-hard tensor quantity as dimensions vary. The reduction adds no claim about approximation
+factors beyond those established for that source problem.
+A.8
+Proof of Proposition 7
+Under the triangular sequence Bn,c, the OLS error distribution is independent of the coefficient.
+The law of large numbers gives S/n →I in probability, and conditional normality implies
+(z −bn,c)/tn
+d−→G,
+G ∼Np(0, I).
+This implication can be verified directly from conditional characteristic functions:
+E[exp{−h⊤(nS−1)h/2}] →exp(−∥h∥2/2),
+by bounded convergence in probability. Expand Bn,c = B0+ctn
+P3
+j=1 Ej+O(t2
+n/λ), where Ej changes
+the designated coordinate in exactly block j. These three elementary tensors are orthonormal.
+For completeness, the required HOSVD first-order expansion follows from its eigenvector equation.
+In any block unfolding, Z = λe0w⊤
+0 + tnDn, with Dn = OP (1), so
+ZZ⊤= λ2e0e⊤
+0 + λtn(e0g⊤
+n + gne⊤
+0 ) + OP (t2
+n),
+gn = Dnw0.
+Weyl’s bound, obtained here from the Rayleigh variational formula, places the largest eigenvalue at
+λ2 + OP (tn) and all other eigenvalues at OP (tn). Choose the leading unit eigenvector with positive
+first coordinate, and write it ane0 + hn, hn ⊥e0. Projecting its eigenvector equation orthogonally
+to e0 first gives hn = OP (tn/λ), then substitution gives
+hn = (tn/λ)(I −e0e⊤
+0 )gn + OP (t2
+n/λ2),
+an = 1 + OP (t2
+n/λ2).
+Indeed the projected linear operator on hn has inverse norm OP (λ−2), and the cross block is λtn(I −
+e0e⊤
+0 )gn+OP (t2
+n), which justifies both substitutions. The HOSVD scalar coefficient equals λ+OP (tn).
+The designated perpendicular coordinate in block j therefore equals (tn/λ)(c + Zn,j) + oP (tn/λ),
+where jointly Zn,j →Zj and their independence follows from the orthonormal Ej coordinates of G.
+Contracting the pure-normal loading with the fitted product yields the asserted product limit.
+For its tangent projection, the leading terms are the three mutually orthogonal Ej directions, with
+coefficients
+(tn/λ)2 Y
+k̸=j
+(c + Zn,k) + oP (t2
+n/λ2).
+The radial term is of order (tn/λ)3; perturbing the remaining unit directions changes the leading
+terms only by a smaller order. Since nS−1 →I, the standard-error limit follows.
+21
+
+
+The limiting denominator is positive almost surely. The equality boundary of the coverage event
+has probability zero: after squaring, it is the zero set of a nonzero polynomial in a Gaussian vector.
+To see the latter fact without a regularity assumption, induct on dimension, condition on all but one
+coordinate, and use that a nonzero univariate polynomial has finitely many roots; the exceptional
+coefficient-zero sets are treated by the induction hypothesis. Thus convergence in distribution gives
+convergence of coverage probabilities. At c = 0 apply the cited monomial law. Finally, as c →∞,
+Q
+j(c + Zj) −c3
+{P
+j
+Q
+k̸=j(c + Zk)2}1/2 = Z1 + Z2 + Z3
+√
+3
++ oP (1).
+This follows by dividing numerator and denominator by c2 and expanding the finite products.
+The displayed iterated limits now follow from the standard normal distribution. No uniform-in-c
+approximation or arbitrary growing-cn limit is asserted.
+22

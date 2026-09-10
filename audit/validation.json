@@ -1,0 +1,58 @@
+{
+  "baseline_files_unchanged": 32,
+  "numbered_results": 17,
+  "essential_claims": 16,
+  "counterexamples": 12,
+  "labels": 41,
+  "numbered_equations_referenced": 10,
+  "bibliography_entries": 33,
+  "cited_references": 28,
+  "literature_comparisons": 28,
+  "latex_log_clean": true,
+  "all_internal_references_resolved": true,
+  "all_inventory_labels_resolved": true,
+  "completion_date": "2026-09-08",
+  "pdf_pages": 34,
+  "original_datasets": 186000,
+  "paired_audit_datasets": 6000,
+  "finite_variance_audit_datasets": 6000,
+  "total_unique_datasets": 198000,
+  "original_interval_records": 1410000,
+  "audit_interval_records": 222000,
+  "total_interval_records": 1632000,
+  "original_numerical_validation": "PASS: validate_results.py",
+  "new_numerical_validations": [
+    {
+      "unique_datasets": 6000,
+      "interval_records": 210000,
+      "summary_rows": 105,
+      "paired_comparisons": 42,
+      "all_code_hashes_match": true,
+      "endpoints_coverage_length_verified": true,
+      "all_energy_lengths_no_larger": true
+    },
+    {
+      "datasets": 6000,
+      "interval_records": 12000,
+      "all_hashes_match": true,
+      "endpoints_and_common_event_verified": true
+    }
+  ],
+  "theory_falsification_checks": "PASS original and audit checks",
+  "audit_workbook_sheets": 12,
+  "audit_workbook_roundtrip": "PASS",
+  "vocabulary_scan_matches": 0,
+  "visual_inspection_pages": [
+    1,
+    6,
+    10,
+    11,
+    16,
+    17,
+    28,
+    29,
+    31,
+    34
+  ],
+  "proof_status_scope": "Complete internal derivations and checks; no formal verification or independent peer review."
+}

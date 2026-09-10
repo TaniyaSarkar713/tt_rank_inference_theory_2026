@@ -1,0 +1,61 @@
+0
+2
+4
+6
+8
+Central bond τ2/(σ/√n)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Coverage probability
+(a) Tangent-aligned loading
+0
+2
+4
+6
+8
+Central bond τ2/(σ/√n)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(b) Nearly normal loading
+Graded honest
+Ambient scalar
+Known-rank Wald
+Selected-rank Wald (2)
+Boundary-degree Wald
+Figure 1: Exact-boundary calibration can fail under a local change in the central TT bond. Four
+binary modes have caps (1, 2, 1), n = 2048, λ = 3, and σ = 0.2; the path and two fixed loadings are
+specified in Section 7. Points use 2,000 replications with Wilson 95% Monte Carlo intervals; the
+horizontal line is nominal coverage 0.95. “Selected-rank Wald (2)” uses the prespecified threshold
+multiplier two.
+Moduli, curved models, and model neighborhoods.
+The connection between honest interval
+length and between-class moduli is central to Cai and Low (2004). Its lower-bound logic applies
+to singleton evaluation classes and does not require a new tensor information inequality. Andrews
+and Mikusheva (2016) already obtains conservative inference from curved-model geometry. Model-
+misspecification sensitivity is studied by Bonhomme and Weidner (2022), and bias-aware intervals
+and efficiency comparisons by Armstrong and Koles´ar (2021); Armstrong et al. (2023).
+Our
+neighborhood calculation uses the elementary modulus sandwich; the specific input is the classified
+TT contact order. We do not claim a new general theory of robust confidence intervals.
+Rank uncertainty and tensor inference.
+Carpentier et al. (2018) shows that rank-adaptive
+matrix confidence sets can exist, with feasibility depending on the observation and noise experiment.
+Armstrong et al. (2026) allows weak factors in panel inference. Thus rank uncertainty is not a
+universal impossibility mechanism. In regular tensor settings, Xu et al. (2025) and Ma and Xia
+(2024) obtain functional Gaussian limits under signal, initialization, and nondegenerate alignment
+conditions. Their dimensions can increase, and their regular-regime results are stronger than the
+fixed-dimensional analysis here in that respect. We address a different boundary regime rather than
+improving their sample complexity. Xia et al. (2022) also establishes important tensor inference
+results without a universal need for debiasing.
+Tensor geometry, estimation, and computation.
+Kutschan (2018) characterizes TT tangent
+cones, and Yang et al. (2025) gives first- and second-order variational formulas for determinantal
+3

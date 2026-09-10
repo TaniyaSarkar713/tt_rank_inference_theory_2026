@@ -1,0 +1,71 @@
+This implication can be verified directly from conditional characteristic functions:
+E[exp{−h⊤(nS−1)h/2}] →exp(−∥h∥2/2),
+by bounded convergence in probability. Expand Bn,c = B0+ctn
+P3
+j=1 Ej+O(t2
+n/λ), where Ej changes
+the designated coordinate in exactly block j. These three elementary tensors are orthonormal.
+For completeness, the required HOSVD first-order expansion follows from its eigenvector equation.
+In any block unfolding, Z = λe0w⊤
+0 + tnDn, with Dn = OP (1), so
+ZZ⊤= λ2e0e⊤
+0 + λtn(e0g⊤
+n + gne⊤
+0 ) + OP (t2
+n),
+gn = Dnw0.
+Weyl’s bound, obtained here from the Rayleigh variational formula, places the largest eigenvalue at
+λ2 + OP (tn) and all other eigenvalues at OP (tn). Choose the leading unit eigenvector with positive
+first coordinate, and write it ane0 + hn, hn ⊥e0. Projecting its eigenvector equation orthogonally
+to e0 first gives hn = OP (tn/λ), then substitution gives
+hn = (tn/λ)(I −e0e⊤
+0 )gn + OP (t2
+n/λ2),
+an = 1 + OP (t2
+n/λ2).
+Indeed the projected linear operator on hn has inverse norm OP (λ−2), and the cross block is λtn(I −
+e0e⊤
+0 )gn+OP (t2
+n), which justifies both substitutions. The HOSVD scalar coefficient equals λ+OP (tn).
+The designated perpendicular coordinate in block j therefore equals (tn/λ)(c + Zn,j) + oP (tn/λ),
+where jointly Zn,j →Zj and their independence follows from the orthonormal Ej coordinates of G.
+Contracting the pure-normal loading with the fitted product yields the asserted product limit.
+For its tangent projection, the leading terms are the three mutually orthogonal Ej directions, with
+coefficients
+(tn/λ)2 Y
+k̸=j
+(c + Zn,k) + oP (t2
+n/λ2).
+The radial term is of order (tn/λ)3; perturbing the remaining unit directions changes the leading
+terms only by a smaller order. Since nS−1 →I, the standard-error limit follows.
+The limiting denominator is positive almost surely. The equality boundary of the coverage event
+has probability zero: after squaring, it is the zero set of a nonzero polynomial in a Gaussian vector.
+To see the latter fact without a regularity assumption, induct on dimension, condition on all but one
+coordinate, and use that a nonzero univariate polynomial has finitely many roots; the exceptional
+coefficient-zero sets are treated by the induction hypothesis. Thus convergence in distribution gives
+convergence of coverage probabilities. At c = 0 apply the cited monomial law. Finally, as c →∞,
+Q
+j(c + Zj) −c3
+{P
+j
+Q
+k̸=j(c + Zk)2}1/2 = Z1 + Z2 + Z3
+√
+3
++ oP (1).
+This follows by dividing numerator and denominator by c2 and expanding the finite products.
+The displayed iterated limits now follow from the standard normal distribution. No uniform-in-c
+approximation or arbitrary growing-cn limit is asserted.
+B
+Strengthened certificates and localization transfer
+Lemma 17 (Energy bound for every block degree). Let B† be a block product within Frobenius
+distance ρ < bs of bB = bs N
+j bvj, where bs > 0 and the factors are unit vectors. For 2 ≤ℓ≤J,
+∥bΠℓB†∥≤
+J
+ℓ
+1/2
+J−ℓ/2
+ρℓ
+(bs −ρ)ℓ−1 .
+28

@@ -1,0 +1,6 @@
+{
+  "datasets": 6000,
+  "interval_records": 12000,
+  "all_hashes_match": true,
+  "endpoints_and_common_event_verified": true
+}

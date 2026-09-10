@@ -1,0 +1,50 @@
+In (1), R(B) −R(B⋆) = ∥B −B⋆∥2
+F /2, so the coefficient is identifiable even before structural
+restrictions. Ambient OLS is the unique empirical minimizer for full-column-rank design. Our
+structured pilot is a rank-one HOSVD of OLS in specified blocks, not an assertion that a globally
+optimal constrained least-squares tensor can be computed.
+For the prefix unfolding B[k] ∈R(d1···dk)×(dk+1···dK), define rk(B) = rank(B[k]). Given positive
+integer caps ¯r = (¯r1, . . . , ¯rK−1) and M > 0, let
+Θ0 = {B : rk(B) ≤¯rk for 1 ≤k < K, ∥B∥F ≤M},
+Θη = {B : ∥B∥F ≤M, distF (B, Θ0) ≤η},
+η ≥0.
+These sets are closed and bounded. The caps and the allowance η are specified independently of the
+data. All actual ranks below the caps are allowed, including simultaneous rank drops. A known η is
+a sensitivity parameter bounding coefficient approximation; it is not a contamination proportion or
+a data-derived certificate.
+3.2
+Target, honesty, and regime
+Fix a nonzero deterministic loading A and target ψA(B) = ⟨A, B⟩. Examples are individual entries
+or prespecified weighted contrasts. The evaluation metrics are coverage and expected interval length,
+not support recovery or generalization error of a trained feature map. Honesty means
+inf
+B∈Θη PB,σ{ψA(B) ∈I} ≥1 −α,
+0 < α < 1/2,
+with the infimum also over σ > 0 for a procedure that does not know σ. A short interval at one point
+is only useful for this objective if coverage holds over the declared class. No regularity, equivariance
+or asymptotic-linearity condition is imposed on competing intervals in the lower bound.
+The length analysis fixes K, dk, ¯r and allows arbitrary deterministic loadings, including A = An.
+Its constants are uniform over loadings and unit signal directions, and it evaluates rank-one points
+B0 = λ N
+k uk with 0 < λ < M/2. Constants are not dimension free. We assume n ≥p + max(J, 2),
+where J is the number of cap-one-induced blocks, and σ/√n is sufficiently small relative to λ. The
+latter condition keeps the local alternatives away from zero signal. These restrictions are sufficient
+for the inverse-design moments used in the proof; finite-sample coverage alone needs only n > p and
+full-column-rank design.
+The roles of the assumptions are distinct. Original-mode rank one makes the within-block
+witness paths feasible with internal ranks at most two. The known cap-one cuts exclude the
+ambient directions responsible for slower inference. The norm cap provides compactness and an
+interior margin; Corollary 11 removes it. Gaussian errors give exact chi-square and F localization;
+isotropic random design gives the stated information distance and length moments. Corollary 9
+proves the same rate under explicit more general design conditions. Proposition 10 gives a separate
+conditional-moment noise result with a slower upper bound; Theorem 12 restores the full rate using
+independent groups and a known variance bound. Neither extension implies unrestricted observation
+contamination, arbitrary dependent-noise validity, or growing-dimensional optimality.
+4
+Contact order and honest expected length
+Write C = {k : ¯rk = 1} and partition the ordered modes at these cuts into J = |C| + 1 consecutive
+blocks. Their dimensions are D1, . . . , DJ. At
+B0 = λu1 ⊗· · · ⊗uK,
+∥uk∥= 1,
+0 < λ < M/2,
+5

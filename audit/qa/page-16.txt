@@ -1,0 +1,63 @@
+0
+10−1
+100
+101
+102
+103
+104
+Loading coefficient multiplier κ
+102
+Mean energy-interval length / Aε(tn)
+(a) All-degree loading transition
+n = 512
+n = 8,192
+n = 131,072
+0
+10−1
+100
+101
+102
+103
+104
+Loading coefficient multiplier κ
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Ratio of mean lengths: energy / original
+(b) Paired length reduction
+Figure 4: The energy certificate reduces length while the multiscale normalization tracks loading
+transitions. The coefficient is ϵ = κt2
+n/λ2 in the prespecified loading Aϵ. Each sample-size cohort
+contains 2,000 datasets reused across loadings and methods. Bars are pointwise ±1.96 Monte Carlo
+standard errors; ratios use paired influence-variable errors. The horizontal line in the right panel is
+equal mean length. The left panel is normalized by a rate scale, not an exact optimal confidence
+constant.
+8
+Discussion and limitations
+The main conclusion is a loading-uniform local modulus and honest-length formula at original-
+mode rank-one points in capped TT classes.
+It retains all orthogonal degrees and therefore
+describes transitions that an integer contact order alone cannot represent. Cap-one cuts determine
+the exponent, while internal constraints can leave a singular feasible set without changing that
+exponent. If every cut permits an additional rank, all nonzero linear functionals return to first
+order. These statements describe the geometry of the declared class, not a universal benefit of
+tensor parameterization or rank selection.
+The approximation result is consequential for interpretation. A confidence interval with an
+n−3/2 pointwise length relies on a structural allowance of the same order if that gain is to persist
+uniformly. An ambient coefficient departure of order between n−3/2 and n−1/2 can be statistically
+undetectable and still dominate the target uncertainty. The theorem therefore argues for explicit
+sensitivity analysis whenever rank restrictions are approximate. It does not provide a way to infer
+the required small allowance from the same sample without additional assumptions.
+The limitations are substantial. The pointwise length theorem fixes ambient dimension and uses
+an original-mode rank-one evaluation point; its constants are uniform over the unit signal directions
+and deterministic loadings. The OLS ball can incur large dimension constants. Although the energy
+refinement substantially shortens intervals at a tested cubic point, the experiments still show that
+it is far from a sharp constant procedure. No matching dimension-dependent minimax length,
+efficient confidence constant, or general classification at non-rank-one TT points has been established.
+Coverage for data-selected contrasts follows from the common ball, but the expected-length formula
+for arbitrary dependent loadings and coverage conditional on selection remain separate questions.
+The local norm-hardness result does not establish hardness of optimal inference.
+16

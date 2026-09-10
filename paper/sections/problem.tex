@@ -1,0 +1,35 @@
+\section{Statistical experiment and inferential objective}\label{sec:problem}
+\subsection{Data, loss, and structural parameters}
+Fix an integer $K\ge2$ and positive mode dimensions $d_1,\ldots,d_K$, and set $p=\prod_{k=1}^Kd_k$. We observe independent pairs $(X_i,Y_i)$, where $X_i\in\R^{d_1\times\cdots\times d_K}$, $x_i=\vecop(X_i)$, and
+\begin{equation}\label{eq:model}
+ x_i\stackrel{\rm iid}{\sim}N_p(0,I_p),\qquad
+ Y_i=x_i^\top b+\varepsilon_i,\qquad
+ \varepsilon_i\stackrel{\rm iid}{\sim}N(0,\sigma^2),\quad b=\vecop(B).
+\end{equation}
+Designs and errors are independent. Vectorization preserves the mode order throughout; the implementation uses C order. There are no latent random structural factors in this experiment. TT cores are nonunique parameterizations of the coefficient and are not inferential targets. Write $P_{B,\sigma}^{(n)}$ for the joint law of all observations. The noise scale is either known or estimated as specified later.
+
+The half-squared loss is $\ell(B;x,y)=(y-x^\top b)^2/2$. Its risk and empirical risk are
+\[
+ R(B)=\E_{B^\star,\sigma}\ell(B;x,Y),\qquad
+ R_n(B)=\frac1n\sum_{i=1}^n\ell(B;x_i,Y_i).
+\]
+In \eqref{eq:model}, $R(B)-R(B^\star)=\norm{B-B^\star}_F^2/2$, so the coefficient is identifiable even before structural restrictions. Ambient OLS is the unique empirical minimizer for full-column-rank design. Our structured pilot is a rank-one HOSVD of OLS in specified blocks, not an assertion that a globally optimal constrained least-squares tensor can be computed.
+
+For the prefix unfolding $B^{[k]}\in\R^{(d_1\cdots d_k)\times(d_{k+1}\cdots d_K)}$, define $r_k(B)=\rank(B^{[k]})$. Given positive integer caps $\bar r=(\bar r_1,\ldots,\bar r_{K-1})$ and $M>0$, let
+\begin{align*}
+ \Th_0&=\{B:r_k(B)\le\bar r_k\text{ for }1\le k<K,\ \norm{B}_F\le M\},\\
+ \Th_\eta&=\{B:\norm{B}_F\le M,\ \dist_F(B,\Th_0)\le\eta\},\qquad\eta\ge0.
+\end{align*}
+These sets are closed and bounded. The caps and the allowance $\eta$ are specified independently of the data. All actual ranks below the caps are allowed, including simultaneous rank drops. A known $\eta$ is a sensitivity parameter bounding coefficient approximation; it is not a contamination proportion or a data-derived certificate.
+
+\subsection{Target, honesty, and regime}
+Fix a nonzero deterministic loading $A$ and target $\psi_A(B)=\ip{A}{B}$. Examples are individual entries or prespecified weighted contrasts. The evaluation metrics are coverage and expected interval length, not support recovery or generalization error of a trained feature map. Honesty means
+\[
+ \inf_{B\in\Th_\eta}\PP_{B,\sigma}\{\psi_A(B)\in I\}\ge1-\alpha,
+ \qquad 0<\alpha<1/2,
+\]
+with the infimum also over $\sigma>0$ for a procedure that does not know $\sigma$. A short interval at one point is only useful for this objective if coverage holds over the declared class. No regularity, equivariance or asymptotic-linearity condition is imposed on competing intervals in the lower bound.
+
+The length analysis fixes $K,d_k,\bar r$ and allows arbitrary deterministic loadings, including $A=A_n$. Its constants are uniform over loadings and unit signal directions, and it evaluates rank-one points $B_0=\lambda\bigotimes_ku_k$ with $0<\lambda<M/2$. Constants are not dimension free. We assume $n\ge p+\max(J,2)$, where $J$ is the number of cap-one-induced blocks, and $\sigma/\sqrt n$ is sufficiently small relative to $\lambda$. The latter condition keeps the local alternatives away from zero signal. These restrictions are sufficient for the inverse-design moments used in the proof; finite-sample coverage alone needs only $n>p$ and full-column-rank design.
+
+The roles of the assumptions are distinct. Original-mode rank one makes the within-block witness paths feasible with internal ranks at most two. The known cap-one cuts exclude the ambient directions responsible for slower inference. The norm cap provides compactness and an interior margin; Corollary~\ref{cor:unbounded} removes it. Gaussian errors give exact chi-square and $F$ localization; isotropic random design gives the stated information distance and length moments. Corollary~\ref{cor:design} proves the same rate under explicit more general design conditions. Proposition~\ref{prop:variance} gives a separate conditional-moment noise result with a slower upper bound; Theorem~\ref{thm:robust} restores the full rate using independent groups and a known variance bound. Neither extension implies unrestricted observation contamination, arbitrary dependent-noise validity, or growing-dimensional optimality.

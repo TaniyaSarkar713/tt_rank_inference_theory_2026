@@ -1,0 +1,61 @@
+tensor formats. Higher block-degree spans for product varieties appear in the osculating geometry of
+Araujo et al. (2019). We use that grading and verify feasible lower-bound paths inside the additional
+TT constraints. TT regression estimation and algorithmic guarantees are already supplied by Qin
+and Zhu (2025); oracle tensor regression under separation is studied by Wang et al. (2025). The
+spectral-norm hardness observation in Proposition 5 inherits the result of Hillar and Lim (2013); it
+is not an independent complexity theorem.
+Finite-variance localization.
+Robust mean estimation with finite second moments is developed
+by Devroye et al. (2016); Lugosi and Mendelson (2019). Our coordinate-median OLS argument uses
+the classical independent-group amplification principle, then transfers the resulting radius moments
+through the TT modulus. It does not improve the dimension or confidence-level dependence of
+those mean-estimation results. The need to restrict a fully nonparametric unknown-noise class is
+consistent with the impossibility literature originating with Bahadur and Savage (1956); the explicit
+regression construction in Appendix C is proved directly.
+Modern tensor models and other inferential targets.
+Tensor regression networks (Kossaifi
+et al., 2020), global rank-adaptive TT adapters (Lopez-Piqueres et al., 2026), and statistical rank
+allocation for LoRA (Gao and Tan, 2026) motivate attention to rank restrictions. Their architectural
+or optimization targets should not be conflated with the present population coefficient. Tensor
+conformal completion (Sun and Chen, 2026) and the recent dual-channel tensor framework (Chen
+et al., 2026) further demonstrate that tensor uncertainty quantification is already an active area.
+Predictive intervals and structure-comparison guarantees in those experiments do not determine the
+honest length studied here.
+The literature assessment is refreshed through 8 September 2026. The accompanying novelty
+matrix records mathematical settings, assumptions, guarantees, versions and differences for 28
+comparisons, including three audit additions, with a retained review of all 18 supplied PDFs. No
+reviewed source states the cap-profile classification and structural-neighborhood length formula in
+the form proved below. That observation supports a candidate contribution, not an assertion that
+all overlapping unpublished results have been excluded.
+3
+Statistical experiment and inferential objective
+3.1
+Data, loss, and structural parameters
+Fix an integer K ≥2 and positive mode dimensions d1, . . . , dK, and set p = QK
+k=1 dk. We observe
+independent pairs (Xi, Yi), where Xi ∈Rd1×···×dK, xi = vec(Xi), and
+xi
+iid
+∼Np(0, Ip),
+Yi = x⊤
+i b + εi,
+εi
+iid
+∼N(0, σ2),
+b = vec(B).
+(1)
+Designs and errors are independent.
+Vectorization preserves the mode order throughout; the
+implementation uses C order. There are no latent random structural factors in this experiment. TT
+cores are nonunique parameterizations of the coefficient and are not inferential targets. Write P (n)
+B,σ
+for the joint law of all observations. The noise scale is either known or estimated as specified later.
+The half-squared loss is ℓ(B; x, y) = (y −x⊤b)2/2. Its risk and empirical risk are
+R(B) = EB⋆,σℓ(B; x, Y ),
+Rn(B) = 1
+n
+n
+X
+i=1
+ℓ(B; xi, Yi).
+4

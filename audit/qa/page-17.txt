@@ -1,0 +1,60 @@
+29
+210
+211
+212
+213
+Sample size n
+10−4
+10−3
+10−2
+Mean interval length
+Contact order q = 3
+slope -3/2
+Gaussian
+t2.5
+29
+210
+211
+212
+213
+Sample size n
+10−6
+10−5
+10−4
+Mean interval length
+Contact order q = 4
+slope -4/2
+Gaussian
+t2.5
+Figure 5: Median-localized intervals shrink at higher orders under Gaussian and finite-variance
+heavy-tailed errors. Each point is a mean over 1,000 datasets with ±1.96 Monte Carlo standard-error
+bars. The t2.5 errors have variance 0.22 but lack third and fourth moments. Dotted lines show the
+predicted limiting slopes, while the observed finite-grid slopes remain steeper. The two cap profiles
+share observations within each noise/sample-size cohort.
+Status of possible extensions.
+Partial: growing-dimensional inference has a valid ambient
+localization construction and fixed-geometry lower bounds, but their dimension factors do not
+match. Conjectured: a general classification at non-rank-one points with several weak bonds may
+require higher-order feasible arcs beyond the present elementary paths; no universal rate is asserted.
+Partial: the spectral-norm reduction identifies a difficult constant but leaves computationally
+optimal intervals unresolved. Proved: design distributions satisfying explicit Gram conditions and
+a known conditional second-moment noise bound are treated in Section 6, with a slower upper bound
+in the latter case. Proved: Theorem 12 retains the full rate for independent observation pairs under
+a known conditional variance bound. Arbitrary dependence and an unknown unrestricted variance
+bound do not inherit this result; Counterexample C12 gives a nonshrinking-length obstruction for
+the latter. Only the statements labeled Partial or Conjectured remain research questions; the proved
+extensions have explicit assumptions and complete derivations.
+8.1
+Relevance to modern AI and why no LLM benchmark is claimed
+A tensor regression head on frozen features offers a direct statistical setting for coefficient functionals.
+In a locally linear adapter model, a fixed evaluation contrast has the form ⟨A, B⟩, with A determined
+by held-out or externally fixed Jacobian features. Existing TT adapters make such restrictions
+plausible modeling choices, but a trained LLM does not automatically satisfy isotropic design,
+Gaussian residuals, fixed dimensions, or a known approximation allowance.
+A fully observed
+checkpoint is also a deterministic approximation object, not the sampling experiment in (1).
+Accordingly, this draft contains no real-data or trained-LLM result. The companion application
+protocol specifies a frozen-feature regression study with a separately fixed functional, sample splitting
+for any learned loading, residual checks, and an explicit sensitivity grid. A convincing application
+would need to justify the population target and structural approximation bound, rather than add an
+17

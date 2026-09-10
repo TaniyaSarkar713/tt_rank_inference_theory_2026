@@ -1,0 +1,123 @@
+\section{Strengthened certificates and localization transfer}\label{app:strengthening}
+\begin{lemma}[Energy bound for every block degree]\label{lem:energy}
+Let $B^\dagger$ be a block product within Frobenius distance $\rho<\widehat s$ of $\widehat B=\widehat s\bigotimes_j\widehat v_j$, where $\widehat s>0$ and the factors are unit vectors. For $2\le\ell\le J$,
+\[
+ \norm{\widehat\Pi_\ell B^\dagger}
+ \le\binom J\ell^{1/2}J^{-\ell/2}
+                \frac{\rho^\ell}{(\widehat s-\rho)^{\ell-1}}.
+\]
+Consequently the improved interval has length no greater than the original interval on every dataset, with the same fallback and empty-intersection conventions.
+\end{lemma}
+\begin{proof}
+\emph{Roadmap:} keep the sum of squared block perturbations, bound the elementary symmetric polynomial by averaging coordinates, and compare the two nested structured intervals.
+Use the chart $B^\dagger=c\bigotimes_j(\widehat v_j+z_j)$, with $c\ge\widehat s-\rho>0$ and $z_j\perp\widehat v_j$. Set $x_j=\norm{z_j}^2$. Orthogonal expansion gives $c^2\sum_jx_j\le\rho^2$ and
+\[
+ \norm{\widehat\Pi_\ell B^\dagger}^2=c^2 e_\ell(x),
+ \qquad e_\ell(x)=\sum_{|S|=\ell}\prod_{j\in S}x_j.
+\]
+For nonnegative $x$ of sum $u$, compactness gives a maximum of $e_\ell$. If $u=0$, the assertion is immediate. If $u>0$, the maximum is positive for $\ell\le J$, and any maximizer has at least $\ell$ positive coordinates. Replacing an unequal pair $x_i,x_j$ by their average preserves their sum and increases their product strictly. In the identity
+\[
+ e_\ell(x)=e_\ell(x_{-i,-j})+(x_i+x_j)e_{\ell-1}(x_{-i,-j})
+                         +x_ix_je_{\ell-2}(x_{-i,-j}),
+\]
+we use $e_0=1$ and $e_k=0$ above the number of coordinates. The last coefficient is positive at a positive maximizer: after removing any unequal pair there remain at least $\ell-2$ positive coordinates. Thus an unequal pair contradicts maximality. All coordinates are equal, proving
+$e_\ell(x)\le\binom J\ell(u/J)^\ell$.
+Substitute $u\le\rho^2/c^2$ and take square roots to obtain the bound.
+
+The improved coefficients are no larger than the original ones, so their structured intervals are nested and have identical centers. Intersecting each with the same ambient interval preserves containment when both intersections are nonempty. If the improved intersection is empty its reported length is zero. If the original intersection is empty then the improved one is also empty. In every case the improved length is no greater. The fallback coefficients are identical. This is a deterministic length comparison, not equality of coverage probabilities or optimality of the resulting constants.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:transfer}}
+\paragraph{Roadmap.} Coverage is deterministic on the confidence-ball event. For expected length decompose the loading into its true degrees, use cross-projector mixing on a localized event, and truncate each degree at the available moment order on its complement.
+The coverage proof of Theorem~\ref{thm:procedure} only uses the ball event and product geometry, so it applies verbatim, with no distributional step left to check. A nearest point exists because $\Th_0$ is compact.
+
+Write $T=\norm{z-b_0}+e$, $U=T+\eta$, and $G=\{U\le c_J\lambda\}$ for the same sufficiently small $c_J$ as in that proof. Decompose $A=\sum_{\ell=0}^J A^{(\ell)}$, $A^{(\ell)}=\Pi_\ell A$, $\norm{A^{(\ell)}}=a_\ell$, and put $k_\ell=\max(1,\ell)$. On $G$ the graded expression before its minimum is subadditive in $A$, by the triangle inequality for each projected norm. For a single pure degree, Lemma~\ref{lem:pilot} and the term-by-term calculation in the procedure proof give
+\[
+ H(A)\one_G\le C\sum_{\ell=0}^J a_\ell
+           \frac{U^{k_\ell}}{\lambda^{k_\ell-1}}\one_G
+ \le C\sum_{\ell=0}^J a_\ell
+           \frac{U^{d_\ell}}{\lambda^{d_\ell-1}}\one_G.
+\]
+The first inequality uses the graded expression as an upper bound for $H$; it does not assume that a minimum of norms is subadditive. The second uses $U/\lambda\le c_J\le1$ and $d_\ell\le k_\ell$. For degree zero and degree one, every projected loading norm is at most $a_\ell$. Their graded expressions are consequently at most
+\[
+ a_\ell\rho\left\{1+\sum_{r=2}^J\kappa_{J,r}
+       \left(\frac{\rho}{\widehat s-\rho}\right)^{r-1}\right\}
+ \le C_Ja_\ell\rho,
+\]
+since $\rho/(\widehat s-\rho)\le1/6$ on $G$. The same bound holds for the original larger coefficients. This bounds each graded expression itself, without substituting a bound for its minimum. On $G^c$,
+\[
+ H(A)\le\norm{A}\rho\le C\sum_\ell a_\ell U,
+ \qquad U\one_{G^c}\le
+        U^{d_\ell}/(c_J\lambda)^{d_\ell-1}
+\]
+for each $\ell$, including $d_\ell=1$. Hence the same sum of moment powers bounds $H$ on the whole sample space. If $\eta\le r_n$, the assumed moments and $(x+y)^k\le2^{k-1}(x^k+y^k)$ give $\E U^k\le C'_k r_n^k$ for all $k\le m$. Since $|I|\le2H+2\eta\norm{A}$, this proves the desired bound in this case. If $\eta>r_n$, ambient intersection gives $|I|\le2e\norm{A}$, including the zero-length empty case; the first moment bound finishes the proof. No stochastic-order statement is used as a substitute for integrability.
+
+\subsection{Proof of Corollary~\ref{cor:design}}
+\paragraph{Roadmap.} Retain the exact conditional Gaussian pivot, check localization moments using the assumed inverse Gram moments, and replace the isotropic relative-entropy identity by an upper bound.
+Conditional on $X$, let $G\sim N_p(0,I_p)$ represent $S^{1/2}(z-b)/\sigma$. Its conditional law is constant, so $G$ is independent of $X$ in this representation. Then
+\[
+ \E\norm{z-b}^k\le\sigma^k\E\norm{G}^k\,
+                            \E\lambda_{\min}(S)^{-k/2}
+ \le C'_k\tn^k.
+\]
+The known radius has the same moment bound. Orthogonal Gaussian projections show that $\widehat\sigma/\sigma$ has law $\sqrt{\chi^2_{n-p}/(n-p)}$, independent of $X$ and of the standardized OLS error. Its positive moments are bounded uniformly in the positive integer $n-p$. For fixed $p,\alpha$, the $F$ upper quantiles are bounded over those integers, by convergence to $\chi_p^2/p$ and the finite initial set. Thus the unknown radius has the same bounds. Theorem~\ref{thm:transfer} proves the upper result.
+
+For any coefficient difference $\delta$, the common design law and conditional normality give
+\[
+ \operatorname{KL}(P_{b_0},P_{b_0+\delta})
+ =\frac{\delta^\top(\E S)\delta}{2\sigma^2}
+ \le\frac{Ln\norm{\delta}^2}{2\sigma^2}.
+\]
+Choose local radius $(1-2\alpha)\tn/\max(1,\sqrt L)$ in the two-point lemma and use the uniform modulus and tube lower bounds. The changed constants depend on $L$ only in addition to the earlier constants.
+For deterministic bounded Gram matrices the assumptions follow by direct eigenvalue bounds. For Gaussian rows with covariance $\Sigma$, write $S=\Sigma^{1/2}W\Sigma^{1/2}$, where $W\sim W_p(n,I)$. Then $\lambda_{\min}(S)\ge\lambda_{\min}(\Sigma)\lambda_{\min}(W)$ and $\E S=n\Sigma$. Lemma~\ref{lem:OLS} supplies the moment conditions when $n\ge p+\max(J,2)$ and $\Sigma$ has the stated eigenvalue bounds. This verifies the examples without asserting that an arbitrary full-rank design has good moments.
+
+\subsection{Proof of Proposition~\ref{prop:variance}}
+\paragraph{Roadmap.} Compute a conditional second moment, use Markov's inequality on its square, and transfer the first two localization moments.
+OLS has error $S^{-1}X^\top\varepsilon$, conditional mean zero, and covariance at most $\bar\sigma^2S^{-1}$. Therefore
+\[
+ \E(\norm{z-b}^2\mid X)\le\bar\sigma^2\operatorname{tr}(S^{-1}),
+ \qquad
+ \PP(\norm{z-b}>e_{\rm v}\mid X)\le\alpha.
+\]
+The interval coverage follows from Theorem~\ref{thm:transfer}. If the trace moment condition holds, then
+\[
+ \E(\norm{z-b_0}+e_{\rm v})^2
+ \le2\bar\sigma^2(1+\alpha^{-1})\E\operatorname{tr}(S^{-1})
+ \le C'\bar\sigma^2/n.
+\]
+Cauchy--Schwarz supplies the first moment. Apply that theorem with $m=2$. No third or higher error moment, Gaussian projection independence, or residual variance consistency has been assumed.
+
+\subsection{Proof of Corollary~\ref{cor:unbounded}}
+\paragraph{Roadmap.} Replace global compactness by bounded minimizing sequences for distance, then inspect every use of the norm cap.
+The TT class is closed because each unfolding rank constraint is the simultaneous zero set of its minors. It contains zero. For any finite $B$, a minimizing sequence $C_k$ for distance to this class has $\norm{B-C_k}\le\norm B+1$ eventually, hence $\norm{C_k}\le2\norm B+1$. A subsequence converges in finite dimension, its limit remains in the closed class, and continuity attains the distance. The tube is closed since distance to a nonempty set is a 1-Lipschitz function.
+The modulus upper bounds use product structure only; all signed and radial witness paths remain feasible without the norm restriction. The two-point alternatives remain admissible. The coverage proof requires an attained nearest point, now supplied above. HOSVD localization, projector mixing, and all moment calculations make no use of $M$. These observations verify each proof under the enlarged parameter spaces, with identical constants. At $B_0=0$ the local-signal assumption fails and the contact classification is not extended.
+
+\subsection{Proof of Theorem~\ref{thm:robust}}
+\paragraph{Roadmap.} Bound one coordinate of each group OLS estimate by a second-moment calculation, amplify its tail through independent groups, integrate the amplified tail through order $J$, and invoke the localization transfer theorem. The Gaussian submodel supplies the matching lower bound.
+Let $z^{(s)}$ be OLS in group $s$, with Gram matrix $S_s$. Given all designs in that group, conditional means of the errors are zero and conditional cross covariances vanish, because the observation pairs are independent. The diagonal conditional variances are at most $\bar\sigma^2$. Thus
+\[
+ \E\{(z_j^{(s)}-b_j)^2\mid X_s\}
+ \le\bar\sigma^2(S_s^{-1})_{jj},\qquad
+ \E(z_j^{(s)}-b_j)^2
+ \le\frac{\bar\sigma^2}{k-p-1}\le\frac{2\bar\sigma^2}{k}.
+\]
+The middle identity for the inverse Gram expectation follows from the same residualized-column chi-square integral as Lemma~\ref{lem:OLS}; $k\ge2p+2$ verifies both its finiteness and the last inequality. For every $v>0$, Markov's inequality gives
+$\PP(|z_j^{(s)}-b_j|>v)\le2\bar\sigma^2/(kv^2)$, uniformly over the noise law and $b$.
+
+If the median of $g=2h-1$ numbers differs from $b_j$ by more than $v$, at least $h$ of those numbers differ in absolute value by more than $v$. The group estimates are independent, although their coordinates within a group need not be. A union over the $\binom gh$ subsets of size $h$, followed by a union over $p$ coordinates with $v=u/\sqrt p$, gives
+\[
+ \PP(\norm{z_{\rm med}-b}>u)
+ \le\min\left\{1,\ p\binom gh
+       \left(\frac{2p\bar\sigma^2}{ku^2}\right)^h\right\}
+ =\min\{1,(D/u)^{2h}\}.
+\]
+This verifies the unconditional confidence ball at $u=e_{\rm med}$. No simultaneous-coordinate independence or Gaussian error tail is used. For every real $0<r<2h$, tail integration gives
+\[
+ \E\norm{z_{\rm med}-b}^r
+ =\int_0^\infty r u^{r-1}\PP(\norm{z_{\rm med}-b}>u)\,du
+ \le D^r+\frac{rD^r}{2h-r}
+ =\frac{2h}{2h-r}D^r.
+\]
+Here $2h>J$, so the integer moments through $J$ are finite. Also $n/g\ge2$ and $k=\lfloor n/g\rfloor\ge n/(2g)$, hence $D\le C_{p,J}\bar\sigma/\sqrt n$. Since $e_{\rm med}$ is deterministic, the sum $\norm{z_{\rm med}-b}+e_{\rm med}$ has all required moments through $J$ with uniform constants. Apply Theorem~\ref{thm:transfer} with $m=J$, $r_n=\bar t_n$, and the median ball to obtain coverage and the length upper bound.
+
+For the lower bound take the admissible conditional noise law $Q_G=N(0,\bar\sigma^2)$ independent of the design. Every procedure honest for all $Q$ is honest on this Gaussian submodel. The two-point calculation at noise scale $\bar\sigma$, the uniform loading modulus, and the tube alternative give the lower scale in the display. The supremum over $Q$ in expected length is at least its value at $Q_G$. Taking the infimum over honest procedures preserves the bound. This proof uses the direct lower-bound argument, so it does not require importing the Gaussian procedure's separate sufficient sample-size threshold. The median upper bound is uniform over $Q$, completing the comparison.

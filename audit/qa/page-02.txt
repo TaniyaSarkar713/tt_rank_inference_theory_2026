@@ -1,0 +1,47 @@
+We therefore study a deliberately explicit experiment: independent isotropic Gaussian designs,
+independent Gaussian regression errors, and a fixed-dimensional coefficient in a bounded TT
+rank class or a known neighborhood of that class. The main length estimand is a prespecified
+linear functional of the coefficient, not an individual TT core, a training-trajectory statistic, or an
+unobserved neural-network parameterization. Our main objective is to classify the best expected
+interval length at rank-one coefficients subject to coverage for every coefficient in the declared
+class. We allow unknown error variance but do not claim inference when ambient least squares is
+unavailable.
+Three obstacles distinguish the calculation from a direct delta-method exercise. First, a path in
+an enclosing product model may violate an internal TT rank cap, so a lower modulus bound requires
+an actually feasible tensor path. Second, a confidence interval calibrated at the exact boundary
+can fail under statistically indistinguishable local changes, as Figure 1 illustrates. Third, the fitted
+loading projections have lower-order components even when the true ones vanish; these terms and
+the event of poor pilot localization must be controlled to bound expected length.
+The construction uses the cuts whose rank cap equals one to partition the tensor chain. Orthog-
+onal loading components are graded by the number of blocks perpendicular to the signal. For a
+fixed loading, the smallest nonzero degree determines the modulus exponent. Retaining all degrees
+gives a uniform formula when low-degree components approach zero. Within-block sums of two
+elementary products provide feasible witness paths despite the remaining TT constraints. Averaging
+signed paths isolates each degree without cancellation from lower ones. Confidence-ball inversion
+then supplies global coverage, while a graded product bound makes the calculation explicit. In the
+four-way example this recovers cubic inference. A six-way example with a proper singular internal
+rank constraint has the same cubic order, demonstrating both the scope of the classification and
+the limited role of that singularity.
+The paper makes three claims, each proved in the appendix:
+1. Section 4 classifies local contact and optimal honest expected length at rank-one signals for
+arbitrary positive TT cap profiles, uniformly over deterministic loadings. It also shows that
+slack at every cut restores first-order contact for every nonzero loading.
+2. Theorem 3 determines the additional length required by a known structural approximation
+allowance and identifies departures that cannot be detected but invalidate exact-model lengths.
+3. Section 5 gives a computable, globally honest interval that attains these orders without
+selecting the contact order. The improved energy certificate is no longer than the original on
+any dataset. Section 6 separates localization assumptions from geometry; experiments test
+the rate transitions, coverage distinction, and approximation sensitivity.
+2
+Related work and the scope of the contribution
+Degenerate functionals and singular tests.
+Chen and Fang (2019) develops second-order
+functional inference and explains ordinary-bootstrap failure; higher-order extensions are explicitly
+discussed. Dufour et al. (2025) studies locally singular polynomial Wald restrictions. Pillai and
+Meng (2016) gives the exact Gaussian monomial Wald law, including the cubic χ2
+1/9 case. Bei and
+Navjeevan (2026) constructs uniformly valid minimum-distance inference under degeneracy and
+discusses extensions beyond a nonsingular Hessian. These results preclude novelty claims based
+solely on a cubic delta method or a nonstandard Wald limit. Our explicit local Wald calculation is
+a supporting specialization of that literature.
+2

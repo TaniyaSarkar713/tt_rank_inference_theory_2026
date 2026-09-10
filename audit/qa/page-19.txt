@@ -1,0 +1,47 @@
+References
+Isaiah Andrews and Anna Mikusheva. A geometric approach to nonlinear econometric models.
+Econometrica, 84(3):1249–1264, 2016. doi: 10.3982/ECTA12030. URL https://economics.mit.
+edu/sites/default/files/publications/ecta12030-%20final%20version.pdf.
+Carolina Araujo, Alex Massarenti, and Rick Rischter. On non-secant defectivity of Segre–Veronese
+varieties. Transactions of the American Mathematical Society, 2019. doi: 10.1090/tran/7306.
+URL https://arxiv.org/abs/1611.01674.
+Timothy B. Armstrong and Michal Koles´ar.
+Sensitivity analysis using approximate moment
+condition models. Quantitative Economics, 12(1):77–108, 2021. doi: 10.3982/QE1609. URL
+https://arxiv.org/abs/1808.07387.
+Timothy B. Armstrong, Michal Koles´ar, and Soonwoo Kwon. Bias-aware inference in regularized
+regression models, 2023. URL https://arxiv.org/abs/2012.14823. arXiv:2012.14823, version
+2.
+Timothy B. Armstrong, Martin Weidner, and Andrei Zeleneev. Robust estimation and inference in
+panels with interactive fixed effects. Journal of Political Economy, 2026. doi: 10.1086/741623.
+URL https://arxiv.org/abs/2210.06639. Mathematical comparisons use arXiv version 3.
+R. R. Bahadur and Leonard J. Savage.
+The nonexistence of certain statistical procedures in
+nonparametric problems. The Annals of Mathematical Statistics, 27(4):1115–1122, 1956. doi:
+10.1214/aoms/1177728077.
+Xinyue Bei and Manu Navjeevan.
+Inference under first-order degeneracy, 2026.
+URL https:
+//arxiv.org/abs/2602.07377. arXiv:2602.07377.
+St´ephane Bonhomme and Martin Weidner.
+Minimizing sensitivity to model misspecification.
+Quantitative Economics, 13(3):907–954, 2022. doi: 10.3982/QE1930. URL https://arxiv.org/
+abs/1807.02161.
+T. Tony Cai and Mark G. Low. An adaptation theory for nonparametric confidence intervals.
+The Annals of Statistics, 32(5):1805–1840, 2004.
+doi: 10.1214/009053604000000049.
+URL
+https://arxiv.org/abs/math/0503662.
+Alexandra Carpentier, Olga Klopp, Matthias L¨offler, and Richard Nickl. Adaptive confidence
+sets for matrix completion. Bernoulli, 24(4A):2429–2460, 2018. doi: 10.3150/17-BEJ933. URL
+https://arxiv.org/abs/1608.04861.
+Elynn Chen, Jiayu Li, Zheshi Zheng, and Jian Pei. Dual-channel tensor neural networks: Finite-
+sample theory and conformal structure selection, 2026. URL https://arxiv.org/abs/2605.
+19122. arXiv:2605.19122.
+Qihui Chen and Zheng Fang. Inference on functionals under first order degeneracy. Journal of
+Econometrics, 210(2):459–481, 2019. URL https://arxiv.org/abs/1901.04861.
+Luc Devroye, Matthieu Lerasle, Gabor Lugosi, and Roberto I. Oliveira.
+Sub-gaussian mean
+estimators. The Annals of Statistics, 44(6):2695–2725, 2016. doi: 10.1214/16-AOS1440. URL
+https://arxiv.org/abs/1509.05845.
+19

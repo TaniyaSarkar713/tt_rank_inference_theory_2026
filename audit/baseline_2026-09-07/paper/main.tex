@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Contact Orders and the Fragility of Honest Tensor Inference}
+\author{Research draft for author review}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A linear functional of a tensor coefficient can have a vanishing first-order derivative when restricted to a rank-constrained model. We study the resulting inference problem in Gaussian tensor regression with fixed ambient dimension. At an original-mode rank-one signal, we classify the local modulus for every tensor-train rank-cap profile: cuts constrained to rank one partition the modes into blocks, and the first nonzero block degree of the loading determines the contact order $q$. The optimal pointwise expected length among intervals honest over the entire class is of order $(\sigma/\sqrt n)^q/\lambda^{q-1}$, where $\lambda$ is signal magnitude. The classification includes examples with singular internal rank constraints. In a known Frobenius neighborhood of radius $\eta$, the optimal order acquires the term $\eta\wedge(\sigma/\sqrt n)$. We construct a computable interval using a Gaussian confidence ball, an HOSVD pilot, and all block orders, with an exact extension to unknown variance. Simulations recover the predicted exponents and distinguish exact-boundary Wald calibration from locally honest inference, while documenting substantial conservatism of the proposed interval. The contribution is a tensor-specific classification and sensitivity calculation; generic higher-order inference, modulus lower bounds, and tensor tangent geometry are established tools.
+\end{abstract}
+\noindent\textbf{Keywords:} confidence intervals; tensor train; local modulus; singular inference; model approximation; higher-order contact.
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/problem}
+\input{sections/theory}
+\input{sections/experiments}
+\input{sections/discussion}
+\clearpage
+\bibliography{references}
+\clearpage
+\appendix
+\input{appendix}
+\end{document}

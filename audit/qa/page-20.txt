@@ -1,0 +1,42 @@
+Jean-Marie Dufour, Eric Renault, and Victoria Zinde-Walsh. Wald tests when restrictions are
+locally singular. The Annals of Statistics, 53(2):457–476, 2025. doi: 10.1214/24-AOS2398. URL
+https://arxiv.org/abs/1312.0569.
+Yihang Gao and Vincent Y. F. Tan. Statistical inference for rank allocation in low-rank adaptation,
+2026. URL https://arxiv.org/abs/2607.20205. arXiv:2607.20205.
+Christopher J. Hillar and Lek-Heng Lim. Most tensor problems are NP-hard. Journal of the ACM,
+2013. URL https://arxiv.org/abs/0911.1393.
+Jean Kossaifi, Zachary C. Lipton, Arinbjorn Kolbeinsson, Aran Khanna, Tommaso Furlanello, and
+Anima Anandkumar. Tensor regression networks. Journal of Machine Learning Research, 21:
+1–21, 2020. URL https://jmlr.org/papers/v21/18-503.html.
+Benjamin Kutschan. Tangent cones to tensor train varieties. Linear Algebra and its Applications,
+544:370–390, 2018. doi: 10.1016/j.laa.2018.01.012. URL https://arxiv.org/abs/1705.10152.
+Javier Lopez-Piqueres, Pranav Deshpande, Archan Ray, Mattia J. Villani, Marco Pistoia, and
+Niraj Kumar. MetaTT: A global tensor-train adapter for parameter-efficient fine-tuning, 2026.
+URL https://arxiv.org/abs/2506.09105v3. arXiv:2506.09105, version 3; accepted version for
+TMLR.
+Gabor Lugosi and Shahar Mendelson. Sub-gaussian estimators of the mean of a random vector.
+The Annals of Statistics, 47(2):783–794, 2019. doi: 10.1214/17-AOS1639. URL https://arxiv.
+org/abs/1702.00482.
+Wanteng Ma and Dong Xia.
+Statistical inference in tensor completion: Optimal uncertainty
+quantification and statistical-to-computational gaps, 2024. URL https://arxiv.org/abs/2410.
+11225. arXiv:2410.11225.
+Natesh S. Pillai and Xiao-Li Meng. An unexpected encounter with cauchy and l´evy. The Annals
+of Statistics, 44(5):2089–2097, 2016. doi: 10.1214/15-AOS1407. URL https://arxiv.org/abs/
+1505.01957.
+Zhen Qin and Zhihui Zhu.
+Computational and statistical guarantees for tensor-on-tensor re-
+gression with tensor train decomposition, 2025. URL https://arxiv.org/abs/2406.06002v2.
+arXiv:2406.06002, version 2.
+Hu Sun and Yang Chen. Conformalized tensor completion with riemannian optimization. Journal of
+Computational and Graphical Statistics, 35(2):594–605, 2026. doi: 10.1080/10618600.2025.2554671.
+URL https://arxiv.org/abs/2405.00581. Published online in 2025.
+Wenbin Wang, Yu Shi, and Ziping Zhao. High-dimensional tensor regression with oracle properties. In
+Proceedings of the International Conference on Machine Learning, volume 267, pages 64302–64342,
+2025. URL https://proceedings.mlr.press/v267/wang25co.html.
+Dong Xia, Anru R. Zhang, and Yuchen Zhou. Inference for low-rank tensors: No need to debias.
+The Annals of Statistics, 50(2):1220–1245, 2022. doi: 10.1214/21-AOS2146. URL https://arxiv.
+org/abs/2012.14844.
+Ke Xu, Elynn Chen, and Yuefeng Han. Statistical inference for low-rank tensor models, 2025. URL
+https://arxiv.org/abs/2501.16223. arXiv:2501.16223.
+20

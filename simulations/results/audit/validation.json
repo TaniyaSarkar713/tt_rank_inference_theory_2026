@@ -1,0 +1,9 @@
+{
+  "unique_datasets": 6000,
+  "interval_records": 210000,
+  "summary_rows": 105,
+  "paired_comparisons": 42,
+  "all_code_hashes_match": true,
+  "endpoints_coverage_length_verified": true,
+  "all_energy_lengths_no_larger": true
+}

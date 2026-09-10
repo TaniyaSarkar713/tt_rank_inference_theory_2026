@@ -1,0 +1,84 @@
+Profile
+p
+Predicted
+Primary
+Large-n (MCSE)
+Four-mode slack
+16
+-0.50
+-0.548
+-0.503 (9.4 × 10−6)
+Four-mode two blocks
+16
+-1.00
+-1.071
+-1.003 (0.002)
+Three-mode product
+8
+-1.50
+-1.563
+-1.504 (0.004)
+Four-mode three blocks
+16
+-1.50
+-1.605
+-1.500 (0.003)
+Six-mode singular
+64
+-1.50
+-1.776
+-1.511 (0.002)
+Four-mode product
+16
+-2.00
+-2.136
+-2.010 (0.004)
+Table 1: Mean-length log–log slopes approach the contact-order predictions. Primary slopes fit
+the three prespecified sample sizes; large-n slopes use the two addendum sizes. Parentheses give
+delta-method Monte Carlo standard errors for the latter, using independent settings.
+For the Gaussian experiments we simulate the exact joint distribution of the sufficient statistics
+using Bartlett’s Wishart construction. Specifically, if S = LL⊤, G ∼Np(0, I) and V ∼χ2
+n−p are
+independent of the design, then
+z = b + σL−⊤G,
+bσ = σ
+p
+V/(n −p).
+This has the same law as ambient OLS and its residual scale from n Gaussian observations. Large
+values of n therefore do not require storing an n by p matrix. The stress experiments instead
+generate the actual observations because their error laws are outside this construction.
+The operational baseline with an exact finite-sample scalar guarantee is ambient OLS: a⊤z ±
+z.975σ
+√
+a⊤S−1a, or its residual-t version. We compare the graded interval with this baseline, ordinary
+HOSVD tangent plug-in Wald, the boundary-degree calibration, and a single-prefix-matrix envelope.
+The last method applies two-block graded inversion at the first available cap-one cut and otherwise
+uses ambient inference. It is a containing-model baseline, not a claim to optimize every possible
+unfolding method. Exact inversion of the nonconvex TT confidence region is a theoretical benchmark;
+the graded procedure computes an outer certificate rather than globally optimized endpoints.
+For an interval I(r), reported coverage is bc = R−1 P
+r 1{ψA(B) ∈I(r)} and its binomial Monte
+Carlo standard error is
+p
+bc(1 −bc)/R. At R = 2000 and c = 0.95, this is 0.00487. Wilson 95% Monte
+Carlo intervals are also reported, including at zero or full empirical coverage. Mean lengths have
+standard errors equal to their sample standard deviations divided by
+√
+R. At 2,000 successes out of
+2,000, a zero plug-in standard error does not imply certainty: the Wilson interval is approximately
+[0.9981, 1].
+7.2
+Contact orders and internal singularity
+We take B0 = 3E00···0, A = E11···1, and σ = 0.2. Three binary modes with caps (1, 1) give q = 3.
+Four binary modes with caps (1, 1, 1), (1, 2, 1), (2, 1, 2), and (2, 2, 2) give q = 4, 3, 2, 1, respectively.
+Six binary modes with caps (1, 2, 2, 2, 1) give the internally singular q = 3 example. The primary
+sample sizes are 512, 2048 and 8192.
+The mean-length slopes approach the predicted −q/2 exponents; Table 1 reports both the
+primary and larger-n estimates. The primary six-mode slope is −1.776, so those sample sizes alone
+should not be described as a precise confirmation of −1.5. The addendum uses n = 131072 and
+2097152, with unchanged methods and tuning. Its six-mode slope is −1.511, while the four-way
+product slope is −2.010. Monte Carlo errors in the table describe uncertainty in simulated means,
+not error from approximating an asymptotic exponent.
+All graded intervals in the exactly specified contact experiments cover their targets. This
+demonstrates substantial conservatism. For example, at n = 2048 in the four-way three-block
+12

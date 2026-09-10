@@ -1,0 +1,344 @@
+[
+  {
+    "id": "P01",
+    "filename": "02835-NakatsujiM.pdf",
+    "pages": 9,
+    "text_file": "research_review/extracted/P01.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "Tensorized Attention for Understanding Multi-Object Relationships",
+      "author": "Makoto Nakatsuji, Yasuhiro Fujiwara, Atsushi Otsuka, Narichika Nomoto, Yoshihide Sato",
+      "subject": "The Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-25)",
+      "keywords": "Natural Language Processing (NLP): NLP: (Large) Language Models, Natural Language Processing (NLP): NLP: Conversational AI/Dialog Systems, Machine Learning (ML): ML: Deep Learning Algorithms, Natural Language Processing (NLP): NLP: Question Answering",
+      "creator": "",
+      "producer": "",
+      "creationDate": "D:20250407100446Z",
+      "modDate": "D:20250407100447Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P02",
+    "filename": "Computational and Statistical Guarantees for Tensor-on-Tensor Regression with Tensor Train Decomposition.pdf",
+    "pages": 21,
+    "text_file": "research_review/extracted/P02.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.25",
+      "creationDate": "D:20250502002714Z",
+      "modDate": "D:20250502002714Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P03",
+    "filename": "Guarantees for Alternating Least Squares in Overparameterized Tensor Decomposition.pdf",
+    "pages": 18,
+    "text_file": "research_review/extracted/P03.txt",
+    "metadata": {
+      "format": "PDF 1.4",
+      "title": "ALS",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "Keynote",
+      "producer": "macOS Version 15.6.1 (Build 24G90) Quartz PDFContext",
+      "creationDate": "D:20250921232141Z00'00'",
+      "modDate": "D:20250921232141Z00'00'",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P04",
+    "filename": "High-Dimensional Tensor Regression With Oracle Properties.pdf",
+    "pages": 41,
+    "text_file": "research_review/extracted/P04.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "High-Dimensional Tensor Regression with Oracle Properties",
+      "author": "Wenbin Wang, Yu Shi, Ziping Zhao",
+      "subject": "Proceedings of the International Conference on Machine Learning 2025",
+      "keywords": "Machine Learning, ICML",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.26",
+      "creationDate": "D:20250807133456Z",
+      "modDate": "D:20250807133456Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P05",
+    "filename": "Low-Rank Tensor Decompositions for the Theory of Neural Networks- Understanding deep learning through the lens of tensor formats [Special Issue on the Mathematics of Deep Learning].pdf",
+    "pages": 21,
+    "text_file": "research_review/extracted/P05.txt",
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "Low-Rank Tensor Decompositions for the Theory of Neural Networks",
+      "author": "Ricardo Borsoi; Konstantin Usevich; Marianne Clausel",
+      "subject": "",
+      "keywords": "",
+      "creator": "arXiv GenPDF (tex2pdf:57610bf)",
+      "producer": "pikepdf 8.15.1",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P06",
+    "filename": "Low-Rank Tensor Learning by Generalized Nonconvex Regularization.pdf",
+    "pages": 52,
+    "text_file": "research_review/extracted/P06.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.25",
+      "creationDate": "D:20241025002051Z",
+      "modDate": "D:20241025002051Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P07",
+    "filename": "MetaTT- A Global Tensor-Train Adapter for ParameterEfficient Fine-Tuning.pdf",
+    "pages": 37,
+    "text_file": "research_review/extracted/P07.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "MetaTT: A Global Tensor-Train Adapter for Parameter-Efficient Fine-Tuning",
+      "author": "Javier Lopez-Piqueres; Pranav Deshpande; Archan Ray; Mattia J. Villani; Marco Pistoia; Niraj Kumar",
+      "subject": "",
+      "keywords": "",
+      "creator": "arXiv GenPDF (tex2pdf:a6404ea)",
+      "producer": "pikepdf 8.15.1",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P08",
+    "filename": "Rethinking the Role of Tensor Decompositions in Post-Training LLM Compression.pdf",
+    "pages": 12,
+    "text_file": "research_review/extracted/P08.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "Rethinking the Role of Tensor Decompositions in Post-Training LLM Compression",
+      "author": "",
+      "subject": "-  Computing methodologies  ->  Machine learning.",
+      "keywords": "",
+      "creator": "LaTeX with acmart 2025/08/27 v2.16 Typesetting articles for the Association for Computing Machinery and hyperref 2025-05-20 v7.01m Hypertext links for LaTeX",
+      "producer": "pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1",
+      "creationDate": "D:20260531192836Z",
+      "modDate": "D:20260531192836Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P09",
+    "filename": "Surviving Resource-constraint Compression- Capability Retention under Tensor-train Decomposition for Sub-billion Parameter Language Models.pdf",
+    "pages": 16,
+    "text_file": "research_review/extracted/P09.txt",
+    "metadata": {
+      "format": "PDF 1.4",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "",
+      "producer": "SoWise",
+      "creationDate": "D:20260728171556+08'00'",
+      "modDate": "D:20260731071822+08'00'",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P10",
+    "filename": "TENSORSLM- SUB-BILLION PARAMETER LANGUAGE MODEL COMPRESSION FOR LOW-END DEVICES BASED ON TENSOR-TRAIN DECOMPOSITION.pdf",
+    "pages": 21,
+    "text_file": "research_review/extracted/P10.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.26",
+      "creationDate": "D:20241128110251Z",
+      "modDate": "D:20241128110251Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P11",
+    "filename": "TEON- Tensorized Orthonormalization Beyond Layer-Wise MUON for Large Language Model Pre-Training.pdf",
+    "pages": 19,
+    "text_file": "research_review/extracted/P11.txt",
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "TEON: Tensorized Orthonormalization Beyond Layer-Wise Muon for Large Language Model Pre-Training",
+      "author": "Ruijie Zhang; Yequan Zhao; Ziyue Liu; Zhengyang Wang; Dongyang Li; Yupeng Su; Sijia Liu; Zheng Zhang",
+      "subject": "",
+      "keywords": "",
+      "creator": "arXiv GenPDF (tex2pdf:57610bf)",
+      "producer": "pikepdf 8.15.1",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P12",
+    "filename": "TRAC- TENSOR-TRAIN BASED ACROSS-LAYER COMPRESSION FOR PARAMETER-EFFICIENT FINE-TUNING.pdf",
+    "pages": 34,
+    "text_file": "research_review/extracted/P12.txt",
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.27",
+      "creationDate": "D:20260304162510Z",
+      "modDate": "D:20260304162510Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P13",
+    "filename": "Tensor Methods for Language Models- From Token Representation to Training, Adaptation, Inference, Compression, and Interpretability.pdf",
+    "pages": 58,
+    "text_file": "research_review/extracted/P13.txt",
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "Tensor Methods for Language Models: From Token Representation to Training, Adaptation, Inference, Compression, and Interpretability",
+      "author": "Matvei Tarasov; Salman Ahmadi-Asl; Andre L. F. de Almeida; Andrzej Cichocki",
+      "subject": "",
+      "keywords": "",
+      "creator": "arXiv GenPDF (tex2pdf:4af3385)",
+      "producer": "pikepdf 8.15.1",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P14",
+    "filename": "Tensor Methods in High Dimensional Data Analysis- Opportunities and Challenges.pdf",
+    "pages": 38,
+    "text_file": "research_review/extracted/P14.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.25",
+      "creationDate": "D:20240529010616Z",
+      "modDate": "D:20240529010616Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P15",
+    "filename": "Tensor Regression Networks.pdf",
+    "pages": 21,
+    "text_file": "research_review/extracted/P15.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref package",
+      "producer": "pdfTeX-1.40.17",
+      "creationDate": "D:20200722010029Z",
+      "modDate": "D:20200722010029Z",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P16",
+    "filename": "Tucker Attention- A generalization of approximate attention mechanisms.pdf",
+    "pages": 21,
+    "text_file": "research_review/extracted/P16.txt",
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "Tucker Attention: A generalization of approximate attention mechanisms",
+      "author": "Timon Klein; Jonas Kusch; Sebastian Sager; Stefan Schnake; Steffen Schotth\u00f6fer",
+      "subject": "",
+      "keywords": "",
+      "creator": "arXiv GenPDF (tex2pdf:a6404ea)",
+      "producer": "pikepdf 8.15.1",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P17",
+    "filename": "ijfis-25-2-136.pdf",
+    "pages": 10,
+    "text_file": "research_review/extracted/P17.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.25",
+      "creationDate": "D:20250624113246+09'00'",
+      "modDate": "D:20250624113246+09'00'",
+      "trapped": "",
+      "encryption": null
+    }
+  },
+  {
+    "id": "P18",
+    "filename": "tadipatri25a.pdf",
+    "pages": 70,
+    "text_file": "research_review/extracted/P18.txt",
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "LaTeX with hyperref",
+      "producer": "pdfTeX-1.40.26",
+      "creationDate": "D:20250311035227Z",
+      "modDate": "D:20250311035227Z",
+      "trapped": "",
+      "encryption": null
+    }
+  }
+]

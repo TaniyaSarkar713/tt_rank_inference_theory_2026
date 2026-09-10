@@ -1,0 +1,10 @@
+{
+  "settings": 19,
+  "independent_datasets": 95000,
+  "interval_records": 380000,
+  "all_hashes_verified": true,
+  "raw_summaries_verified": true,
+  "all_common_ball_inclusions": true,
+  "all_joint_lengths_no_greater": true,
+  "max_numerator_bracket_gap": 1.3322676295501878e-15
+}

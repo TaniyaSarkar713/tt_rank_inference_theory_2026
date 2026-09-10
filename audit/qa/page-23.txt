@@ -1,0 +1,73 @@
+Each internal unfolding has rank at most two, each boundary cut has rank one, and Lemma 13
+proves feasibility. Moreover,
+∥Bϵ(s) −B0∥2 = λ2{(1 + s2)ℓ−1} = t2,
+∥Bϵ(s)∥=
+p
+λ2 + t2 < M.
+Expand the finite product and average with the top sign character:
+2−ℓX
+ϵ
+
+Y
+j∈S
+ϵj
+
+⟨A, Bϵ(s) −B0⟩= λcSsℓ.
+Indeed each monomial for a proper subset of S has at least one sign appearing to the first power,
+whose average is zero. Thus at least one feasible sign choice has absolute target change at least
+λ|cS|sℓ. The mean value theorem, with t/λ ≤1/2, gives
+s2 ≥4
+5ℓ(t/λ)2.
+Therefore ωA,0(t) ≥cℓ,Daℓtℓ/λℓ−1. If a0 > 0, the feasible radial path gives ωA,0(t) ≥a0t. Zero-
+dimensional degrees simply contribute zero. The maximum of these J + 1 nonnegative bounds is at
+least their sum divided by J + 1. This proves the uniform lower bound with constants independent
+of the loading and signal directions.
+For fixed A, the first nonzero degree now implies (4); higher terms are bounded by its order
+when t ≤λ. For t ≥λ, Cauchy–Schwarz gives ωA,0(t) ≤∥A∥t ≤∥A∥tq/λq−1, proving the global
+bound. For the pure elementary loading the preceding unsigned path has target λsq, so its scaled
+limit is q−q/2.
+For the exact elementary coefficient, use a local product chart for any feasible B within t < λ:
+B = c
+J
+O
+j=1
+(vj + zj),
+zj ⊥vj,
+c = ⟨B,
+O
+j
+vj⟩≥λ −t > 0.
+Nonzero projections onto every vj follow from the same positive c. Orthogonal expansion gives
+t2 ≥(c −λ)2 + c2
+
+
+
+Y
+j
+(1 + ∥zj∥2) −1
+
+
+≥c2 X
+j
+∥zj∥2.
+For the elementary loading active on S, its target is c Q
+j∈S⟨wj, zj⟩. Cauchy–Schwarz and the
+arithmetic–geometric mean inequality give
+|⟨A, B⟩| ≤c
+Y
+j∈S
+∥zj∥≤
+tq
+qq/2cq−1 ≤
+tq
+qq/2(λ −t)q−1 .
+The unsigned elementary path has the matching leading coefficient. For q = 1 it also attains the
+exact Cauchy–Schwarz bound t. This proves every claim of the theorem.
+A.3
+Proof of Proposition 2 and the singular example
+Roadmap.
+Add a rank-one direction at a slack point; inspect determinantal minors for the
+separate singularity example. Choose a unit elementary original-mode product H with ⟨A, H⟩̸= 0,
+which exists because elementary products span the ambient space. Rank subadditivity gives
+rank((B + sH)[k]) ≤rank(B[k]) + 1 ≤¯rk.
+23

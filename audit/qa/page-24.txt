@@ -1,0 +1,53 @@
+For |s| < M −∥B∥the norm constraint also holds. This gives the lower bound |⟨A, H⟩|t; Cauchy–
+Schwarz gives the upper bound.
+In the six-mode example, the middle block has dimensions 2 × 2 × 2 × 2. The internal edge
+unfoldings have rank at most two automatically. Its central 4 × 4 unfolding is constrained to rank
+at most two, a proper determinantal variety. At a rank-one point this variety is singular: the
+differentials of all its 3 × 3 minors vanish, so its algebraic tangent space is the full 16-dimensional
+space, whereas the dimension of the rank-at-most-two variety is 2(4 + 4 −2) = 12. Factoring the
+two external nonzero lines gives a local product chart with this variety; its singularity persists. The
+elementary path in the preceding proof remains feasible and gives cubic contact. For any one prefix
+cut with cap one, the corresponding elementary contrast is perpendicular on both matrix sides and
+the two-factor calculation gives order two. At the other cuts cap two leaves rank-one slack, giving
+order one. This verifies the stated scope of the matrix comparison.
+A.4
+Information bound and tube geometry
+Lemma 14 (Two-point expected-length bound). If an interval has coverage at least 1 −α at B0
+and B1, then
+EB0,σ|I| ≥|⟨A, B1 −B0⟩|
+
+1 −2α −
+√n∥B1 −B0∥
+2σ
+
++
+.
+Proof. Roadmap: compute Gaussian relative entropy, convert to total variation, and force simultane-
+ous inclusion of two targets. The design distributions are identical at the two coefficients. Conditional
+Gaussian relative entropy equals ∥X(b1 −b0)∥2/(2σ2); its expectation under isotropic design is
+n∥b1 −b0∥2/(2σ2). Pinsker’s inequality therefore bounds total variation by √n∥b1 −b0∥/(2σ). Under
+B0, the event that the interval contains both target values has probability at least 1 −2α −TV. On
+that event its length is at least their separation. Integrating proves the bound. This is the usual
+two-point modulus argument, not a new information inequality.
+For a unit loading, compactness of Θ0 and Cauchy–Schwarz give the tube sandwich, for small t
+with λ + t < M:
+max{ωA,0(t), η ∧t} ≤ωA,η(t) ≤min{t, η + ωA,0(t + η)}.
+(9)
+Indeed Θ0 ⊆Θη and B0 + (η ∧t)A supplies the two lower bounds. For any feasible B, choose
+a nearest B† ∈Θ0. Then ∥B −B†∥≤η and ∥B† −B0∥≤t + η, proving the upper bound. For
+a nonunit loading the corresponding factors are ∥A∥, which are absorbed in constants. If η ≤t,
+Theorem 1 and (t + η)q ≤2qtq give an upper bound of order η + tq/λq−1. If η > t, use the upper
+bound t. The lower bounds combine via max(x, y) ≥(x + y)/2.
+Take h = 1 −2α > 0 and t = htn in Lemma 14. Its bracket is at least h/2. A supremizing
+local alternative, or a sequence approaching the supremum, gives the lower bound in Theorem 3,
+using (9). The signal condition ensures these alternatives stay within the norm cap. For unknown
+σ, restricting the honest procedure to alternatives with this same σ proves exactly the same lower
+bound. At a slack point Proposition 2 and the same lemma give a root-n lower bound, matched by
+ambient inference.
+For Corollary 4, the explicit alternative is within ηn of B0 and its norm is below M eventually.
+The entropy calculation yields KL = η2
+n/(2t2
+n) →0, while its target separation is ηn. Apply the
+two-point bound. The argument applies to any measurable interval, including those obtained after
+an arbitrary rank pretest.
+24
