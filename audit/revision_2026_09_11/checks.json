@@ -1,0 +1,59 @@
+{
+  "seed": 2026091101,
+  "date": "2026-09-11",
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "random_normal_references": 30,
+  "capped_witness_checks": 180,
+  "general_perturbation_upper_checks": 240,
+  "maximum_witness_distance_over_radius": 0.9732549421716887,
+  "maximum_witness_target_relative_error": 2.1094237467877974e-15,
+  "sharp_limit_ratio_range": [
+    0.9999975000031237,
+    0.999998500001126
+  ],
+  "unequal_family_spectrum_checks": 6,
+  "boundary_witnesses": [
+    {
+      "radius": 0.001,
+      "target": 1.924499935048919e-10,
+      "cubic_ratio": 0.9999995000003195
+    },
+    {
+      "radius": 0.01,
+      "target": 1.9244046784011575e-07,
+      "cubic_ratio": 0.999950003194215
+    },
+    {
+      "radius": 0.1,
+      "target": 0.0001914939432252149,
+      "cubic_ratio": 0.9950317170233464
+    },
+    {
+      "radius": 1,
+      "target": 0.1325141267187052,
+      "cubic_ratio": 0.6885636005922537
+    },
+    {
+      "radius": 10,
+      "target": 6.99341231846697,
+      "cubic_ratio": 0.03633883636158855
+    }
+  ],
+  "strongly_imbalanced_witness_checks": 30,
+  "selected_coordinate_count": 23,
+  "cross_identity_checks": 300,
+  "constructed_ball_inclusion_checks": 450,
+  "outcome_length_bound_checks": 900,
+  "group_only_certified_cases": 281,
+  "regression_wrapper_checked": true,
+  "source_sha256": {
+    "theory/unequal_bond_modulus.md": "dae894c22488d994a681780c727cef6c34912c0e54e0df2aebfda4f438299060",
+    "theory/unequal_bond_inference.md": "aa83669eb727933755788533ffc522f8db8926cbcf53259f0b4e520c811bb405",
+    "simulations/code/unequal_bonds/methods.py": "d82da03d42029d4733aa0605ca0d5ec08407535f9a99e46cbe2d3712dfe061a9",
+    "simulations/code/unequal_bonds/check_theory.py": "be3c049ad52564ddc36521790d5d0be5d1f607a284fe5acfbed645ed7d6d8e75"
+  },
+  "all_checks_passed": true,
+  "scope": "Numerical falsification checks only; no empirical coverage study or formal machine-arithmetic verification."
+}
